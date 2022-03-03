@@ -1,0 +1,132 @@
+
+.itemWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 500px;
+  margin-top: 100px;
+}
+
+.rowItemRig {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 33%;
+  height: 100%;
+}
+
+.wrapperVersion {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  margin: 10px 0px;
+}
+
+.colInfoBlock {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 50px;
+}
+
+.txt_maintxt {
+  height: auto;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: system-ui;
+  color: rgb(20, 5, 5);
+}
+
+.txt_main_subtxt {
+  width: 70%;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: system-ui;
+  color: rgb(20, 5, 5);
+  padding-top: 50px;
+}
+
+.wrapper_maintxt {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 60%;
+}
+
+.wrapper_img_mainlogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+}
+
+.img_mainlogo {
+  width: 120%;
+  height: 120%;
+  padding-top: 200px;
+}
+
+.colTimerBlock {
+  display: flex;
+  width: 100%;
+  height: 30%;
+  /* justify-content: center; */
+  align-items: center;
+  margin-top: -100px;
+}
+
+.wrapperTimer {
+  display: flex;
+  width: 50%;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(145, 145, 173); */
+}
+
+.colButtonBlock {
+  display: flex;
+  width: 100%;
+  height: 30%;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 150px;
+  margin-top: 60px;
+}
+
+.wrapperButton {
+  display: flex;
+  width: 150px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  background-color: rgb(100, 100, 212);
+  cursor: pointer;
+}
+
+.wrapperButton:hover {
+  background-color: rgb(72, 72, 240);
+}
+
+.txtButton {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: system-ui;
+  color: white;
+}
+
+.txtTimer {
+  font-size: 25px;
+  font-weight: 800;
+  font-family: monospace;
+  color: rgb(8, 4, 4);
+}

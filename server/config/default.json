@@ -1,0 +1,22 @@
+{
+  "Server": {
+    "dbConfig":  {
+      "development":{
+        "username": "",
+        "password": "",
+        "database": "",
+        "host": "",
+        "dialect": "mysql"
+      }
+    },
+    "port": 4000,
+    "KEYS": {
+      "JWT_SECRET_KEY_ACCESS": "JWT_SECRET_KEY_ACCESS",
+      "JWT_SECRET_KEY_REFRESH": "JWT_SECRET_KEY_REFRESH"
+    },
+    "URL" : {
+      "API" : "http://localhost:4000",
+      "CLIENT" : "http://localhost:3000"
+    }
+  }
+}

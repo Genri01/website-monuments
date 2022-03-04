@@ -1,0 +1,14 @@
+{
+  "Server": {
+    "dbConfig": {
+      "production": {
+        "username": "",
+        "password": "",
+        "database": "",
+        "host": "",
+        "dialect": "mysql"
+      }
+    },
+    "port": 8080
+  }
+}

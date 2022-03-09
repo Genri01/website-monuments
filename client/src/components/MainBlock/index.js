@@ -2,7 +2,7 @@ import React from 'react';
 import images from '../../assets/images';
 import './style.css';
 import FilterItem from '../FilterItem';
-import PlusBlock from '../PlusBlock';
+
 
 
 class MainBlock extends React.Component {
@@ -21,15 +21,15 @@ class MainBlock extends React.Component {
             <div className="wrapper_maintxt">
               <div className="txt_maintxt">Вечная память, застывшая в камне.</div>
               <div className="txt_main_subtxt">
-                ТУТ ОПИСАНИЕ ТИПА Изготовим надгробный памятник любой сложности
-                и установим в городе от стольки то дней
+              Занимаемся изготовлением, доставкой и установкой гранитных памятников и благоустройством могил по доступным ценам
               </div>
             </div>
-            <div className="wrapper_img_mainlogo">
+            {/* <div className="wrapper_img_mainlogo">
               <img className="img_mainlogo" src={logo} alt="mainlogo" />
-            </div>
+            </div> */}
           </div>
           <div className="colTimerBlock">
+              <div className="timerTxt">Получи скидку 15% до окончания времени: </div>
             <div className="wrapperTimer">
               <div className="txtTimer">0</div>
               <div className="txtTimer">1</div>
@@ -44,7 +44,6 @@ class MainBlock extends React.Component {
             </div>
           </div>
           <FilterItem />
-          <PlusBlock />
         </div>
       );
     }

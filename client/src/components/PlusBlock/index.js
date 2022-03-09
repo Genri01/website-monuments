@@ -8,12 +8,12 @@ class PlusBlock extends React.Component {
       return (
         <div className="plusItemWrapper">
           <div className="plusLeftBlock">
-            <div className="titlePlus">почему стоит работать с нами ПЛЮСЫ</div>
+            <div className="titlePlus">Работая с нами вы получите :</div>
           </div>
           <div className="plusRightBlock">
-            <div className="plusItem">плюс</div>
-            <div className="plusItem">плюс2</div>
-            <div className="plusItem">плюс3</div>
+            <div className="plusItem">Своевременную бесплатную консультацию по любому вопросу</div>
+            <div className="plusItem">Гарантию 15 лет на памятники категории вип</div>
+            <div className="plusItem">Качество продукции и материалов</div>
           </div>
         </div>
       );

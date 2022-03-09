@@ -9,19 +9,20 @@ import WorkOrder from '../../components/WorkOrder'
 import FeedbackBlock from '../../components/FeedbackBlock'
 import AnswerBlock from '../../components/AnswerBlock'
 import DataForm from '../../components/DataForm'
-
+import PlusBlock from '../../components/PlusBlock';
 function MainScreen(props) {
     return (
       <div className="main_screen" >
 
         <MainBlock />
+        <PlusBlock />
+        <ViewStone />
         {/* <TopMonument /> */}
         {/* <AboutProduct /> */}
         {/* <WorkOrder /> */}
         {/* <FeedbackBlock /> */}
         {/* <AnswerBlock /> */}
         {/* <DataForm />  */}
-        {/* <ViewStone /> */}
       </div>
     );
 }

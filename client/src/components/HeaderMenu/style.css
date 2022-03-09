@@ -3,7 +3,8 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  background-color: rgb(250, 250, 249);
+  /* background-color: rgb(250, 250, 249); */
+  background-color: rgb(255 255 255 / 70%);
   width: 100%;
   height: 80px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -29,21 +30,17 @@
 
 .tab {
   display: flex;
-  width: 160px;
+  width: 110px;
   height: 28px;
   justify-content: center;
   align-items: center;
-  background-color: #dfe4ec;
+  color: dimgray;
   margin-right: 10px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .tab:hover {
-  display: flex;
-  width: 160px;
-  height: 28px;
-  justify-content: center;
-  align-items: center;
-  background-color: #d6e2f5;
-  color:aliceblue
+  color: rgb(70, 67, 67);
+  border-bottom: 1px solid #c5c7da;
 }

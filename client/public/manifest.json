@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "thumbai-isus.png",
+      "src": "thumbai-isus.ico",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "thumbai-isus.png",
+      "src": "thumbai-isus.ico",
       "type": "image/png",
       "sizes": "512x512"
     }

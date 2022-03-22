@@ -3,22 +3,59 @@ import images from '../../assets/images';
 import './style.css';
 
 function HeaderMenu(props) {
-  const { statuy,cart }= images;
+  const { statuy,cart,phone,map,time }= images;
   const { onClick, userName} = props;
     return (
       <div className="headerWrapper">
-        <div className="logo">Monumentum</div>
-        <img style={{marginLeft: '15px' }} src={statuy} alt="profile" width="40" height="40" />
-        <div className="catigories">
-          <div style={{ borderBottom: '2px solid #c5c7da'}} className="tab">Главная</div>
-          <div className="tab">Каталог</div>
-          <div className="tab">Установка</div>
-          <div className="tab">Наши работы</div>
-          <div className="tab">Доставка</div>
-          <div className="tab">Контакты</div>
-          <div className="tab">Отзывы</div>
+
+        <div className='topHeader'>
+
+          <div className="catigories">
+            <div style={{ borderBottom: '2px solid #c5c7da'}} className="tab">Главная</div>
+            <div className="tab">Каталог</div>
+            <div className="tab">Установка</div>
+            <div className="tab">Наши работы</div>
+            <div className="tab">Доставка</div>
+            <div className="tab">Контакты</div>
+            <div className="tab">Отзывы</div>
+          </div>
+          <img className='cart' src={cart} alt="profile" width="40" height="40" />
         </div>
-        <img style={{ paddingRight: '80px' }} src={cart} alt="profile" width="40" height="40" />
+        <div className='bottomHeader'>
+          <div className='lableContainer'>
+            <div className='textLogoContainer'>
+              <div className="logo">Imperial</div>
+              <div className="subLogo">Изготовление памятников</div>
+            </div>
+            <img style={{marginLeft: '15px' }} src={statuy} alt="profile" width="40" height="40" />
+          </div>
+          <ul className="header-extras">
+              <li>
+                  <img  style={{margin: '3px' }} src={map} alt="map" width="42" height="42" />
+                  <div className="he-text">
+                      Адрес
+                      <span className="text-muted">ул Памятников, 20, офис 666</span>
+                  </div>
+              </li>
+
+              <li>
+              <img className="i-plain" src={phone} alt="phone" />
+                  <div className="he-text">
+                      Телефон
+                      <span className="text-muted">+7 (999) 999 99 99</span>
+                  </div>
+              </li>
+
+
+              <li className="media-desktop">
+                  <img className="i-plain" src={time} alt="time" />
+                  <div className="he-text">
+                      Часы работы
+                      <span className="text-muted">Пн-Пт с 10:00 до 19:00</span>
+                  </div>
+              </li>
+          </ul>
+        </div>
       </div>
     );
 }

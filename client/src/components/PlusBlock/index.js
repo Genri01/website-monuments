@@ -1,4 +1,5 @@
 import React from 'react';
+import Title from '../Title';
 import './style.css'
 
 class PlusBlock extends React.Component {
@@ -7,10 +8,10 @@ class PlusBlock extends React.Component {
 
       return (
         <div className="plusItemWrapper">
-          <div className="plusLeftBlock">
-            <div className="titlePlus">Работая с нами вы получите :</div>
-          </div>
-          <div className="plusRightBlock">
+          <div className='layout'></div>
+          <Title margin="50px 0px 0px 0px" color="white" text="Работая с нами вы получите :" under z={2}/>
+            <div style={{borderColor:'white',zIndex: 9}} className="underlineTextMonument"></div>
+          <div style={{zIndex: 9}} className="plusRightBlock">
             <div className="plusItem">Своевременную бесплатную консультацию по любому вопросу</div>
             <div className="plusItem">Гарантию 15 лет на памятники категории вип</div>
             <div className="plusItem">Качество продукции и материалов</div>

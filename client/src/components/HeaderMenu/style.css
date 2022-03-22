@@ -1,31 +1,43 @@
 .headerWrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  /* background-color: rgb(250, 250, 249); */
-  background-color: rgb(255 255 255 / 70%);
+  flex-direction: column;
+  background-color: #333;
   width: 100%;
-  height: 80px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   position: absolute;
   top: 0;
   left: 0;
-
+  z-index: 1;
 }
+
+.bottomHeader {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  background-color: #fdfdfd;
+}
+
+.topHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
 .catigories {
   display: flex;
-  justify-content: center;
+  padding-left: 100px;
   align-items: center;
   flex-direction: row;
   width:100%;
-  height: 40px;
+  height: 70px;
 }
+
 .logo {
-  color: rgb(158, 155, 152);
-  font-size: 24px;
-  font-weight: 300;
-  margin-left: 30px;
+  color: rgb(51 51 51);
+  font-size: 40px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif !important;
 }
 
 .tab {
@@ -34,13 +46,137 @@
   height: 28px;
   justify-content: center;
   align-items: center;
-  color: dimgray;
+  color: rgb(255, 255, 255);
   margin-right: 10px;
   cursor: pointer;
   font-size: 16px;
 }
 
 .tab:hover {
-  color: rgb(70, 67, 67);
+  color: rgb(209, 225, 255);
   border-bottom: 1px solid #c5c7da;
+}
+
+.textLogoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.lableContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-left: 100px;
+}
+
+.header-extras {
+  margin-top: 45px;
+  margin-left: 200px;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.header-extras li:first-child {
+  margin-left: 0;
+}
+
+.header-extras li {
+  float: left;
+  margin-left: 100px;
+  height: 40px;
+  list-style: none;
+}
+
+.i-plain {
+  width: 33px;
+  height: 33px;
+  margin: 5px;
+}
+
+.nomargin {
+  margin: 0 !important;
+}
+
+.header-extras li .he-text {
+  float: right;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.43;
+}
+
+.header-extras li .he-text span {
+  display: block;
+  font-weight: 400;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+.cart {
+  padding-right: 80px;
+  cursor:'pointer';
+}
+
+@media ( width <= 1430px ) { 
+  .header-extras {
+    margin-left: 30px;
+    margin-top: 42px;
+  }
+}
+
+@media ( width <= 1260px ) { 
+  .header-extras {
+    margin-left: 20px;
+    margin-top: 48px;
+  }
+  .header-extras li .he-text {
+    font-size: 12px;
+  }
+}
+
+@media ( width <= 1110px ) { 
+  .header-extras li {
+    float: left;
+    margin-left: 10px;
+  }
+}
+
+@media ( width <= 800px ) { 
+  .tab {
+    width: 81px;
+    margin-right: 5px;
+    font-size: 14px;
+  }
+
+  .logo {
+    font-size: 35px;
+  }
+
+  .subLogo {
+    font-size: 11px;
+  }
+
+  .header-extras li:first-child {
+    margin-left: 10px;
+  }
+
+  .header-extras {
+    margin-top: 5px;
+    width: 40%;
+    margin-left: 220px;
+  }
+
+  .header-extras li .he-text {
+    font-size: 12px;
+    width: 166px;
+  }
+
+  .cart {
+    padding-right: 30px;
+    cursor: pointer;
+  }
 }

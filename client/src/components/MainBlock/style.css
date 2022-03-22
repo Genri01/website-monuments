@@ -6,8 +6,9 @@
   width: 100%;
   height: 770px;
   margin-top: 100px;
-  background-image: url('../../assets/images/angel1.jpg');
-  background-position: center;
+  background-color: #444;
+  background-image: url('../../assets/images/a1.jpg');
+  background-position: 0px 90px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -41,17 +42,23 @@
 
 .txt_maintxt {
   height: auto;
-  font-size: 55px;
+  font-size: 33px;
   font-weight: 600;
   font-family: system-ui;
-  color: #DAE5E9;
-  padding: 0px 40px 40px 40px;
+  color: #444;
+  padding: 0px 0px 20px 22px;
+  border-bottom: 2px solid #ea402f;
+  font-family: 'Roboto', sans-serif;
 }
 
 .txt_main_subtxt {
   width: 80%;
-  font-size: 22px;
-  color: #d6d3d4;
+  font-size: 14px;
+  color: #222;
+  padding-top: 20px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  border-top: 2px solid #ea402f;
 }
 
 .wrapper_maintxt {
@@ -59,9 +66,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 70%;
-  height: 350px;
-  background-color: rgba(0,0,0,0.5);
+  height: 48%;
+  padding: 0px 50px 50px 50px;
+  width: 420px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+  margin-top: 190px;
+  margin-left: 100px;
+  position: relative;
 }
 
 .wrapper_img_mainlogo {
@@ -80,26 +92,26 @@
 
 .colTimerBlock {
   display: flex;
-  width: 40%;
-  height: 30%;
+  width: 100%;
+  height: auto;
   justify-content: center;
   align-items: center;
- flex-direction: column;
+  flex-direction: column;
+  position: absolute;
+  bottom: 20px;
 }
 
 .wrapperTimer {
   display: flex;
   width: 50%;
-  height: 60px;
+  height: auto;
   justify-content: center;
   align-items: flex-end;
-  /* background-color: rgb(145, 145, 173); */
 }
 
 .timerTxt {
-  color: #f2fcfe;
+  color: #222;
   font-size: 23px;
-  background-color: #304e3099;
   padding: 8px;
 }
 
@@ -119,8 +131,17 @@
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  background-color: rgb(100, 100, 212);
+  background-color: #ea402f;
   cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  padding: 0 22px;
+  font-size: 14px;
+  line-height: 40px;
+  color: #FFF;
+  font-weight: 700;
+  border-radius: 3px;
+  margin-top: 30px;
 }
 
 .wrapperButton:hover {
@@ -135,8 +156,8 @@
 }
 
 .txtTimer {
-  font-size: 25px;
+  font-size: 35px;
   font-weight: 800;
   font-family: monospace;
-  color: #fffff2;
+  color: #222;
 }

@@ -1,101 +1,73 @@
 import React from 'react';
-import images from '../../assets/images';
-// import ColorTable from '../ColorTable/index';
-// import InfoCards from '../InfoCards/index';
-// import StatusNetwork from '../StatusNetwork/index';
-// import Moment from 'react-moment';
-// import moment from 'moment';
-// import { convertTimeBd, differentsTimeOff,getRndInteger } from '../../helpers';
-// import style from './style.css';
+import Answer from '../../components/Answer';
+import Title from '../Title';
+import './style.css';
 
-class AnswerBlock extends React.Component {
+const answers = [
+  {
+    answer: "Что выбрать гранит или мрамор?",
+    description:`Мрамор
+    Это осадочная горная порода из карбоната кальция и магния. Мрамор имеет рисунок в виде разводов и прожилок. Чаще встречается светлый мрамор, но благодаря примесям, входящим в состав камня, он может быть разных оттенков от желтого до черного.
+    Мрамор обладает большей пластичностью, благодаря чему его поверхность лучше поддаётся механической обработке – резке и полировке. Из-за высокой плотности мрамор практически не поглощает влагу, что придаёт ему высокую морозостойкость и устойчивость к ударам, растрескиванию.
+    Гранит
+    Это вулканическая горная порода, образующаяся в результате остывания и окаменения магмы. Гранит имеет зернистый рисунок цветом от розового до зеленого и даже черного.
+    Однако плотность гранита более чем в два раза превышает таковую
+    у мрамора. Так, средний срок службы мрамора на открытом воздухе
+    в условиях нашего климата 110-160 лет, а срок службы гранита — 500-600 лет
+    Делая выбор между гранитом и мрамором для изготовления памятника, учитывайте
+    Разницу в прочности Это два очень прочных материала, но гранит более долговечен
+    Свой вкус Какой рисунок и оттенок вам придется по душе
+    Свой бюджет
+    Гранит сложнее добывать
+    и тяжелее поддается обработке, поэтому стоит он дороже. Мрамор же доступен по цене практически любой семье.
+    `
+  },
+  {
+    answer: "Как сделать заказ?",
+    description:`Заявка
+    Вы оставляете заявку : — заполнив любую форму на сайте, — по телефону, — или в одном из офисов продаж.
+    Договор
+    После согласования всех деталей с менеджером мы составляем
+    и подписываем договор
+    Изготовление
+    Стандартный памятник изготавливаем от 3 до 14 дней. Мемориальный комплекс — от 1 месяца
+    Установка
+    Доставляем
+    и устанавливаем памятник на могилу в удобное
+    для вас время. Подробнее
+    Оплата
+    Вы оплачиваете стоимость памятника
+    и всех работ нашему сотруднику на месте после установки
+    3.  доставка
+     Мы доставим и установим памятник на могилу в любую точку Краснодарского края и Республики Адыгея.
+    ► Мы доставим и установим памятник по согласованию
+    в удобное для вас время.
+    ► За 15 лет работы мы доставили и установили памятники
+    в городах: Абинск, Анапа, Геленжик, Апширонск, Белореченск, Ейск, Гулькевичи, Коренвск, Крымск, Курганинск, Лабинск, Майкоп, Новокубанск, Приморско-Ахтарск, Сочи, Темрюк, Тихорецк, Тимошевск, Туапсе, Усть-Лабинск, в станицах
+    и селах: Выселковская, Белая глина, Динская, Брюховецкая, Каневская, Абрау-Дюрсо, Новомышавтовская, Лазоревская, Кущевская и во многих других городах и населенных пунктах нашего края и республики.
+    ► Если потребуется (например, для установки мемориальных комплексов), мы выезжаем несколько раз.
+    `
+  },
+  {
+    answer: "Как оплатить?",
+    description:"Наличными в офисе, безналичным СбербанкОнлайн"
+  }
+]
 
-    render(){
-      const {
-        fill,
-        // count,
-        arr_temp,
-        login,
-      } = this.props;
-
-      let objDiff = 0;
-
-      // if (fill.status === 'on') {
-       
-          // objDiff = differentsTimeOff(moment(fill.offline_time),fill.online_time);
-      
-      // }
-
-      // if (fill.status === 'off') {
-        // objDiff = differentsTimeOff(convertTimeBd(fill.last_update,moment(moment().format("YYYY-MM-DD HH:mm"))));
-        // if (fill.toogle_status_off === false) {
-        //   objDiff = differentsTimeOff(convertTimeBd(fill.last_update,moment(moment().format("YYYY-MM-DD HH:mm"))));
-        // }
-        // if (fill.toogle_status_off) {
-        //   objDiff = differentsTimeOff(convertTimeBd(fill.last_update,moment(moment().format("YYYY-MM-DD HH:mm"))));
-        // } 21-45=====21-38
-      // }
-
-      // const objDiffAgo = differentsTimeOff(convertTimeBd(fill.last_update,moment().format("YYYY-MM-DD HH:mm")));
-
-      const lock = images.lock;
-      const mess = images.mess;
-
-      return (
-        <div className="itemWrapper" style={{backgroundColor: `rgb(241,241,241)`}}>
-          <div className="rowItemRig">
-            <div className="titleRig">{`sfgs_gd`}</div>
-            <div className="infoRig">token <img style={{ marginTop: '5px'}} src={lock} width={14} alt="" /> {'sgv5gfv5d5dxdg'}</div>
-            <div className="infoRig">owner <img style={{ marginTop: '5px'}} src={mess} width={14} alt="" /> {login}</div>
-            <div className="wrapperVersion">
-            <div className="table" style={{backgroundColor:'rgb(42,101,166)',userSelect: 'none'}}>Config ver: 2</div>
-              <div style={{width: '10px', height: '10px'}} />
-            <div className="table" style={{backgroundColor:'rgb(42,101,166)',userSelect: 'none'}}>Exe ver: 2</div>
-            </div>
-          </div>
-          <div className="rowItemRig">
-            <div className="onlineWrapper">
-              {/* <StatusNetwork type={'on'} /> */}
-            </div>
-            <div className="statusWrapper">
-              <div className="titleOnline">{'on' === 'on' ? `Online:` : `Offline`}</div>
-              <div className="timeOnline">{`${objDiff.days} Days ${objDiff.hours} hours. ${objDiff.minutes} min. ${objDiff.seconds} sec. `}</div>
-            </div>
-            <div className="updateWrapper">
-              <div className="titileUpdate">Last update: </div>
-              <div className="momentWrapper">
-                {/* <div className="timeUpdate">{moment(convertTimeBd(fill.last_update)).format("YYYY-MM-DD HH:mm")}</div> */}
-                {/* <Moment format="YYYY-MM-DD HH:mm" className="timeUpdate" date={convertTimeBd(fill.last_update)} /> */}
-                <div style={{margin: "0px 5px"}} />
-                <div className="timeUpdate">{
-                // `(${objDiffAgo.days !== 0 ? `${objDiffAgo.days} Days`:''} ${objDiffAgo.hours !== 0 ? `${objDiffAgo.hours} hours`:''} ${objDiffAgo.minutes} minutes ago )`
-                }</div>
-                {/* <Moment className="timeUpdate" fromNow>{convertTimeBd(fill.last_update)}</Moment> */}
-              </div>
-            </div>
-          </div>
-          <div className="rowItemRig">
-              <div className="colorWrapper">
-                {
-                  [1,13,433,2].map((item,i) => (
-                    <div key={i} style={{display: 'flex', flexDirection: 'row', marginBottom: '2px'}}>
-                      <div
-                        className="table"
-                        style={{
-                          backgroundColor: 'on' === 'on' ? item <= 74 ? 'rgb(83,171,83)' : (item >= 75 && item < 80) ? 'rgb(230,161,60)':'rgb(210,60,60)' : 'rgb(165,158,147)',
-                          userSelect: 'none'
-                          }}>
-                        {'GPU'} {'on' === 'on' ? item : `?-?-?-?`} C°
-                      </div>
-                      <div style={{width: '10px', height: '10px'}} />
-                      {/* <ColorTable status={'on'} count={'on' === 'on' ? (item+7) : `?-?-?-?`} type="FANS" /> */}
-                     </div>
-                  ))
-                }
-              </div>
-          </div>
-        </div>
-      );
-    }
+function AnswerBlock(props) {
+  const { header} = props;
+  let st = {}
+    return (
+      <div id="answer" className="answerblock_container">
+        <Title margin="50px 0px 30px 0px" text="Вoпросы отвевты" under />
+        <div className="answerblock_container_header">{header}</div>
+        {
+          answers.map((el,id) => ( 
+            <Answer style={st} title={el.answer} description={el.description} key={id} />
+          ))
+        }
+      </div>
+    );
 }
+
 export default AnswerBlock;

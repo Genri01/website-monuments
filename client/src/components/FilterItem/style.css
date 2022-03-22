@@ -1,37 +1,51 @@
 .filterItemWrapper {
   display: flex;
-  width: 100%;
+  width: 50%;
   /* height: 100%; */
-  justify-content: space-evenly;
-  align-items: flex-start;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding-bottom: 50px;
-  /* background-color: beige;*/
+  background-color: #f5faff;
 }
 
-.filterItemRow {
+.filterItemCol {
   display: flex;
   width: 100%;
-  height: 30%;
-  background-color: bisque;
+  height: 70px;
   justify-content: center;
+  align-items: center;
 }
 
 .titleItem {
   display: flex;
+  width: 150px;
+  height: 40px;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 30px;
-  background-color: rgb(252 255 254 / 60%);
-  border: 1px solid #87776e;
-  margin: 10px;
-  cursor: pointer;
-  color: #53502e;
   border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+  7px 7px 20px 0px rgba(0,0,0,.1),
+  4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+  border: none;
+  background: linear-gradient(0deg, #ea402f 0%, #ea402f 100%);
+  color: #fff;
+  overflow: hidden;
+  margin: 15px;
 }
 
 .titleItem:hover {
-  /* background-color: rgb(241, 202, 149); */
-  background-color: rgb(251 255 255);
+    opacity: .7;
+}
+
+
+.titleItem:active{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
 }

@@ -13,12 +13,9 @@ const Main = () => {
     <main>
       <Routes>
         <Route exact path='/' element={<MainScreen />}/>
-          <Route path='/work' element={<WorkScreen />}/> 
+          {/* <Route path='/work' element={<WorkScreen />}/>  */}
           <Route path='/shop' element={<ShopScreen />}/> 
-          <Route path='/cart' element={<CartScreen />}/> 
-          <Route path='/signup' element={<SignupScreen />}/>
-          <Route path='/signin' element={<SigninScreen />}/>
-          <Route path='/forgot' element={<ForgotScreen />}/>
+          {/* <Route path='/cart' element={<CartScreen />}/>  */}
       </Routes>
     </main>
   )

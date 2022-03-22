@@ -1,0 +1,30 @@
+.titleWrapper {
+  display: flex;
+  width: auto;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.titleContainer {
+  display: flex;
+  width: auto;
+  height: auto;
+} 
+
+.titleText {
+  font-weight: 600 ;
+  font-family: 'Roboto', sans-serif ;
+} 
+
+.underline {
+  display: flex;
+  height: 2px;
+  width: 40px;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  margin-top: 30px;
+}
+

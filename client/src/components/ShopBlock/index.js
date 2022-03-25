@@ -24,7 +24,7 @@ class ShopBlock extends React.Component {
               40 227р.
             </div>
             <div className='btnShopBlockWrapper'>
-              <OrangeButton text='Заказать' />
+            <Link to={"/cart"}><OrangeButton text='Оформить заказ' /></Link>
             </div>
             <div className="aboutShopBlock">
               Очень крутой памятник для любимого деда!Он будет нисказанно рад такому выбору!

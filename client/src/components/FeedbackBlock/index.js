@@ -11,7 +11,7 @@ class FeedbackBlock extends React.Component {
         <div className="feedbackWrapper">
           <Title text="Отзывы наших клиентов" margin="20px 0px 50px 0px" />
           <div className='feedbackItemContainer'>
-            <FeedbackItem name="killer" subname="jack" feed="dsdfsdffsdfsdfsdfsvcsdvds  s dd dsvsvcz" cool="7" />
+            <FeedbackItem name="killer" subname="jack" feed="dsdfsdffsdfsdfsdfsvcsdvds  s dd dsvsvcz" cool="40" />
             <FeedbackItem name="dodik" subname="goodd" feed="авывваи птрьввыси  ыаи рты  ваым" cool="2" />
             <FeedbackItem name="dura" subname="locker" feed="" cool="3" />
             <FeedbackItem name="som" subname="pidor" feed="" cool="1" />

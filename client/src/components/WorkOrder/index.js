@@ -46,6 +46,11 @@ class WorkOrder extends React.Component {
                 — или в одном из офисов продаж.`} 
             />
             <ItemOrder
+              number="4"
+              title="Доставка" 
+              text={`Мы доставляем по всей РосссиюС возможностьюб доставки ознакомиться в разделе корзина`} 
+            />
+            <ItemOrder
               number="5"
               title="Оплата" 
               text={`Вы оставляете заявку :

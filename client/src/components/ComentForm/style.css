@@ -1,0 +1,56 @@
+.commentFormWrapper {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 12px rgb(0 0 0 / 30%);
+}
+
+.titlecommentFormContainer {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  background-color: #dfdfdf;
+}
+
+.commentFormContainer {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #dfdfdf;
+  border-top: 1px solid #ea402f
+}
+
+.comments {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  resize: none;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.titleComment {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.textTitleForm {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+

@@ -1,0 +1,109 @@
+.ProductItemWrapper {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  align-items: center;
+  flex-direction: row;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.photoItem {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+.nameItem {
+
+}
+
+.countItemContainer {
+  display: flex;
+  width: 50%;
+  height: 60%;
+  align-items: center;
+  justify-content: center;
+}
+
+.decrementCount {
+  display: flex;
+  width: 15%;
+  height: 90%;
+  background-color: #ea402f;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.resultCount {
+  display: flex;
+  width: 20%;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.incrementCount {
+  display: flex;
+  width: 15%;
+  height: 90%;
+  background-color: #ea402f;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.priceItem {
+
+}
+
+.allpriceItem {
+
+}
+
+.productItemPhotoContainer {
+  display: flex;
+  width: 19%;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.productItemNameContainer {
+  display: flex;
+  width: 41%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.productItemCountContainer {
+  display: flex;
+  width: 20%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.productItemPriceContainer {
+  display: flex;
+  width: 10%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.productItemAllPriceContainer {
+  display: flex;
+  width: 10%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}

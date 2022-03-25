@@ -1,5 +1,6 @@
 import React from 'react';
 import images from '../../assets/images';
+import { HashLink as Link } from 'react-router-hash-link'
 import './style.css';
 
 function HeaderMenu(props) {
@@ -13,13 +14,10 @@ function HeaderMenu(props) {
           <div className="catigories">
             <div style={{ borderBottom: '2px solid #c5c7da'}} className="tab">Главная</div>
             <div className="tab">Каталог</div>
-            <div className="tab">Установка</div>
             <div className="tab">Наши работы</div>
-            <div className="tab">Доставка</div>
-            <div className="tab">Контакты</div>
             <div className="tab">Отзывы</div>
           </div>
-          <img className='cart' src={cart} alt="profile" width="40" height="40" />
+          <Link to={"/cart"}><img className='cart' src={cart} alt="profile" width="40" height="40" /></Link>
         </div>
         <div className='bottomHeader'>
           <div className='lableContainer'>
@@ -34,7 +32,7 @@ function HeaderMenu(props) {
                   <img  style={{margin: '3px' }} src={map} alt="map" width="42" height="42" />
                   <div className="he-text">
                       Адрес
-                      <span className="text-muted">ул Памятников, 20, офис 666</span>
+                      <span className="text-muted"> Майкоп Промышленная 54а Анапа Чехова 50а</span>
                   </div>
               </li>
 
@@ -42,7 +40,7 @@ function HeaderMenu(props) {
               <img className="i-plain" src={phone} alt="phone" />
                   <div className="he-text">
                       Телефон
-                      <span className="text-muted">+7 (999) 999 99 99</span>
+                      <span className="text-muted">+7 (953) 534 41 11</span>
                   </div>
               </li>
 

@@ -14,6 +14,7 @@ class TransferForm extends React.Component {
           </div>
           <div className='payFormContainer'>
             <div className='pay'><input type="Radio" style={{ marginRight:'10px' }}/>Доставка транспортной кампанией (оплачивается заказчиком)</div>
+            <div className='pay'><input type="Radio" style={{ marginRight:'10px' }}/>Доставка и установка</div>
             <div className='pay'><input type="Radio" style={{ marginRight:'10px' }} />Cамовывоз с производства г. Майкоп Промышленная 54а</div>
             <div className='pay'><input type="Radio" style={{ marginRight:'10px' }} />Cамовывоз с производства г. Анапа Чехова 50а</div>
           </div>

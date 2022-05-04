@@ -3,18 +3,45 @@
   flex-direction: column;
   background-color: #333;
   width: 100%;
+  height: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  min-width: 740px;
+}
+
+.mobileHeaderWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #333;
+  width: 100%;
+  height: 100px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
 }
-
+ 
 .bottomHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 130px;
   display: flex;
   background-color: #fdfdfd;
+}
+ 
+.mobileBottomHeader {
+  width: 100%;
+  height: auto;
+  display: flex;
+  background-color: #fdfdfd;
+  margin-top: 100px;
+  flex-direction: column;
 }
 
 .topHeader {
@@ -40,6 +67,13 @@
   font-family: 'Roboto', sans-serif !important;
 }
 
+.mobileLogo {
+  color: rgb(51 51 51);
+  font-size: 26px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif !important;
+}
+
 .tab {
   display: flex;
   width: 110px;
@@ -50,9 +84,35 @@
   margin-right: 10px;
   cursor: pointer;
   font-size: 16px;
+  text-decoration: none;
+  user-select: none;
+  outline:none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .tab:hover {
+  color: rgb(209, 225, 255);
+  border-bottom: 1px solid #c5c7da;
+}
+
+.tabMobile {
+  display: flex;
+  width: 100px;
+  height: 21px;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 16px;
+  margin: 30px 0px;
+  text-decoration: none;
+  user-select: none;
+  outline:none;
+  -webkit-tap-highlight-color: transparent;
+
+}
+
+.active {
   color: rgb(209, 225, 255);
   border-bottom: 1px solid #c5c7da;
 }
@@ -72,9 +132,23 @@
   margin-left: 100px;
 }
 
-.header-extras {
-  margin-top: 45px;
-  margin-left: 200px;
+.mobileLableContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 10px 0px 10px 15px;
+}
+
+.mobileContainerLi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.mobile-header-extras {
   font-family: 'Roboto', sans-serif !important;
 }
 
@@ -89,14 +163,18 @@
   list-style: none;
 }
 
-.i-plain {
-  width: 33px;
-  height: 33px;
-  margin: 5px;
+.header-extras {
+  width: auto;
+  margin-right: 80px;
 }
 
-.nomargin {
-  margin: 0 !important;
+.mobile-header-extras li {
+  height: 40px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-extras li .he-text {
@@ -107,9 +185,31 @@
   line-height: 1.43;
 }
 
+.mobile-header-extras li .he-text {
+  float: right; 
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 1.43;
+}
+
 .header-extras li .he-text span {
   display: block;
   font-weight: 400;
+}
+
+.i-plain {
+  width: 33px;
+  height: 33px; 
+}
+
+.mobile-i-plain {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+}
+
+.nomargin {
+  margin: 0 !important;
 }
 
 .text-muted {
@@ -121,62 +221,114 @@
   cursor:'pointer';
 }
 
-@media ( width <= 1430px ) { 
-  .header-extras {
-    margin-left: 30px;
-    margin-top: 42px;
-  }
+.cartMobile {
+  position: absolute;
+  right: 25px;
+  top: 25px;
 }
 
-@media ( width <= 1260px ) { 
-  .header-extras {
-    margin-left: 20px;
-    margin-top: 48px;
-  }
-  .header-extras li .he-text {
-    font-size: 12px;
-  }
+.i-local {
+  width: 42px;
+  height: 42px;
 }
 
-@media ( width <= 1110px ) { 
-  .header-extras li {
-    float: left;
-    margin-left: 10px;
-  }
-}
-
-@media ( width <= 800px ) { 
-  .tab {
-    width: 81px;
-    margin-right: 5px;
-    font-size: 14px;
-  }
-
-  .logo {
-    font-size: 35px;
+@media ( width <= 1365px ) { 
+  .logo { 
+    font-size: 35px; 
   }
 
   .subLogo {
-    font-size: 11px;
+    font-size: 12px;
   }
 
-  .header-extras li:first-child {
-    margin-left: 10px;
+  .i-local {
+    width: 25px;
+    height: 25px;
+  }
+
+  .i-plain {
+    width: 21px;
+    height: 21px; 
+  }
+
+  .header-extras li {
+    height: auto;
+    margin-left: 5px;
   }
 
   .header-extras {
-    margin-top: 5px;
-    width: 40%;
-    margin-left: 220px;
+    width: 61%;
+    margin-right: 0px;
   }
+}
 
-  .header-extras li .he-text {
-    font-size: 12px;
-    width: 166px;
-  }
 
-  .cart {
-    padding-right: 30px;
-    cursor: pointer;
-  }
+
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #f4f0f0;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #f4f0f0;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  overflow: hidden !important;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
 }

@@ -34,6 +34,11 @@ class BuyerForm extends React.Component {
           </div>
           <div className='locationContainer'>
             <div className='locationForm'>
+            <div className='pay'>Установка<input type="checkbox" style={{ marginRight:'10px' }}/></div>
+            </div>
+          </div>
+          <div className='locationContainer'>
+            <div className='locationForm'>
               <div style={{width:'150px'}}>Ваше Ф.И.О</div><input className='locationInput' step="1" min="1" max="27" id="count_product" name="count_product" />
             </div>
           </div>

@@ -14,7 +14,7 @@ class PayForm extends React.Component {
           </div>
           <div className='payFormContainer'>
             <div className='pay'><input type="Radio"  style={{ marginRight:'10px' }}/>Наличными в офисе</div>
-            <div className='pay'><input type="Radio" disabled  style={{ marginRight:'10px' }}/>Безналичный расчёт</div>
+            <div className='pay'><input type="Radio" style={{ marginRight:'10px' }}/>Безналичный расчёт (Сбербанк онлайн)</div>
           </div>
         </div>
       );

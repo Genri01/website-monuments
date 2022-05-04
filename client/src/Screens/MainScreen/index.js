@@ -16,13 +16,15 @@ import HeaderMenu from '../../components/HeaderMenu'
 import OrangeButton from '../../components/OrangeButton';
 import InputMask from 'react-input-mask';
 import Footer from '../../components/Footer';
-
+import { useSelector } from 'react-redux';
+import { app } from '../../redux/selectors'
 function MainScreen(props) {
+  const mobile = useSelector(app.mobile);
     return (
       <div className="main_screen" >
-        <HeaderMenu />
-        <MainBlock />
-        <TopMonument />
+        <HeaderMenu mobile={mobile} />
+        <MainBlock mobile={mobile} />
+        {/* <TopMonument />
         <div className='backgroundFilter'>
           <Title text="Фильтры" margin="50px 0px 10px 0px" />
         </div>
@@ -52,8 +54,8 @@ function MainScreen(props) {
           <div className='answerBtnWrapper'>
             <OrangeButton text="Заказать звонок" /> 
           </div>
-        </div>
-        <Footer /> 
+        </div> */}
+        <Footer mobile={mobile} /> 
       </div>
     );
 }

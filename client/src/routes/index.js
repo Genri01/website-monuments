@@ -10,9 +10,10 @@ const Main = () => {
     <main>
       <Routes>
         <Route exact path='/' element={<MainScreen />}/>
-          <Route path='/work' element={<WorkScreen />}/> 
+          <Route path='/works' element={<WorkScreen />}/> 
           <Route path='/shop' element={<ShopScreen />}/> 
           <Route path='/cart' element={<CartScreen />}/> 
+          <Route path='/feedback' element={<CartScreen />}/> 
       </Routes>
     </main>
   )

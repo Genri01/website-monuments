@@ -112,3 +112,12 @@
     padding: 30px;
     box-sizing: border-box;
   }
+
+
+  @media (width <= 1090px ) { 
+    .mobileTitle .titleText {
+      font-size: 30px;
+    } 
+  }
+
+

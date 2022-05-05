@@ -24,24 +24,24 @@ function MainScreen(props) {
       <div className="main_screen" >
         <HeaderMenu mobile={mobile} />
         <MainBlock mobile={mobile} />
-        {/* <TopMonument />
+        {/* <TopMonument /> */}
         <div className='backgroundFilter'>
-          <Title text="Фильтры" margin="50px 0px 10px 0px" />
+          <Title text="Фильтры" margin="50px 0px 10px 0px" customclass="mobileTitle" />
         </div>
         <div className='subTitleFilter'>
-          <Title text="Категории памятников:" />
-          <Title text="Виды камня:" />
+          <Title text="Категории памятников:"  customclass="mobileTitle" />
+          <Title text="Виды камня:"  customclass="mobileTitle" />
         </div>
         <div className='filterContainer'>
           <FilterItem />
           <ViewStone />
         </div>
-        <PlusBlock />
+        {/* <PlusBlock />
         <AboutProduct />
         <WorkOrder />
         <FeedbackBlock />
-        <AnswerBlock />
-        <div className='answerContainer'>
+        <AnswerBlock /> */}
+        {/* <div className='answerContainer'>
           <Title margin="30px 0px 50px 0px" text="Остались вопросы?" />
           <div className='answerAbout'>
           Заполните небольшую форму. Мы вам перезвоним в ближайшее время и проконсультируем.

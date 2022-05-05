@@ -100,6 +100,10 @@
   position: relative;
 }
 
+.mobile-wrapper_maintxt .titleText {
+  text-align: center;
+}
+
 .wrapper_img_mainlogo {
   display: flex;
   justify-content: center;
@@ -186,17 +190,28 @@
 }
 
 .txtTimer {
-  font-size: 35px;
+  font-size: 23px;
   font-weight: 800;
   font-family: monospace;
   color: #222;
 }
 
-@media ( width <= 770px ) { 
+@media (600px >= width <= 780px ) { 
+  .mobile-wrapper_maintxt {
+    width: 40%;
+    margin-left: 210px;
+    margin-top: 250px;
+  }
+  .colInfoBlock {
+    padding-left: 30px; 
+  }
+}
+
+@media ( width <= 600px ) { 
   .itemWrapper {
-    background-position: -200px 100px;
+    background-position: -680px 140px;
     background-repeat: no-repeat;
-    background-size: 180%;
+    background-size: cover;
   }
 }
 

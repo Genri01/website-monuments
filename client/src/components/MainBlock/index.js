@@ -9,7 +9,7 @@ export default function MainBlock(props) {
     <div className="itemWrapper">
       <div className="colInfoBlock"> 
         <div className={`${mobile ? 'mobile-wrapper_maintxt' : 'wrapper_maintxt'}`} >
-          <Title margin={`${mobile ? "0px 20px 30px" : "0px 0px 20px 0px"}`} size={`${mobile ? '16px' : '33px'}`} text="Вечная память, застывшая в камне." />
+          <Title margin={`${mobile ? "0px 20px 20px" : "0px 0px 20px 0px"}`} size={`${mobile ? '16px' : '33px'}`} text="Вечная память, застывшая в камне." />
           <div className={`${mobile ? 'mobile-txt_main_subtxt' : 'txt_main_subtxt'}`}>
           Изготовление, доставкой и установкой гранитных памятников и благоустройством могил по доступным ценам
           </div>

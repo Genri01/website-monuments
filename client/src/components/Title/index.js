@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 
 function Title(props) {
-    const { text, color, size, margin ,under, z } = props;
+    const { text, color, size, margin ,under, z, customclass } = props;
     return (
       <div 
       style={{ 
@@ -11,7 +11,7 @@ function Title(props) {
         margin: margin === undefined ? '0px' : margin,
         zIndex: z === undefined ? '0' : z,
       }} 
-        className='titleWrapper'
+        className={`titleWrapper ${customclass === undefined ? '' : customclass}`}
       >
         <div className="titleContainer">
           <div className="titleText">{ text }</div>

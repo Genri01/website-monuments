@@ -10,7 +10,7 @@ function Footer(props) {
       <div className="footer_container">
         <div className="footer_up">
           <div className="footer_logo_section">
-            <iframe src="https://yandex.ru/map-widget/v1/-/CKaAJA14" className={`${mobile ? 'mobile-iframe' : 'iframe'}`} frameborder="1" allowfullscreen="true"></iframe> 
+            <iframe src="https://yandex.ru/map-widget/v1/-/CKaAJA14" className={`${mobile ? 'mobile-iframe' : 'iframe'}`} /> 
           </div>
           <div className="footer_desription_section_left">
           <Link to={"/"}><div className={`${mobile ? 'mobile-footer_txt' : 'footer_txt'}`} >Каталог</div></Link> 

@@ -48,3 +48,26 @@
   background-color: rgb(0 0 0 / 50%);
   cursor: pointer;
 }
+
+.mobileSlider { 
+  width: 80% !important; 
+  margin: 0px 0px 30px 0px;
+}
+
+.mobileSlider .swiper_container {
+  width: 90%; 
+}
+
+@media (width <= 1090px ) { 
+  .mobileArrow .wrapperArrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 55px;
+    margin: 0px 10px;
+    background-color: rgb(0 0 0 / 50%);
+    cursor: pointer;
+  }
+}
+

@@ -14,6 +14,16 @@
   flex-direction: row;
 }
 
+.mobileFilterContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f5faff;
+}
+
 .titleFilters {
   width: 100%;
   height: 100px;
@@ -41,6 +51,16 @@
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
+    background-color: #f5faff;
+  }
+
+  .mobileSubTitleFilter {
+    width: 100%;
+    height:360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: #f5faff;
   }
 
@@ -113,6 +133,9 @@
     box-sizing: border-box;
   }
 
+  .mobileItem {
+    width: 270px !important;
+  }
 
   @media (width <= 1090px ) { 
     .mobileTitle .titleText {

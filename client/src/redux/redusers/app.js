@@ -1,7 +1,7 @@
 import ActionTypes from '../constants';
 
 const initialState = {
-  mobile: false,
+  mobile: true,
 };
 
 export default function app(state = initialState, { type, payload }) {

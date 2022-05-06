@@ -10,6 +10,30 @@
   background-color: white;
 }
 
+.mobileAboutWrapper {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 10px;
+  background-color: white;
+}
+
+.mobileAboutWrapper .aboutTextWrapper {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 10px;
+  background-color: white;
+}
+
 .aboutTopWrapper {
   display: flex;
   width: 100%;
@@ -20,6 +44,16 @@
   margin-bottom: 20px;
 }
 
+.mobileAboutTopWrapper {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
 .aboutBottomWrapper {
   display: flex;
   width: 100%;
@@ -27,6 +61,16 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  margin-top: 20px;
+}
+
+.mobileAboutBottomWrapper {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin-top: 20px;
 }
 
@@ -45,6 +89,14 @@
 .aboutPhotoWrapper {
   display: flex;
   width: 50%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileAboutWrapper .aboutPhotoWrapper {
+  display: flex;
+  width: 100%;
   height: 100%;
   align-items: center;
   justify-content: center;

@@ -25,21 +25,40 @@ function MainScreen(props) {
         <HeaderMenu mobile={mobile} />
         <MainBlock mobile={mobile} />
         {/* <TopMonument /> */}
-        <div className='backgroundFilter'>
-          <Title text="Фильтры" margin="50px 0px 10px 0px" customclass="mobileTitle" />
-        </div>
-        <div className='subTitleFilter'>
-          <Title text="Категории памятников:"  customclass="mobileTitle" />
-          <Title text="Виды камня:"  customclass="mobileTitle" />
-        </div>
-        <div className='filterContainer'>
-          <FilterItem />
-          <ViewStone />
-        </div>
-        {/* <PlusBlock />
-        <AboutProduct />
-        <WorkOrder />
-        <FeedbackBlock />
+        { 
+         mobile ? 
+         <>
+            <div className='backgroundFilter'>
+              <Title size={30} text="Фильтры" margin="30px 0px 10px 0px" />
+            </div>
+            <div className='mobileSubTitleFilter'>
+              <Title size={22} margin="0px 0px 30px 0px" text="Категории памятников:" />
+              <FilterItem customclass={`${mobile ? 'mobileItem' : ''}`}/>
+            </div>
+            <div className='mobileFilterContainer'>
+              <Title size={22} margin="30px 0px 10px 0px" text="Виды камня:" />
+              <ViewStone customclass="mobileArrow mobileSlider" />
+            </div>
+         </> 
+       : 
+       <>
+          <div className='backgroundFilter'>
+            <Title text="Фильтры" margin="50px 0px 10px 0px" customclass="mobileTitle" />
+          </div>
+          <div className='subTitleFilter'>
+            <Title text="Категории памятников:"  customclass="mobileTitle" />
+            <Title text="Виды камня:"  customclass="mobileTitle" />
+          </div>
+          <div className='filterContainer'>
+            <FilterItem />
+            <ViewStone customclass="mobileArrow" />
+          </div>
+        </> 
+        }
+        <PlusBlock mobile={mobile} />
+        <AboutProduct mobile={mobile} />
+        <WorkOrder mobile={mobile} />
+        {/* <FeedbackBlock />
         <AnswerBlock /> */}
         {/* <div className='answerContainer'>
           <Title margin="30px 0px 50px 0px" text="Остались вопросы?" />

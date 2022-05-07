@@ -55,16 +55,31 @@ const answers = [
 ]
 
 function AnswerBlock(props) {
-  const { header} = props;
-  let st = {}
+  const { header, mobile } = props;
+  let st = {fontSize: '10px'}
     return (
-      <div id="answer" className="answerblock_container">
-        <Title margin="50px 0px 30px 0px" text="Вoпросы отвевты" under />
-        <div className="answerblock_container_header">{header}</div>
+      <div id="answer" className={`${mobile ? 'mobileAnswerBlock_container' : "answerblock_container"}`}>
         {
-          answers.map((el,id) => ( 
-            <Answer style={st} title={el.answer} description={el.description} key={id} />
-          ))
+          mobile ? 
+          <>
+            <Title size={28} margin="20px 0px 30px 0px" text="Вoпросы ответы" under />
+            {/* <div className="answerblock_container_header">{header}</div> */}
+            {
+              answers.map((el,id) => ( 
+              <Answer mobile={mobile} style={st} title={el.answer} description={el.description} key={id} />
+              ))
+            }
+          </>
+          :
+          <>
+            <Title margin="50px 0px 30px 0px" text="Вoпросы отвевты" under />
+            <div className="answerblock_container_header">{header}</div>
+            {
+              answers.map((el,id) => ( 
+              <Answer mobile={mobile} style={st} title={el.answer} description={el.description} key={id} />
+              ))
+            }
+          </>
         }
       </div>
     );

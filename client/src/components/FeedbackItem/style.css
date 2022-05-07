@@ -13,6 +13,21 @@
   box-shadow: 1px 1px 12px rgb(0 0 0 / 20%);
 }
 
+.mobileFeedbackItemWrapper {
+  display: flex;
+  width: 90%;
+  height: 200px;
+  background: #ffffff;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 30px;
+  margin: 16px 12px;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 12px rgb(0 0 0 / 20%);
+}
+
 .feedbackItemTitleWrapper {
   display: flex;
   width: 100%;

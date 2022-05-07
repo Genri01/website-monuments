@@ -24,7 +24,7 @@ function MainScreen(props) {
       <div className="main_screen" >
         <HeaderMenu mobile={mobile} />
         <MainBlock mobile={mobile} />
-        {/* <TopMonument /> */}
+        <TopMonument mobile={mobile} />
         { 
          mobile ? 
          <>
@@ -58,22 +58,42 @@ function MainScreen(props) {
         <PlusBlock mobile={mobile} />
         <AboutProduct mobile={mobile} />
         <WorkOrder mobile={mobile} />
-        {/* <FeedbackBlock />
-        <AnswerBlock /> */}
-        {/* <div className='answerContainer'>
-          <Title margin="30px 0px 50px 0px" text="Остались вопросы?" />
-          <div className='answerAbout'>
-          Заполните небольшую форму. Мы вам перезвоним в ближайшее время и проконсультируем.
-          </div>
-          <div className='formWrapper'>
-            <input name="name" placeholder="Представьтесь пожалуйста" className={`popup_input`}  type="text" value='' onChange={()=>{}} />
-            <InputMask placeholder="Ваш телефон" className={`popup_input`}  name="telephone" mask={``} maskChar={'_'} value='' onChange={()=>{}} />
-            <textarea name="msg" placeholder="Задайте Ваш вопрос, консультация бесплатна..." className="popup_textarea" value={''} onChange={()=>{}} />
-          </div>
-          <div className='answerBtnWrapper'>
-            <OrangeButton text="Заказать звонок" /> 
-          </div>
-        </div> */}
+        <FeedbackBlock mobile={mobile} />
+        <AnswerBlock mobile={mobile} />
+        <div className='answerContainer'>
+          {
+            mobile ?
+            <>
+              <Title size={28} margin="30px 0px 50px 0px" text="Остались вопросы?" />
+              <div style={mobile ? { width: '90%'} : {} } className='answerAbout'>
+                Заполните небольшую форму. Мы вам перезвоним в ближайшее время и проконсультируем.
+              </div>
+              <div className='formWrapper'>
+              <input name="name" placeholder="Представьтесь пожалуйста" style={mobile ? { width: '100%'} : {} } className={`popup_input`}  type="text" value='' onChange={()=>{}} />
+              <InputMask style={mobile ? { width: '100%'} : {} } placeholder="Ваш телефон" className={`popup_input`}  name="telephone" mask={``} maskChar={'_'} value='' onChange={()=>{}} />
+              <textarea style={mobile ? { width: '100%'} : {} } name="msg" placeholder="Задайте Ваш вопрос, консультация бесплатна..." className="popup_textarea" value={''} onChange={()=>{}} />
+              </div>
+              <div className='answerBtnWrapper'>
+              <OrangeButton text="Заказать звонок" /> 
+              </div>
+            </>
+            :
+            <>
+              <Title margin="30px 0px 50px 0px" text="Остались вопросы?" />
+              <div className='answerAbout'>
+              Заполните небольшую форму. Мы вам перезвоним в ближайшее время и проконсультируем.
+              </div>
+              <div className='formWrapper'>
+              <input name="name" placeholder="Представьтесь пожалуйста" className={`popup_input`}  type="text" value='' onChange={()=>{}} />
+              <InputMask placeholder="Ваш телефон" className={`popup_input`}  name="telephone" mask={``} maskChar={'_'} value='' onChange={()=>{}} />
+              <textarea name="msg" placeholder="Задайте Ваш вопрос, консультация бесплатна..." className="popup_textarea" value={''} onChange={()=>{}} />
+              </div>
+              <div className='answerBtnWrapper'>
+              <OrangeButton text="Заказать звонок" /> 
+              </div>
+            </>
+          }
+        </div>
         <Footer mobile={mobile} /> 
       </div>
     );

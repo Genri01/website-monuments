@@ -9,14 +9,28 @@ import TransferForm from '../TransferForm';
 import PayForm from '../PayForm';
 import './style.css';
 
-class CartBlock extends React.Component {
-
-    render(){
-
-      return (
-        <div className="cartBlockWrapper">
+export default function CartBlock(props) {
+  const { mobile } = props;
+  return (
+    <div  style={ mobile ? { padding: '0px 10px' } : {} } className="cartBlockWrapper">
+      {
+        mobile ?
+        <>
+        <div className='mobileProductWrapper'>
+          <ProductForm mobile={mobile} />
+          <BuyerForm mobile={mobile} />
+          <ComentForm />
+          <LocationForm />
+          <TransferForm />
+          <PayForm />
+          <div className='btnWrapperCart'>
+          <OrangeButton text="Оформить" />
+          </div>
+        </div>
+        </> :
+        <>
           <div className='productWrapper'>
-            <ProductForm />
+           <ProductForm />
           </div>
           <div className='infoWrapper'>
             <div className='infoLeftWrapper'>
@@ -32,8 +46,9 @@ class CartBlock extends React.Component {
           <div className='btnWrapperCart'>
             <OrangeButton text="Оформить" />
           </div>
-        </div>
-      );
-    }
+        </>
+      }
+    </div>
+  );
 }
-export default CartBlock;
+ 

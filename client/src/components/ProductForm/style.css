@@ -27,9 +27,25 @@
   justify-content: center;
 }
 
+.mobilePhotoProduct {
+  display: flex;
+  width: 7%;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
 .nameProduct {
   display: flex;
   width: 40%;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileNameProduct {
+  display: flex;
+  width: 37%;
   height: 40px;
   align-items: center;
   justify-content: center;
@@ -113,10 +129,31 @@
   box-sizing: border-box;
 }
 
+.mobileProductFormTitle {
+  display: flex;
+  width: 60%;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 40px;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+
 .productFormPrice {
   display: flex;
   width: 10%;
   height: 100%;
   align-items: center;
   justify-content: center;
+}
+
+.mobileProductFormPrice {
+  display: flex;
+  width: 30%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
 }

@@ -3,7 +3,7 @@ import images from '../../assets/images';
 import './style.css';
 
 function FeedbackItem(props) {
-    const { name, subname, feed, cool } = props;
+    const { name, subname, feed, cool, mobile } = props;
     const {star,starfill,profile } = images;
 
     let starCount = cool < 5 ? Number(cool) : 5;
@@ -19,7 +19,7 @@ function FeedbackItem(props) {
 
 
     return (
-        <div className='feedbackItemWrapper'>
+        <div className={`${mobile ? 'mobileFeedbackItemWrapper' : 'feedbackItemWrapper'}`}>
           <div className='feedbackItemTitleWrapper'>
             <div className='feedbackItemImgContainer'> <img className='profile' src={profile} alt="profile" /></div>
             <div className='feedbackItemNameWrapper'>

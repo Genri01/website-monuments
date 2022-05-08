@@ -14,6 +14,12 @@
   height: 50px;
 }
 
+.mobilePhotoItem {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
 .nameItem {
 
 }
@@ -21,6 +27,14 @@
 .countItemContainer {
   display: flex;
   width: 50%;
+  height: 60%;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileCountItemContainer {
+  display: flex;
+  width: 80%;
   height: 60%;
   align-items: center;
   justify-content: center;
@@ -76,9 +90,25 @@ input::-webkit-inner-spin-button {
   justify-content: center;
 }
 
+.mobileProductItemPhotoContainer {
+  display: flex;
+  width: 11%;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
 .productItemNameContainer {
   display: flex;
   width: 41%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileroductItemNameContainer {
+  display: flex;
+  width: 33%;
   height: 100%;
   align-items: center;
   justify-content: center;
@@ -92,6 +122,14 @@ input::-webkit-inner-spin-button {
   justify-content: center;
 }
 
+.mobileProductItemCountContainer {
+  display: flex;
+  width: 26%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
 .productItemPriceContainer {
   display: flex;
   width: 10%;
@@ -100,10 +138,29 @@ input::-webkit-inner-spin-button {
   justify-content: center;
 }
 
+.mobileProductItemPriceContainer {
+  display: flex;
+  width: 15%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
 .productItemAllPriceContainer {
   display: flex;
   width: 10%;
   height: 100%;
   align-items: center;
   justify-content: center;
+
+}
+
+.mobileProductItemAllPriceContainer {
+  display: flex;
+  width: 15%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
 }

@@ -67,6 +67,14 @@
   justify-content: center;
 }
 
+.mobilePriceProduct {
+  display: flex;
+  width: 14%;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
 .allpriceProduct {
   display: flex;
   width: 10%;
@@ -119,6 +127,12 @@
   font-family: sans-serif;
 }
 
+.mobileTextTitleForm {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
 .productFormTitle {
   display: flex;
   width: 90%;
@@ -131,15 +145,15 @@
 
 .mobileProductFormTitle {
   display: flex;
-  width: 60%;
+  width: 70%;
   height: 100%;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 40px;
+  padding-right: 10px;
   box-sizing: border-box;
   font-size: 12px;
+  text-align: right;
 }
-
 
 .productFormPrice {
   display: flex;
@@ -155,5 +169,5 @@
   height: 100%;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 14px;
 }

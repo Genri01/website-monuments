@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './style.css';
-import images from '../../assets/images';
+import images from '../../assets/images'; 
 
 export default function Answer(props) {
+
   const { title, description, mobile } = props;
   const { cross } = images; 
   const [isToggleOn,setIstoogle] =useState(true);

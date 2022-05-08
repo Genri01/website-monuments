@@ -11,18 +11,18 @@ export default function ProductForm(props) {
       {
         mobile ? 
         <>
-          <div className='titleProductContainer'>
-          <div className='mobilePhotoProduct textTitleForm'>Фото</div>
-          <div className='mobileNameProduct textTitleForm'>Наименование товара</div>
-          <div className='countProduct textTitleForm'>Количество</div>
-          <div className='priceProduct textTitleForm'>Цена</div>
-          <div className='allpriceProduct textTitleForm'>Итого</div>
+          <div style={mobile ? {justifyContent: 'space-evenly'} : {} } className='titleProductContainer'>
+          <div className='mobilePhotoProduct mobileTextTitleForm'>Фото</div>
+          <div className='mobileNameProduct mobileTextTitleForm'>Наименование</div>
+          <div className='countProduct mobileTextTitleForm'>Кол-во</div>
+          <div className='mobilePriceProduct mobileTextTitleForm'>Цена</div>
+          <div className='allpriceProduct mobileTextTitleForm'>Итого</div>
           </div>
           <div className='productContainer'>
-            <ProductItem photo={images.view_10} name="Monumetum" count={2} price={170000} />
-            <ProductItem photo={images.view_10} name="Monumetum" count={2} price={170000} />
-            <ProductItem photo={images.view_10} name="Monumetum" count={2} price={170000} />
-            <ProductItem photo={images.view_10} name="Monumetum" count={2} price={170000} />
+            <ProductItem mobile={mobile} photo={images.view_10} name="Monumetum" count={2} price={170000} />
+            <ProductItem mobile={mobile} photo={images.view_10} name="Monumetum" count={2} price={170000} />
+            <ProductItem mobile={mobile} photo={images.view_10} name="Monumetum" count={2} price={170000} />
+            <ProductItem mobile={mobile} photo={images.view_10} name="Monumetum" count={2} price={170000} />
           </div>
           <div className='transportContainer'>
           <div className='mobileProductFormTitle'>Доставка транспортной кампанией (оплачивается заказчиком):</div>

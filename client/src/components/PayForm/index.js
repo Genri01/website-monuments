@@ -1,24 +1,40 @@
 
-import React from 'react';
-import ProductItem from '../ProductItem';
-import images from '../../assets/images';
+import React from 'react'; 
 import './style.css';
+import { setPayMethod } from '../../redux/actions/cart'
+import { useDispatch, useSelector } from 'react-redux'; 
+import { cart } from '../../redux/selectors';
 
-class PayForm extends React.Component {
+export default function PayForm(props) {
+  const { mobile } = props;
 
-    render(){
-      return (
-        <div className="payFormWrapper">
-          <div className='titlepayFormContainer'>
-            <div className='titlePay textTitlepayForm'>Способ оплаты</div>
-          </div>
-          <div className='payFormContainer'>
-            <div className='pay'><input type="Radio"  style={{ marginRight:'10px' }}/>Наличными в офисе</div>
-            <div className='pay'><input type="Radio" style={{ marginRight:'10px' }}/>Безналичный расчёт (Сбербанк онлайн)</div>
-          </div>
-        </div>
-      );
-    }
+  const dispatch = useDispatch(); 
+  const pay_method = useSelector(cart.pay_method);
+
+  const inputs = [
+    {
+      name: "pay",
+      value: "nal",
+      title: 'Наличными в офисе',
+    },
+    {
+      name: "pay",
+      value: "beznal",
+      title: 'Безналичный расчёт (Сбербанк онлайн)',
+    } 
+  ]
+
+  return (
+    <div className="payFormWrapper">
+      <div className='titlepayFormContainer'>
+        <div className='titlePay textTitlepayForm'>Способ оплаты</div>
+      </div>
+      <div style={ mobile ? { width:'130px' } : {} } className='payFormContainer'>
+        {
+          inputs.map((item) => (<div key={item.value} className='pay'><input type="Radio" checked={pay_method === item.value} onChange={(e) => {  item.checked = e.target.checked;  dispatch(setPayMethod(e.target.value)) }}  name={item.name} value={item.value}  style={{ marginRight:'10px' }}/>{item.title}</div>))
+        }
+      </div>
+    </div>
+  );
 }
-
-export default PayForm;
+ 

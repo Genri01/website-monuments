@@ -1,5 +1,4 @@
 import React from 'react';
-import Title from '../Title';
 import OrangeButton from '../OrangeButton';
 import ProductForm from '../ProductForm';
 import BuyerForm from '../BuyerForm';
@@ -44,7 +43,7 @@ export default function CartBlock(props) {
             </div>
           </div>
           <div className='btnWrapperCart'>
-            <OrangeButton text="Оформить" />
+            <OrangeButton onClick={() => { console.log() }} text="Оформить" />
           </div>
         </>
       }

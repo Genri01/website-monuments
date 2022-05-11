@@ -73,3 +73,17 @@
   font-family: sans-serif;
 }
 
+input[type="number"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+ 
+input[name="city"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+ 
+input[name="add"]:focus {
+  outline: none;
+  box-shadow: none;
+}

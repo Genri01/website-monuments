@@ -5,10 +5,8 @@ import { isMobile } from 'react-device-detect';
 import { useDispatch } from 'react-redux';
 import { setMobileMod } from './redux/actions/app';
 
-
 function App() {
-  const dispatch = useDispatch();
-  console.log(isMobile)
+  const dispatch = useDispatch();  
   useEffect(() => {
     dispatch(setMobileMod(isMobile))
   },[]);

@@ -1,26 +1,48 @@
 
 import React from 'react';
-import ProductItem from '../ProductItem';
-import images from '../../assets/images';
+import { setDeliveryMethod } from '../../redux/actions/cart';
+import { useDispatch, useSelector  } from 'react-redux';
+import { cart } from '../../redux/selectors';
 import './style.css';
 
-class TransferForm extends React.Component {
+export default function TransferForm(props) {
+  const { mobile } = props;
 
-    render(){
-      return (
-        <div className="payFormWrapper">
-          <div className='titlepayFormContainer'>
-            <div className='titlePay textTitlepayForm'>Способ доставки</div>
-          </div>
-          <div className='payFormContainer'>
-            <div className='pay'><input type="Radio" style={{ marginRight:'10px' }}/>Доставка транспортной кампанией (оплачивается заказчиком)</div>
-            <div className='pay'><input type="Radio" style={{ marginRight:'10px' }}/>Доставка и установка</div>
-            <div className='pay'><input type="Radio" style={{ marginRight:'10px' }} />Cамовывоз с производства г. Майкоп Промышленная 54а</div>
-            <div className='pay'><input type="Radio" style={{ marginRight:'10px' }} />Cамовывоз с производства г. Анапа Чехова 50а</div>
-          </div>
-        </div>
-      );
-    }
+  const dispatch = useDispatch(); 
+  const delivery_method = useSelector(cart.delivery_method);
+
+  const inputs = [
+    {
+      name: "delivery",
+      value: "transit",
+      title: 'Доставка транспортной кампанией (оплачивается заказчиком)',
+    },
+    {
+      name: "delivery",
+      value: "transitandinstall",
+      title: 'Доставка и установка',
+    },
+    {
+      name: "delivery",
+      value: "maycop",
+      title: 'Cамовывоз с производства г. Майкоп Промышленная 54а',
+    },
+    {
+      name: "delivery",
+      value: "anapa",
+      title: 'Cамовывоз с производства г. Анапа Чехова 50а',
+    },
+  ]
+  return (
+    <div className="payFormWrapper">
+      <div className='titlepayFormContainer'>
+        <div className='titlePay textTitlepayForm'>Способ доставки</div>
+      </div>
+      <div className='payFormContainer'>  
+        {
+          inputs.map((item) => (<div key={item.value} className='pay'><input type="Radio" checked={delivery_method === item.value} onChange={(e) => {  item.checked = e.target.checked;  dispatch(setDeliveryMethod(e.target.value)) }}  name={item.name} value={item.value}  style={{ marginRight:'10px' }}/>{item.title}</div>))
+        } 
+      </div>
+    </div>
+  );
 }
-
-export default TransferForm;

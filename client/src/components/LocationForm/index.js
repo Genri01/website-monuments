@@ -1,125 +1,129 @@
 
 import React from 'react';
-import ProductItem from '../ProductItem';
-import images from '../../assets/images';
+import { setAddres, setCity, setRegion, setIndex } from '../../redux/actions/cart'
+import { useDispatch, useSelector } from 'react-redux'; 
+import { cart } from '../../redux/selectors';
 import './style.css';
 
-class LocationForm extends React.Component {
+export default function LocationForm(props) {
+  const { mobile } = props;
 
-    render(){
-      return (
-        <div className="locationFormWrapper">
-          <div className='titleLocationContainer'>
-            <div className='titlelocation textTitleForm'>Адрес доставки</div>
-          </div>
-          <div className='locationContainer' style={{  borderTop: '1px solid #ea402f'}}>
-            <div className='locationForm'>
-            <div style={{width:'50px'}}>Регион</div><select class="locationInput" name="shipping_address[zone_id]" id="shipping_address_zone_id" data-theme="bootstrap" data-onchange="reloadAll">
-                      <option value=""> --- Выбрать --- </option>
-                      <option value="2726">Алтайский край</option>
-                      <option value="2729">Амурская область</option>
-                      <option value="2724">Архангельская область</option>
-                      <option value="2725">Астраханская область</option>
-                      <option value="2727">Белгородская область</option>
-                      <option value="2730">Брянская область</option>
-                      <option value="2799">Владимирская область</option>
-                      <option value="2801">Волгоградская область</option>
-                      <option value="2802">Вологодская область</option>
-                      <option value="2803">Воронежская область</option>
-                      <option value="2728">Еврейская АО</option>
-                      <option value="2734">Забайкальский край</option>
-                      <option value="2741">Ивановская область</option>
-                      <option value="2740">Иркутская область</option>
-                      <option value="2743">Калининградская область</option>
-                      <option value="2744">Калужская область</option>
-                      <option value="2775">Камчатский край</option>
-                      <option value="2733">Карачаево-Черкеcсия</option>
-                      <option value="2747">Кемеровская область</option>
-                      <option value="2804">Кировская область</option>
-                      <option value="2750">Костромская область</option>
-                      <option value="2751" selected="selected">Краснодарский край</option>
-                      <option value="2752">Красноярский край</option>
-                      <option value="2754">Курганская область</option>
-                      <option value="2755">Курская область</option>
-                      <option value="2735">Ленинградская область</option>
-                      <option value="2757">Липецкая область</option>
-                      <option value="2758">Магаданская область</option>
-                      <option value="2761">Москва</option>
-                      <option value="2722">Московская область</option>
-                      <option value="2762">Мурманская область</option>
-                      <option value="2764">Ненецкий АО</option>
-                      <option value="2766">Нижегородская область</option>
-                      <option value="2767">Новгородская область</option>
-                      <option value="2768">Новосибирская область</option>
-                      <option value="2769">Омская область</option>
-                      <option value="2771">Оренбургская область</option>
-                      <option value="2770">Орловская область</option>
-                      <option value="2773">Пензенская область</option>
-                      <option value="2774">Пермский край</option>
-                      <option value="2800">Приморский край</option>
-                      <option value="2777">Псковская область</option>
-                      <option value="2760">Республика Адыгея</option>
-                      <option value="2738">Республика Алтай</option>
-                      <option value="2794">Республика Башкортостан</option>
-                      <option value="2796">Республика Бурятия</option>
-                      <option value="2759">Республика Дагестан</option>
-                      <option value="2765">Республика Ингушетия</option>
-                      <option value="2763">Республика Кабардино-Балкария</option>
-                      <option value="2736">Республика Калмыкия</option>
-                      <option value="2776">Республика Карелия</option>
-                      <option value="2787">Республика Коми</option>
-                      <option value="2808">Республика Марий Эл</option>
-                      <option value="2782">Республика Мордовия</option>
-                      <option value="2805">Республика Саха</option>
-                      <option value="2798">Республика Северная Осетия</option>
-                      <option value="2746">Республика Татарстан</option>
-                      <option value="2756">Республика Тыва</option>
-                      <option value="2721">Республика Хакасия</option>
-                      <option value="2778">Ростовская область</option>
-                      <option value="2779">Рязанская область</option>
-                      <option value="2781">Самарская область</option>
-                      <option value="2785">Санкт-Петербург</option>
-                      <option value="2783">Саратовская область</option>
-                      <option value="2737">Сахалинская область</option>
-                      <option value="2807">Свердловская область</option>
-                      <option value="2784">Смоленская область</option>
-                      <option value="2786">Ставропольский край</option>
-                      <option value="2788">Тамбовская область</option>
-                      <option value="2792">Тверская область</option>
-                      <option value="2789">Томская область</option>
-                      <option value="2790">Тульская область</option>
-                      <option value="2793">Тюменская область</option>
-                      <option value="2742">Удмуртская Республика</option>
-                      <option value="2795">Ульяновская область</option>
-                      <option value="2748">Хабаровский край</option>
-                      <option value="2749">Ханты-Мансийский АО - Югра</option>
-                      <option value="2732">Челябинская область</option>
-                      <option value="2739">Чеченская Республика</option>
-                      <option value="2731">Чувашская Республика</option>
-                      <option value="2723">Чукотский АО</option>
-                      <option value="2780">Ямало-Ненецкий АО</option>
-                      <option value="2806">Ярославская область</option>
-                  </select>
-            </div>
-          </div>
-            <div className='locationContainer'>
-            <div className='locationForm'>
-            <div style={{width:'50px'}}>Город</div><input className='locationInput' step="1" min="1" max="27" id="count_product" name="count_product" />
-            </div>
-            </div>
-            <div className='locationContainer'>
-            <div className='locationForm'>
-            <div style={{width:'50px'}}>Адрес</div><input className='locationInput' step="1" min="1" max="27" id="count_product" name="count_product" />
-            </div>
-            </div>
-            <div className='locationContainer'>
-              <div className='locationForm'>
-              <div style={{width:'50px'}}>Индекс</div><input className='locationInput' step="1" min="1" max="27" id="count_product" name="count_product" />
-              </div>
-            </div>
+  const dispatch = useDispatch(); 
+  const addres_city = useSelector(cart.addres_city);
+  const addres = useSelector(cart.addres);
+  const addres_index = useSelector(cart.addres_index);
+  const addres_region = useSelector(cart.addres_region);
+
+  return (
+    <div className="locationFormWrapper">
+      <div className='titleLocationContainer'>
+        <div className='titlelocation textTitleForm'>Адрес доставки</div>
+      </div>
+      <div className='locationContainer' style={{  borderTop: '1px solid #ea402f'}}>
+        <div className='locationForm'>
+        <div style={{width:'50px'}}>Регион</div><select value={addres_region} onChange={(e) => {dispatch(setRegion(e.target.value))}} className="locationInput" name="shipping_address[zone_id]" id="shipping_address_zone_id" data-theme="bootstrap" data-onchange="reloadAll">
+                  <option value=""> --- Выбрать --- </option>
+                  <option value="Алтайский край">Алтайский край</option>
+                  <option value="Амурская область">Амурская область</option>
+                  <option value="Архангельская область">Архангельская область</option>
+                  <option value="Астраханская область">Астраханская область</option>
+                  <option value="Белгородская область">Белгородская область</option>
+                  <option value="Брянская область">Брянская область</option>
+                  <option value="Владимирская область">Владимирская область</option>
+                  <option value="Волгоградская область">Волгоградская область</option>
+                  <option value="Вологодская область">Вологодская область</option>
+                  <option value="Воронежская область">Воронежская область</option>
+                  <option value="Еврейская АО">Еврейская АО</option>
+                  <option value="Забайкальский край">Забайкальский край</option>
+                  <option value="Ивановская область">Ивановская область</option>
+                  <option value="Иркутская область">Иркутская область</option>
+                  <option value="Калининградская область">Калининградская область</option>
+                  <option value="Калужская область">Калужская область</option>
+                  <option value="Камчатский край">Камчатский край</option>
+                  <option value="Карачаево-Черкеcсия">Карачаево-Черкеcсия</option>
+                  <option value="Кемеровская область">Кемеровская область</option>
+                  <option value="Кировская область">Кировская область</option>
+                  <option value="Костромская область">Костромская область</option>
+                  <option value="Краснодарский край">Краснодарский край</option>
+                  <option value="Красноярский край">Красноярский край</option>
+                  <option value="Курганская область">Курганская область</option>
+                  <option value="Курская область">Курская область</option>
+                  <option value="Ленинградская область">Ленинградская область</option>
+                  <option value="Липецкая область">Липецкая область</option>
+                  <option value="Магаданская область">Магаданская область</option>
+                  <option value="Москва">Москва</option>
+                  <option value="Московская область">Московская область</option>
+                  <option value="Мурманская область">Мурманская область</option>
+                  <option value="Ненецкий АО">Ненецкий АО</option>
+                  <option value="Нижегородская область">Нижегородская область</option>
+                  <option value="Новгородская область">Новгородская область</option>
+                  <option value="Новосибирская область">Новосибирская область</option>
+                  <option value="Омская область">Омская область</option>
+                  <option value="Оренбургская область">Оренбургская область</option>
+                  <option value="Орловская область">Орловская область</option>
+                  <option value="Пензенская область">Пензенская область</option>
+                  <option value="Пермский край">Пермский край</option>
+                  <option value="Приморский край">Приморский край</option>
+                  <option value="Псковская область">Псковская область</option>
+                  <option value="Республика Адыгея">Республика Адыгея</option>
+                  <option value="Республика Алтай">Республика Алтай</option>
+                  <option value="Республика Башкортостан">Республика Башкортостан</option>
+                  <option value="Республика Бурятия">Республика Бурятия</option>
+                  <option value="Республика Дагестан">Республика Дагестан</option>
+                  <option value="Республика Ингушетия">Республика Ингушетия</option>
+                  <option value="Республика Кабардино-Балкария">Республика Кабардино-Балкария</option>
+                  <option value="Республика Калмыкия">Республика Калмыкия</option>
+                  <option value="Республика Карелия">Республика Карелия</option>
+                  <option value="Республика Коми">Республика Коми</option>
+                  <option value="Республика Марий Эл">Республика Марий Эл</option>
+                  <option value="Республика Мордовия">Республика Мордовия</option>
+                  <option value="Республика Саха">Республика Саха</option>
+                  <option value="Республика Северная Осетия">Республика Северная Осетия</option>
+                  <option value="Республика Татарстан">Республика Татарстан</option>
+                  <option value="Республика Тыва">Республика Тыва</option>
+                  <option value="Республика Хакасия">Республика Хакасия</option>
+                  <option value="Ростовская область">Ростовская область</option>
+                  <option value="Рязанская область">Рязанская область</option>
+                  <option value="Самарская область">Самарская область</option>
+                  <option value="Санкт-Петербург">Санкт-Петербург</option>
+                  <option value="Саратовская область">Саратовская область</option>
+                  <option value="Сахалинская область">Сахалинская область</option>
+                  <option value="Свердловская область">Свердловская область</option>
+                  <option value="Смоленская область">Смоленская область</option>
+                  <option value="Ставропольский край">Ставропольский край</option>
+                  <option value="Тамбовская область">Тамбовская область</option>
+                  <option value="Тверская область">Тверская область</option>
+                  <option value="Томская область">Томская область</option>
+                  <option value="Тульская область">Тульская область</option>
+                  <option value="Тюменская область">Тюменская область</option>
+                  <option value="Удмуртская Республика">Удмуртская Республика</option>
+                  <option value="Ульяновская область">Ульяновская область</option>
+                  <option value="Хабаровский край">Хабаровский край</option>
+                  <option value="Ханты-Мансийский АО - Югра">Ханты-Мансийский АО - Югра</option>
+                  <option value="Челябинская область">Челябинская область</option>
+                  <option value="Чеченская Республика">Чеченская Республика</option>
+                  <option value="Чувашская Республика">Чувашская Республика</option>
+                  <option value="Чукотский АО">Чукотский АО</option>
+                  <option value="Ямало-Ненецкий АО">Ямало-Ненецкий АО</option>
+                  <option value="Ярославская область">Ярославская область</option>
+              </select>
+        </div> 
+      </div>
+        <div className='locationContainer'>
+        <div className='locationForm'>
+        <div style={{width:'50px'}}>Город</div><input value={addres_city} onChange={(e) => { dispatch(setCity(e.target.value)) }} className='locationInput' id="city" name="city" />
         </div>
-      );
-    }
+        </div>
+        <div className='locationContainer'>
+        <div className='locationForm'>
+        <div style={{width:'50px'}}>Адрес</div><input value={addres} onChange={(e) => { dispatch(setAddres(e.target.value)) }}  className='locationInput' id="add" name="add" />
+        </div>
+        </div>
+        <div className='locationContainer'>
+          <div className='locationForm'>
+          <div style={{width:'50px'}}>Индекс</div><input value={addres_index} onChange={(e) => { dispatch(setIndex(e.target.value)) }} type='number'  className='locationInput' id="ind" name="ind" />
+          </div>
+        </div>
+    </div>
+  );
 }
-
-export default LocationForm;

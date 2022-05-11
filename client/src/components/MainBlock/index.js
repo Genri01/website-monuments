@@ -1,6 +1,7 @@
 import React from 'react';
 import Title from '../Title';
 import OrangeButton from '../OrangeButton';
+import Timer from '../Timer';
 import './style.css';
  
 export default function MainBlock(props) {
@@ -17,11 +18,12 @@ export default function MainBlock(props) {
           <div className="colTimerBlock">
             <div className={`${mobile ? 'mobile-txtTimer' : 'txtTimer'}`}>Получи скидку 15% до окончания времени: </div>
             <div className="wrapperTimer">
-              <div className={'txtTimer'}>0</div>
+              <Timer />
+              {/* <div className={'txtTimer'}>0</div>
               <div className={'txtTimer'}>1</div>
               <div className={'txtTimer'}>:</div>
               <div className={'txtTimer'}>3</div>
-              <div className={'txtTimer'}>3</div>
+              <div className={'txtTimer'}>3</div> */}
             </div>
           </div>
         </div>

@@ -1,23 +1,24 @@
 
 import React from 'react';
-import ProductItem from '../ProductItem';
-import images from '../../assets/images';
 import './style.css';
+import { setComent } from '../../redux/actions/cart'
+import { useDispatch, useSelector  } from 'react-redux';
+import { cart } from '../../redux/selectors';
 
-class ComentForm extends React.Component {
+export default function ComentForm(props) {
 
-    render(){
-      return (
-        <div className="commentFormWrapper">
-          <div className='titlecommentFormContainer'>
-            <div className='titleComment textTitleForm'>Коментарии к заказу</div>
-          </div>
-          <div className='commentFormContainer'>
-            <textarea className='comments' placeholder="Необязательно к заполнению" />
-          </div>
-        </div>
-      );
-    }
+  const dispatch = useDispatch();
+  const coment = useSelector(cart.coment);
+  
+  return (
+    <div className="commentFormWrapper">
+      <div className='titlecommentFormContainer'>
+        <div className='titleComment textTitleForm'>Коментарии к заказу</div>
+      </div>
+      <div className='commentFormContainer'>
+        <textarea value={coment} onChange={(e) => {dispatch(setComent(e.target.value))}} className='comments' placeholder="Необязательно к заполнению" />
+      </div>
+    </div>
+  );
 }
-
-export default ComentForm;
+ 

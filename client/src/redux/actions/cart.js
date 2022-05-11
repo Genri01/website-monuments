@@ -3,105 +3,126 @@ import ActionTypes from '../constants';
 export function setInitialDead(initial) {
   return {
     type: ActionTypes.CART_BYER_INITIAL_DEAD,
-    byer_initial_dead: initial
+    payload: initial
   }
 }
 
 export function setBirthdayDate(date) {
   return {
     type: ActionTypes.CART_BYER_DATE_BERTHDAY,
-    byer_date_birthday: date
+    payload: date
   }
 }
 
 export function setDeadDate(date) {
   return {
     type: ActionTypes.CART_BYER_DATE_DEAD,
-    byer_date_dead: date
+    payload: date
   }
 }
 
 export function setFile(date) {
   return {
     type: ActionTypes.CART_BYER_FILE,
-    byer_file: date
+    payload: date
   }
 }
 
 export function setInstall(install) {
   return {
     type: ActionTypes.CART_INSTALL,
-    install: install
+    payload: install
+  }
+}
+
+export function setConsultInitial(initial) {
+  return {
+    type: ActionTypes.CART_CONSULT_BYER_INITIAL,
+    payload: initial
+  }
+}
+
+export function setConsultTel(tel) {
+  return {
+    type: ActionTypes.CART_CONSULT_BYER_TEL,
+    payload: tel
+  }
+}
+
+export function setConsultComent(coment) {
+  return {
+    type: ActionTypes.CART_CONSULT_COMENT,
+    payload: coment
   }
 }
 
 export function setInitial(initial) {
   return {
     type: ActionTypes.CART_BYER_INITIAL,
-    byer_initial: initial
+    payload: initial
   }
 }
 
 export function setTel(tel) {
   return {
     type: ActionTypes.CART_BYER_TEL,
-    byer_tel: tel
+    payload: tel
   }
 }
 
 export function setEmail(email) {
   return {
-    type: ActionTypes.CART_BYER_TEL,
-    byer_tel: email
+    type: ActionTypes.CART_BYER_EMAIL,
+    payload: email
   }
 }
 
 export function setComent(coment) {
   return {
     type: ActionTypes.CART_COMENT,
-    coment: coment
+    payload: coment
   }
 }
 
 export function setRegion(region) {
   return {
     type: ActionTypes.CART_ADDRES_REGION,
-    addres_region: region
+    payload: region
   }
 }
 
 export function setCity(city) {
   return {
     type: ActionTypes.CART_ADDRES_CITY,
-    addres_city: city
+    payload: city
   }
 }
 
 export function setAddres(addres) {
   return {
     type: ActionTypes.CART_ADDRES,
-    addres: addres
+    payload: addres
   }
 }
 
 export function setIndex(index) {
   return {
     type: ActionTypes.CART_ADDRES_INDEX,
-    addres_index: index
+    payload: index
   }
 }
 
 export function setDeliveryMethod(method) {
   return {
     type: ActionTypes.CART_DELIVERY_METHOD,
-    delivery_method: method
+    payload: method
   }
 }
 
 export function setPayMethod(method) {
   return {
     type: ActionTypes.CART_PAY_METHOD,
-    pay_method: method
+    payload: method
   }
 }
  

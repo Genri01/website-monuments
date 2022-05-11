@@ -4,12 +4,15 @@ const initialState = {
   byer_initial_dead: '',
   byer_date_birthday: '',
   byer_date_dead: '',
-  byer_file: [],
+  byer_file: {},
   install: false,
   byer_initial: '',
   byer_tel: '',
-  byer_email: '',
   coment: '',
+  byer_consult_initial: '',
+  byer_consult_tel: '',
+  coment_consult: '',
+  byer_email: '',
   addres_region: '',
   addres_city: '',
   addres: '',
@@ -56,15 +59,30 @@ export default function cart(state = initialState, { type, payload }) {
         ...state,
         byer_tel: payload
       }; 
-    case ActionTypes.CART_BYER_EMAIL:
-      return {
-        ...state,
-        byer_email: payload
-      }; 
     case ActionTypes.CART_COMENT:
       return {
         ...state,
         coment: payload
+      }; 
+    case ActionTypes.CART_CONSULT_BYER_INITIAL:
+      return {
+        ...state,
+        byer_consult_initial: payload
+      }; 
+    case ActionTypes.CART_CONSULT_BYER_TEL:
+      return {
+        ...state,
+        byer_consult_tel: payload
+      }; 
+    case ActionTypes.CART_CONSULT_COMENT:
+      return {
+        ...state,
+        coment_consult: payload
+      }; 
+    case ActionTypes.CART_BYER_EMAIL:
+      return {
+        ...state,
+        byer_email: payload
       }; 
     case ActionTypes.CART_ADDRES_REGION:
       return {

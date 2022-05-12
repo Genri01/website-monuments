@@ -84,6 +84,13 @@ export function setComent(coment) {
   }
 }
 
+export function setInsert(insert) {
+  return {
+    type: ActionTypes.CART_INSERT,
+    payload: insert
+  }
+}
+
 export function setRegion(region) {
   return {
     type: ActionTypes.CART_ADDRES_REGION,

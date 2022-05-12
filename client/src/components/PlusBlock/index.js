@@ -1,7 +1,7 @@
 import React from 'react';
 import Title from '../Title';
 import './style.css'
-
+import { about_plus } from '../../config';
 
 
 export default function PlusBlock(props) {
@@ -16,9 +16,9 @@ export default function PlusBlock(props) {
             <Title size={21} margin="30px 0px 0px 0px" color="white" text="Работая с нами вы получите :" under z={2}/>
             <div style={{borderColor:'white',zIndex: 9}} className="underlineTextMonument"></div>
             <div style={{zIndex: 9}} className="mobilePlusRightBlock">
-              <div className="mobilePlusItem">Своевременную бесплатную консультацию по любому вопросу</div>
-              <div className="mobilePlusItem">Гарантию 15 лет на памятники категории вип</div>
-              <div className="mobilePlusItem">Качество продукции и материалов</div>
+              {
+                about_plus.map((item,i) => (<div key={i+'1p'} className="mobilePlusItem">{ item.plus }</div>))
+              }
             </div>
           </>
         :
@@ -26,9 +26,9 @@ export default function PlusBlock(props) {
           <Title margin="50px 0px 0px 0px" color="white" text="Работая с нами вы получите :" under z={2}/>
           <div style={{borderColor:'white',zIndex: 9}} className="underlineTextMonument"></div>
           <div style={{zIndex: 9}} className="plusRightBlock">
-            <div className="plusItem">Своевременную бесплатную консультацию по любому вопросу</div>
-            <div className="plusItem">Гарантию 15 лет на памятники категории вип</div>
-            <div className="plusItem">Качество продукции и материалов</div>
+            {
+              about_plus.map((item,i) => (<div key={i+'1p'} className="plusItem">{ item.plus }</div>))
+            }
           </div>
         </>
       }

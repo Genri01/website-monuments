@@ -23,5 +23,6 @@ export const cart = {
   addres_region: (state) => state.cart.addres_region,
   delivery_method: (state) => state.cart.delivery_method,
   pay_method: (state) => state.cart.pay_method,
+  insert: (state) => state.cart.insert,
 }
  

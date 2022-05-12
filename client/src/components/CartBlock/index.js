@@ -24,6 +24,7 @@ export default function CartBlock(props) {
           <PayForm />
           <div className='btnWrapperCart'>
           <OrangeButton text="Оформить" />
+          <OrangeButton onClick={() => { console.log() }} text="Отменить" />
           </div>
         </div>
         </> :
@@ -44,6 +45,7 @@ export default function CartBlock(props) {
           </div>
           <div className='btnWrapperCart'>
             <OrangeButton onClick={() => { console.log() }} text="Оформить" />
+            <OrangeButton onClick={() => { console.log() }} text="Отменить" />
           </div>
         </>
       }

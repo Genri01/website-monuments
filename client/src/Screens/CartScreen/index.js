@@ -1,15 +1,7 @@
 import React from 'react';
 import './style.css';
-import HeaderMenu from '../../components/HeaderMenu'
-import MainBlock from '../../components/MainBlock'
-import CartBlock from '../../components/CartBlock'
-import ViewStone from '../../components/ViewStone'
-import TopMonument from '../../components/TopMonument'
-import AboutProduct from '../../components/AboutProduct'
-import WorkOrder from '../../components/WorkOrder'
-import FeedbackBlock from '../../components/FeedbackBlock'
-import AnswerBlock from '../../components/AnswerBlock'
-import DataForm from '../../components/DataForm'
+import HeaderMenu from '../../components/HeaderMenu' 
+import CartBlock from '../../components/CartBlock' 
 import Title from '../../components/Title';
 import { useSelector } from 'react-redux';
 import { app } from '../../redux/selectors'

@@ -18,7 +18,8 @@ const initialState = {
   addres: '',
   addres_index: '',
   delivery_method: '',
-  pay_method: ''
+  pay_method: '',
+  insert: {}
 };
 
 export default function cart(state = initialState, { type, payload }) {
@@ -113,6 +114,11 @@ export default function cart(state = initialState, { type, payload }) {
       return {
         ...state,
         pay_method: payload
+      }; 
+    case ActionTypes.CART_INSERT:
+      return {
+        ...state,
+        insert: payload
       }; 
     default:
       return state;

@@ -1,11 +1,10 @@
-import React from 'react';
-import images from '../../assets/images';
+import React from 'react'; 
 import Title from '../Title';
 import './style.css';
+import { about_product } from '../../config';
 
 
-export default function AboutProduct(props) {
-  const { a2,_1 } = images;
+export default function AboutProduct(props) { 
   const { mobile } = props;
   return (
     <div className={`${mobile ? 'mobileAboutWrapper' : "aboutWrapper"}`}>
@@ -15,49 +14,45 @@ export default function AboutProduct(props) {
           <Title size={20} margin="10px 0px 50px 0px" text="О нас и нашем производстве" />
           <div className='mobileAboutTopWrapper'>
             <div className='aboutPhotoWrapper'>
-              <img className='photoAbout' src={a2} alt="photo" />
+              <img className='photoAbout' src={about_product.img} alt="photo" />
             </div>
             <div className='aboutTextWrapper'>
-              Здравствуйте!
-              Я Давид Балабан — руководитель «Мемориальной Компании Алмаз».
-              Род деятельности компании — изготовление и установка памятников
-              на могилу. Мы на рынке ритуальных услуг уже более 15 лет. Более
-              1000 клиентов в год доверяют нам в камне увековечить память о своих близких.
-              Производство компании находится в г. Майкоп, ст. Ханская, но для замера
-              и установки надгробного памятника на могилу команда наших профессионалов выезжает в любую точку Краснодарского края и Республики Адыгея. Поэтому вы можете заказать памятник в Краснодаре, заказать памятник в Белореченске, в Кропоткине, в Сочи, в Абинскеи в любом другом городе и населенном пункте края и республики.
+              {
+                about_product.text
+              }
             </div>
           </div>
           <div className='mobileAboutBottomWrapper'>
             <div className='aboutPhotoWrapper'>
-              <img className='photoAbout' src={_1} alt="photo" />
+              <img className='photoAbout' src={about_product.img_2} alt="photo" />
             </div>
             <div className='aboutTextWrapper'>
-              Мы работаем без посредников и без предоплаты — вы оплачиваете без наценок только стоимость материалов и выполненных работ и только после полного их завершения.
-              Мы выполняем как стандартные бюджетные заказы, так и эксклюзивные элитные дизайнерские проекты. Поэтому вы можете купить памятник по доступной цене из каталога, или воплотить свои идеи с бо́льшим бюджетом руками наших мастеров.
-              Мы понимаем, в какой трудный период жизни вы обращаетесь за нашими услугами, поэтому прикладываем все силы, чтобы сотрудничество с нами прошло для вас без дополнительных переживаний.</div>
+              {
+                about_product.text_2
+              }
+            </div>
           </div>
         </> :
         <>
           <Title margin="10px 0px 50px 0px" text="О нас и нашем производстве" />
           <div className='aboutTopWrapper'>
           <div className='aboutPhotoWrapper'>
-          <img className='photoAbout' src={a2} alt="photo" />
+            <img className='photoAbout' src={about_product.img} alt="photo" />
           </div>
-          <div className='aboutTextWrapper'>Здравствуйте!
-          Я Давид Балабан — руководитель «Мемориальной Компании Алмаз».
-          Род деятельности компании — изготовление и установка памятников
-          на могилу. Мы на рынке ритуальных услуг уже более 15 лет. Более
-          1000 клиентов в год доверяют нам в камне увековечить память о своих близких.
-          Производство компании находится в г. Майкоп, ст. Ханская, но для замера
-          и установки надгробного памятника на могилу команда наших профессионалов выезжает в любую точку Краснодарского края и Республики Адыгея. Поэтому вы можете заказать памятник в Краснодаре, заказать памятник в Белореченске, в Кропоткине, в Сочи, в Абинскеи в любом другом городе и населенном пункте края и республики.
+          <div className='aboutTextWrapper'>
+            {
+              about_product.text
+            }
           </div>
           </div>
           <div className='aboutBottomWrapper'>
-          <div className='aboutTextWrapper'>Мы работаем без посредников и без предоплаты — вы оплачиваете без наценок только стоимость материалов и выполненных работ и только после полного их завершения.
-          Мы выполняем как стандартные бюджетные заказы, так и эксклюзивные элитные дизайнерские проекты. Поэтому вы можете купить памятник по доступной цене из каталога, или воплотить свои идеи с бо́льшим бюджетом руками наших мастеров.
-          Мы понимаем, в какой трудный период жизни вы обращаетесь за нашими услугами, поэтому прикладываем все силы, чтобы сотрудничество с нами прошло для вас без дополнительных переживаний.</div>
+          <div className='aboutTextWrapper'>
+            {
+              about_product.text_2
+            }
+          </div>
           <div className='aboutPhotoWrapper'>
-          <img className='photoAbout' src={_1} alt="photo" />
+            <img className='photoAbout' src={about_product.img_2} alt="photo" />
           </div>
           </div>
         </>

@@ -6,18 +6,18 @@ import { useDispatch } from 'react-redux';
 import './style.css'
 
 export default function CardsMonument(props) {
-  const { img, title, description, price, id, category } = props;
+  const { img, title, description, price, id, category, info, prop } = props;
   const dispatch = useDispatch();
   return (
     <div className="CardsItemWrapper">
       <div className="CardsItemTop">
-        <img src={img} alt='statuy' width={200} height={200}/>
+        <img src={img} alt='statuy' width='80%' height='100%' />
       </div>
       <div className="CardsItemBottom">
         <div className="txtCardsName">{title}</div>
         <div className="txtCardsAbout">{description}</div>
         <div className="txtCardsPrice">{`${price} руб.`}</div>
-        <Link style={{ textDecoration: 'none' }} to={"/shop"}><OrangeButton margin="20px 0px 0px 0px" text="Подробнее" onClick={() => { dispatch(setInsert({ id, category })) }} /></Link> 
+        <Link style={{ textDecoration: 'none' }} to={`/shop/animals/${id}`}><OrangeButton margin="20px 0px 0px 0px" text="Подробнее" onClick={() => { dispatch(setInsert({ title, description, price, id, category, info, prop })) }} /></Link> 
       </div>
     </div>
   ); 

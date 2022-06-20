@@ -21,7 +21,7 @@ function AnswerBlock(props) {
           </>
           :
           <>
-            <Title margin="50px 0px 30px 0px" text="Вoпросы отвевты" under />
+            <Title margin="50px 0px 30px 0px" text="Вoпросы ответы" under />
             <div className="answerblock_container_header">{header}</div>
             {
               answers.map((item,id) => ( 

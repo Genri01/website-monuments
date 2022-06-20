@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-const Timer = (props) => {
-    const {initialMinute = 0,initialSeconds = 0} = props;
+
+export default function Timer(props) {
+    const {initialMinute,initialSeconds} = props;
     const [ minutes, setMinutes ] = useState(initialMinute);
     const [seconds, setSeconds ] =  useState(initialSeconds);
     useEffect(()=>{
@@ -22,6 +23,7 @@ const Timer = (props) => {
             clearInterval(myInterval);
           };
     });
+
     return (
         <div>
         { minutes === 0 && seconds === 0
@@ -30,5 +32,4 @@ const Timer = (props) => {
         }
         </div>
     )
-}
-export default Timer;
+} 

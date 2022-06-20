@@ -347,7 +347,8 @@ function MainScreen(props) {
   const byer_consult_initial = useSelector(cart.byer_consult_initial);
   const byer_consult_tel = useSelector(cart.byer_consult_tel);
   const coment_consult = useSelector(cart.coment_consult);
-
+  const category = useSelector(cart.category);
+console.log(category)
   const dispatch = useDispatch();
 
     return (
@@ -380,15 +381,15 @@ function MainScreen(props) {
             <Title text="Виды камня:"  customclass="mobileTitle" />
           </div>
           <div className='filterContainer'>
-            <FilterItem />
+            <FilterItem category={category} />
             <ViewStone customclass="mobileArrow" />
-          </div>
+          </div>s
         </> 
         }
         <PlusBlock mobile={mobile} />
         <AboutProduct mobile={mobile} />
         <WorkOrder mobile={mobile} />
-        <FeedbackBlock mobile={mobile} />
+        <FeedbackBlock id="feedback" mobile={mobile} />
         <AnswerBlock mobile={mobile} />
         <div className='answerContainer'>
           {
@@ -404,7 +405,7 @@ function MainScreen(props) {
               <textarea style={mobile ? { width: '100%'} : {} } name="msg" placeholder="Задайте Ваш вопрос, консультация бесплатна..." className="popup_textarea" value={coment_consult} onChange={(e) => { dispatch(setConsultComent(e.target.value)) }} />
               </div>
               <div className='answerBtnWrapper'>
-              <OrangeButton text="Заказать звонок" /> 
+              <OrangeButton onClick={() => { console.log('SENDMAIL CONSULT') }} text="Заказать звонок" /> 
               </div>
             </>
             :
@@ -419,7 +420,7 @@ function MainScreen(props) {
               <textarea name="msg" placeholder="Задайте Ваш вопрос, консультация бесплатна..." className="popup_textarea" value={coment_consult} onChange={(e) => { dispatch(setConsultComent(e.target.value)) }} />
               </div>
               <div className='answerBtnWrapper'>
-              <OrangeButton text="Заказать звонок" /> 
+              <OrangeButton onClick={() => { console.log('SENDMAIL CONSULT') }} text="Заказать звонок" /> 
               </div>
             </>
           }

@@ -132,4 +132,11 @@ export function setPayMethod(method) {
     payload: method
   }
 }
+
+export function setCategory(method) {
+  return {
+    type: ActionTypes.CATALOG_CATEGORY,
+    payload: method
+  }
+}
  

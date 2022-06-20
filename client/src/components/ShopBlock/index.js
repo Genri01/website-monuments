@@ -1,12 +1,17 @@
 import React from 'react';
 import images from '../../assets/images';
 import OrangeButton from '../OrangeButton';
-import { HashLink as Link } from 'react-router-hash-link'
+import { HashLink as Link } from 'react-router-hash-link';
+import { useSelector, useDispatch } from 'react-redux';
+import { cart } from '../../redux/selectors'; 
 import './style.css';
 
 export default function ShopBlock(props) {
   const { mobile } = props;
   const { cross, _1 } =images;
+
+  const insert = useSelector(cart.insert);
+  console.log(insert)
   return (
     <div className={`${mobile ? 'mobileShopBlockWrapper' : "shopBlockWrapper"}`}>
       {
@@ -20,29 +25,21 @@ export default function ShopBlock(props) {
           </div>
           <div style={mobile ? { width: '80%',marginBottom: '50px' } : {}} className="infoShopBlockWrapper">
             <div className="titleShopBlock">
-              Памятник для дедушки
+             {
+               insert.title
+             }
             </div>
             <div style={mobile ? { justifyContent: 'center' } : {}} className="priceShopBlock">
-              40 227р.
+              {
+               insert.price + ' руб.'
+              }
             </div>
             <div style={mobile ? { justifyContent: 'center' } : {}} className='btnShopBlockWrapper'>
               <Link style={{ textDecoration: 'none' }} to={"/cart"}><OrangeButton text='Оформить заказ' /></Link>
             </div>
-            <div className="aboutShopBlock">
-              Очень крутой памятник для любимого деда!Он будет нисказанно рад такому выбору!
-            </div>
-            <div className="infoblockShopBlock">
-              <strong>• Размеры:</strong>
-              <strong></strong>.Памятник 60х60х60
-              <strong></strong>• Цена указана за готовый памятник
-              • Мы можем изготовить памятник в любом цвете
-              <strong></strong>• Оплата после установки памятника
-              <strong></strong>
-            </div>
-            <div className="telephoneShopBlock">
-              • Всю информацию можно уточнить по телефону:
-              +7 (999) 666 99 66
-            </div>
+            <div className="aboutShopBlock" dangerouslySetInnerHTML={{__html: insert.description}} />
+            <div className="infoblockShopBlock" dangerouslySetInnerHTML={{__html: insert.prop}} />
+            <div className="telephoneShopBlock" dangerouslySetInnerHTML={{__html: insert.info}} />
           </div>
         </> :
         <>
@@ -54,29 +51,21 @@ export default function ShopBlock(props) {
           </div>
           <div className="infoShopBlockWrapper">
           <div className="titleShopBlock">
-          Памятник для дедушки
+            {
+              insert.title
+            }
           </div>
           <div className="priceShopBlock">
-          40 227р.
+            {
+              insert.price + ' руб.'
+            }
           </div>
           <div className='btnShopBlockWrapper'>
-          <Link to={"/cart"}><OrangeButton text='Оформить заказ' /></Link>
+          <Link style={{ textDecoration: 'none' }} to={"/cart"}><OrangeButton text='Оформить заказ' /></Link>
           </div>
-          <div className="aboutShopBlock">
-          Очень крутой памятник для любимого деда!Он будет нисказанно рад такому выбору!
-          </div>
-          <div className="infoblockShopBlock">
-          <strong>• Размеры:</strong>
-          <strong></strong>.Памятник 60х60х60
-          <strong></strong>• Цена указана за готовый памятник
-          • Мы можем изготовить памятник в любом цвете
-          <strong></strong>• Оплата после установки памятника
-          <strong></strong>
-          </div>
-          <div className="telephoneShopBlock">
-          • Всю информацию можно уточнить по телефону:
-          +7 (999) 666 99 66
-          </div>
+            <div className="aboutShopBlock" dangerouslySetInnerHTML={{__html: insert.description}} />
+            <div className="infoblockShopBlock" dangerouslySetInnerHTML={{__html: insert.prop}} />
+            <div className="telephoneShopBlock" dangerouslySetInnerHTML={{__html: insert.info}} />
           </div>
         </>
       }

@@ -7,9 +7,9 @@ import './style.css';
 
 
 export default function FeedbackBlock(props) {
-  const { mobile } = props;
+  const { mobile, id } = props;
   return (
-    <div className="feedbackWrapper">
+    <div id={id} className="feedbackWrapper">
       {
         mobile ?
         <>

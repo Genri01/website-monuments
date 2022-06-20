@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import images from '../../assets/images';
 import { HashLink as Link } from 'react-router-hash-link'
 import { slide as Menu } from 'react-burger-menu';
 import { header } from '../../redux/selectors';
+import { useSelector, useDispatch } from 'react-redux';
 import { setTabHeader } from '../../redux/actions/app';
 import './style.css';
 
@@ -21,15 +21,15 @@ function HeaderMenu(props) {
     },
     {
       title: 'Каталог',
-      to: '/',
+      to: '/catalog/all',
     },
     {
       title: 'Наши работы',
-      to: '/',
+      to: '/works',
     },
     {
       title: 'Отзывы',
-      to: '/',
+      to: '/#feedback',
     },
   ];
  

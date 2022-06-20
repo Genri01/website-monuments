@@ -19,10 +19,10 @@ export default function ProductForm(props) {
           <div className='allpriceProduct mobileTextTitleForm'>Итого</div>
           </div>
           <div className='productContainer'>
-            <ProductItem mobile={mobile} photo={images.view_10} name="Monumetum" count={2} price={170000} />
-            <ProductItem mobile={mobile} photo={images.view_10} name="Monumetum" count={2} price={170000} />
-            <ProductItem mobile={mobile} photo={images.view_10} name="Monumetum" count={2} price={170000} />
-            <ProductItem mobile={mobile} photo={images.view_10} name="Monumetum" count={2} price={170000} />
+            <ProductItem onClick={()=>{console.log('DELETED ITEM')}} mobile={mobile} photo={images.view_10} name="Monumetum" count={2} price={170000} />
+            {/* <ProductItem onClick={()=>{console.log('DELETED ITEM')}} mobile={mobile} photo={images.view_10} name="Monumetum" count={2} price={170000} />
+            <ProductItem onClick={()=>{console.log('DELETED ITEM')}} mobile={mobile} photo={images.view_10} name="Monumetum" count={2} price={170000} />
+            <ProductItem onClick={()=>{console.log('DELETED ITEM')}} mobile={mobile} photo={images.view_10} name="Monumetum" count={2} price={170000} /> */}
           </div>
           <div className='transportContainer'>
           <div className='mobileProductFormTitle'>Доставка транспортной кампанией (оплачивается заказчиком):</div>
@@ -46,10 +46,10 @@ export default function ProductForm(props) {
           <div className='allpriceProduct textTitleForm'>Итогова Цена</div>
           </div>
           <div className='productContainer'>
+          <ProductItem photo={images.view_10}  mobile={mobile}  name="Monumetum" count={2} price={170000} />
+          {/* <ProductItem photo={images.view_10} name="Monumetum" count={2} price={170000} />
           <ProductItem photo={images.view_10} name="Monumetum" count={2} price={170000} />
-          <ProductItem photo={images.view_10} name="Monumetum" count={2} price={170000} />
-          <ProductItem photo={images.view_10} name="Monumetum" count={2} price={170000} />
-          <ProductItem photo={images.view_10} name="Monumetum" count={2} price={170000} />
+          <ProductItem photo={images.view_10} name="Monumetum" count={2} price={170000} /> */}
           </div>
           <div className='transportContainer'>
           <div className='productFormTitle'>Доставка транспортной кампанией (оплачивается заказчиком):</div>

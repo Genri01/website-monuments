@@ -2,11 +2,16 @@ import React from 'react';
 import OrangeButton from '../OrangeButton';
 import ItemOrder from '../ItemOrder';
 import Title from '../Title';
-import { ordedr_work } from '../../config'
+import { ordedr_work } from '../../config';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setTabHeader } from '../../redux/actions/app';
 import './style.css';
 
 export default function WorkOrder(props) {
-  const { mobile } = props
+  const { mobile } = props;
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   return (
     <div className="workOrderWrapper">
       {
@@ -19,7 +24,7 @@ export default function WorkOrder(props) {
             } 
           </div>
           <div className="workOrderBtnWrapper">
-          <OrangeButton text="Заказать" />
+          <OrangeButton onClick={() => {dispatch(setTabHeader(1)); navigate('/catalog/all'); }} text="Заказать" />
           </div>
           </> :
         <>
@@ -30,7 +35,7 @@ export default function WorkOrder(props) {
             }  
           </div>
           <div className="workOrderBtnWrapper">
-          <OrangeButton text="Заказать" />
+          <OrangeButton onClick={() => {dispatch(setTabHeader(1)); navigate('/catalog/all'); }} text="Заказать" />
           </div>
         </>
       }

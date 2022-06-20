@@ -13,7 +13,7 @@ export default function Answer(props) {
       <img onClick={() => setIstoogle(!isToggleOn)} className={`cross_rotate ${!isToggleOn ? 'on_crooss' : 'off_crooss' }`} src={cross} alt="logo" width="15" height="15" />
       <div className={`${mobile ? 'mobileAnswerTitle' : "answer_title"}`} onClick={() => setIstoogle(!isToggleOn)}>{title}</div>
     </div>
-    {!isToggleOn ? <div className="answer_description">{description}</div> : ''}
+    {!isToggleOn ? <div className="answer_description" dangerouslySetInnerHTML={{__html: description}} /> : ''}
     </div>
   );
 }

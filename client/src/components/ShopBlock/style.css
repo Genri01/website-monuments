@@ -40,7 +40,7 @@
  .imageShopBlock {
   display: flex;
   width: 50%;
-  height: 50%;
+  height: auto;
   align-items: center;
   justify-content: center;
  }
@@ -63,7 +63,7 @@
   color: #000000;
   font-weight: 600;
   font-family: Cormorant;
-  font-size: 24px;
+  font-size: 26px;
   line-height: 1.35;
  }
 
@@ -87,7 +87,7 @@
   align-items:  flex-start;
   justify-content: flex-start;
   font-family: Roboto;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.55;
   font-weight: 700;
   color: #000;
@@ -101,9 +101,8 @@
   align-items:  flex-start;
   justify-content: flex-start;
   font-family: Roboto;
-  font-size: 14px;
-  line-height: 1.55;
-  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.55; 
   color: #000;
   margin-bottom: 20px;
   flex-direction: column;

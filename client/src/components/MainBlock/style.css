@@ -132,9 +132,13 @@
 .wrapperTimer {
   display: flex;
   width: 50%;
-  height: auto;
+  height: 40px;
   justify-content: center;
   align-items: flex-end;
+}
+
+.wrapperTimer h1{
+  font-size: 30px;
 }
 
 .timerTxt {

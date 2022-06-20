@@ -2,10 +2,17 @@ import React from 'react';
 import Title from '../Title';
 import OrangeButton from '../OrangeButton';
 import Timer from '../Timer';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setTabHeader } from '../../redux/actions/app';
 import './style.css';
- 
+
 export default function MainBlock(props) {
+
   const { mobile } = props;
+
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   return (
     <div className="itemWrapper">
       <div className="colInfoBlock"> 
@@ -14,16 +21,11 @@ export default function MainBlock(props) {
           <div className={`${mobile ? 'mobile-txt_main_subtxt' : 'txt_main_subtxt'}`}>
           Изготовление, доставкой и установкой гранитных памятников и благоустройством могил по доступным ценам
           </div>
-          <OrangeButton width={200} margin="20px 0px 0px 0px" text="Заказать" onClick={() => { console.log('w') }} />
+          <OrangeButton width={200} margin="20px 0px 0px 0px" text="Заказать" onClick={() => {dispatch(setTabHeader(1)); navigate('/catalog/all'); }} />
           <div className="colTimerBlock">
             <div className={`${mobile ? 'mobile-txtTimer' : 'txtTimer'}`}>Получи скидку 15% до окончания времени: </div>
             <div className="wrapperTimer">
-              <Timer />
-              {/* <div className={'txtTimer'}>0</div>
-              <div className={'txtTimer'}>1</div>
-              <div className={'txtTimer'}>:</div>
-              <div className={'txtTimer'}>3</div>
-              <div className={'txtTimer'}>3</div> */}
+              <Timer initialMinute={15} initialSeconds={0} />
             </div>
           </div>
         </div>

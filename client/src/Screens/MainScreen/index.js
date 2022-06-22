@@ -347,8 +347,7 @@ function MainScreen(props) {
   const byer_consult_initial = useSelector(cart.byer_consult_initial);
   const byer_consult_tel = useSelector(cart.byer_consult_tel);
   const coment_consult = useSelector(cart.coment_consult);
-  const category = useSelector(cart.category);
-console.log(category)
+  const category = useSelector(cart.category); 
   const dispatch = useDispatch();
 
     return (
@@ -383,11 +382,11 @@ console.log(category)
           <div className='filterContainer'>
             <FilterItem category={category} />
             <ViewStone customclass="mobileArrow" />
-          </div>s
+          </div>
         </> 
         }
         <PlusBlock mobile={mobile} />
-        <AboutProduct mobile={mobile} />
+        <AboutProduct id="about" mobile={mobile} />
         <WorkOrder mobile={mobile} />
         <FeedbackBlock id="feedback" mobile={mobile} />
         <AnswerBlock mobile={mobile} />

@@ -6,6 +6,7 @@ import { top_product } from '../../config';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setTabHeader } from '../../redux/actions/app';
+import { setCategory } from '../../redux/actions/cart';
 import './style.css';
 
 export default function TopMonument(props) {
@@ -26,7 +27,7 @@ export default function TopMonument(props) {
             } 
           </div>
           <div className='buttonContainer'>
-            <OrangeButton  width={238} text="Перейти в каталог" onClick={() => {dispatch(setTabHeader(1)); navigate('/catalog/all'); }} />
+            <OrangeButton  width={238} text="Перейти в каталог" onClick={() => {dispatch(setTabHeader(1)); navigate('/catalog/all'); dispatch(setCategory('all')); }} />
           </div>
         </>
         :
@@ -38,7 +39,7 @@ export default function TopMonument(props) {
             } 
           </div>
           <div className='buttonContainer'>
-            <OrangeButton  width={238} text="Перейти в каталог" onClick={() => {dispatch(setTabHeader(1)); navigate('/catalog/all'); }} />
+            <OrangeButton  width={238} text="Перейти в каталог" onClick={() => {dispatch(setTabHeader(1)); navigate('/catalog/all'); dispatch(setCategory('all')); }} />
           </div>
         </>
       }

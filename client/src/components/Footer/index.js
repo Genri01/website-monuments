@@ -1,12 +1,15 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { HashLink as Link } from 'react-router-hash-link'
 import images from '../../assets/images';
 import { YMaps, Map, Placemark,ZoomControl } from 'react-yandex-maps';
+import { setCategory } from '../../redux/actions/cart';
 import './style.css';
 
 function Footer(props) {
   const { visa, mastercard } = images;
   const { mobile } = props;
+  const dispatch = useDispatch();
     return (
       <div className="footer_container">
         <div className="footer_up">
@@ -20,13 +23,13 @@ function Footer(props) {
             </YMaps>
           </div>
           <div className="footer_desription_section_left">
-          <Link to={"/catalog/all"}><div className={`${mobile ? 'mobile-footer_txt' : 'footer_txt'}`} >Каталог</div></Link> 
+          <Link onClick={()=> { dispatch(setCategory('all')); }} to={"/catalog/all"}><div className={`${mobile ? 'mobile-footer_txt' : 'footer_txt'}`} >Каталог</div></Link> 
           <Link to={"/works"}><div className={`${mobile ? 'mobile-footer_txt' : 'footer_txt'}`} >Наши работы</div></Link>
           <Link to={"/#feedback"}><div className={`${mobile ? 'mobile-footer_txt' : 'footer_txt'}`} >Отзывы</div></Link>
           </div>
           <div className="footer_desription_section_right">
             <Link to={"/#answer"}><div className={`${mobile ? 'mobile-footer_txt' : 'footer_txt'}`}>Вопросы и ответы</div></Link>
-            {/* <Link to={"/"}><div className={`${mobile ? 'mobile-footer_txt' : 'footer_txt'}`}>О нас</div></Link> */}
+            <Link to={"/#about"}><div className={`${mobile ? 'mobile-footer_txt' : 'footer_txt'}`}>О нас</div></Link>
             <Link to={"/police"}><div className={`${mobile ? 'mobile-footer_txt' : 'footer_txt'}`}>Политика конфидециальности</div></Link>
           </div>
           {/* <div className="footer_social_section">

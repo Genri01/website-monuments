@@ -8,3 +8,11 @@
   padding-top: 180px;
   flex-wrap: wrap;
 } 
+
+.titleFilter {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}

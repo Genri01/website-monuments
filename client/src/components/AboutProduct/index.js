@@ -5,9 +5,9 @@ import { about_product } from '../../config';
 
 
 export default function AboutProduct(props) { 
-  const { mobile } = props;
+  const { mobile, id } = props;
   return (
-    <div className={`${mobile ? 'mobileAboutWrapper' : "aboutWrapper"}`}>
+    <div  id={id} className={`${mobile ? 'mobileAboutWrapper' : "aboutWrapper"}`}>
       {
         mobile ?
         <>

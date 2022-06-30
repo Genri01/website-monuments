@@ -380,7 +380,7 @@ function MainScreen(props) {
             <Title text="Виды камня:"  customclass="mobileTitle" />
           </div>
           <div className='filterContainer'>
-            <FilterItem category={category} />
+            <FilterItem mobile={mobile}  category={category} />
             <ViewStone customclass="mobileArrow" />
           </div>
         </> 

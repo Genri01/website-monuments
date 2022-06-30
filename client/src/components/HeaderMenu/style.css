@@ -97,7 +97,7 @@
 
 .tabMobile {
   display: flex;
-  width: 100px;
+  width: auto;
   height: 21px;
   justify-content: center;
   align-items: center;

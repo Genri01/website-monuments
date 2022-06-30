@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.css';
 import HeaderMenu from '../../components/HeaderMenu'
+import Footer from '../../components/Footer'
 import MainBlock from '../../components/MainBlock'
 import ViewStone from '../../components/ViewStone'
 import TopMonument from '../../components/TopMonument'
@@ -41,7 +42,7 @@ function WorkScreen(props) {
             </>
           }
         </div>
-        {/* <MainBlock /> */}
+        <Footer mobile={mobile} /> 
         {/* <TopMonument /> */}
         {/* <AboutProduct /> */}
         {/* <WorkOrder /> */}

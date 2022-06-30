@@ -23,16 +23,20 @@ import {
   setInstall,
   setPayMethod,
   setRegion,
-  setTel
+  setTel,
+  setDelBuy,
+  clearBuy
  } from '../../redux/actions/cart';
 import './style.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { cart } from '../../redux/selectors';
 
 export default function CartBlock(props) {
 
   const { mobile } = props;
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const buy = useSelector(cart.buy);
 
   return (
     <div  style={ mobile ? { padding: '0px 10px' } : {} } className="cartBlockWrapper">
@@ -47,7 +51,7 @@ export default function CartBlock(props) {
           <TransferForm />
           <PayForm />
           <div className='btnWrapperCart'>
-          <OrangeButton text="Оформить" />
+          <OrangeButton disabled={ buy.length === 0 ? true : false }  text="Оформить" />
           <OrangeButton
               onClick={() => {
                 dispatch(setAddres(''));
@@ -66,6 +70,7 @@ export default function CartBlock(props) {
                 dispatch(setPayMethod(''));
                 dispatch(setRegion(''));
                 dispatch(setTel(''));
+                dispatch(clearBuy());
                 navigate('/');
               }}
               text="Отменить"
@@ -89,7 +94,7 @@ export default function CartBlock(props) {
             </div>
           </div>
           <div className='btnWrapperCart'>
-            <OrangeButton onClick={() => { console.log() }} text="Оформить" />
+            <OrangeButton disabled={ buy.length === 0 ? true : false } onClick={() => { console.log() }} text="Оформить" />
             <OrangeButton
               onClick={() => {
                 dispatch(setAddres(''));

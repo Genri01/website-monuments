@@ -16,3 +16,11 @@
   flex-direction: row;
   margin-top: 50px;
 }
+
+.titleFilterMobile {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}

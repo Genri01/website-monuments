@@ -1,11 +1,13 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import images from '../../assets/images';
+import { incrimentBuy, decrimentBuy } from '../../redux/actions/cart';
 import './style.css';
 
 function ProductItem(props) {
-    const { photo, name, count, price, mobile, onClick } = props;
+    const { photo, name, count, price, mobile, onClick, id } = props;
     const { arrowl, arrowr, cross } = images;
-
+    const dispatch = useDispatch();
     return (
         <div className='ProductItemWrapper'>
           {
@@ -23,11 +25,11 @@ function ProductItem(props) {
                 </div>
                 <div className='mobileProductItemCountContainer'>
                 <div className='mobileCountItemContainer'>
-                <div className='decrementCount'>
+                <div onClick={(e) => {dispatch(decrimentBuy(id));e.preventDefault();}} className='decrementCount'>
                 <img src={arrowl} alt="arrowl" width={25}  height={25} />
                 </div>
-                <input className='resultCount' type='number' step="1" min="1" max="27" id="count_product" name="count_product"></input>
-                <div className='incrementCount'>
+                <input value={count} onChange={()=>{}} className='resultCount' type='number' step="1" min="1" max="27" id="count_product" name="count_product" /> 
+                <div onClick={(e) => {dispatch(incrimentBuy(id));e.preventDefault();}} className='incrementCount'>
                 <img src={arrowr} alt="arrowr" width={25}  height={25}/>
                 </div>
                 </div>
@@ -53,11 +55,11 @@ function ProductItem(props) {
                 </div>
                 <div className='productItemCountContainer'>
                 <div className='countItemContainer'>
-                <div className='decrementCount'>
+                <div onClick={(e) => {dispatch(decrimentBuy(id));e.preventDefault();}} className='decrementCount'>
                 <img src={arrowl} alt="arrowl" width={25}  height={25} />
                 </div>
-                <input className='resultCount' type='number' step="1" min="1" max="27" id="count_product" name="count_product"></input>
-                <div className='incrementCount'>
+                <input value={count} className='resultCount' type='number' step="1" min="1" max="27" id="count_product" name="count_product"></input>
+                <div onClick={(e) => {dispatch(incrimentBuy(id));e.preventDefault();}} className='incrementCount'>
                 <img src={arrowr} alt="arrowr" width={25}  height={25}/>
                 </div>
                 </div>

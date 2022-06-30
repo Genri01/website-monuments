@@ -20,10 +20,11 @@ const initialState = {
   delivery_method: '',
   pay_method: '',
   insert: {},
-  category: 'all'
+  category: 'all',
+  buy: []
 };
 
-export default function cart(state = initialState, { type, payload }) {
+export default function cart(state = initialState, { type, payload }) { 
  
   switch (type) {
     case ActionTypes.CART_BYER_INITIAL_DEAD:
@@ -125,6 +126,53 @@ export default function cart(state = initialState, { type, payload }) {
       return {
         ...state,
         category: payload
+      }; 
+    case ActionTypes.CATALOG_BUY:
+      let tempbuy = state.buy
+      tempbuy.push(payload); 
+      return {
+        ...state,
+        buy: tempbuy
+      }; 
+    case ActionTypes.CATALOG_BUYDEL:
+      let buy1 = state.buy; 
+      let tempsbuy = buy1.filter((item) => (item.id !== payload))
+  
+      return {
+        ...state,
+        buy: tempsbuy
+      }; 
+      
+    case ActionTypes.CATALOG_INCRIMENTBUY:
+      let buy2 = state.buy; 
+      buy2.forEach(item => {
+        if(item.id === payload) {
+          item.count += 1;
+        }
+      });
+      return {
+        ...state,
+        buy: [...buy2]
+      }; 
+    case ActionTypes.CATALOG_DECRIMENTBUY:
+      let buy3 = state.buy; 
+      buy3.forEach(item => {
+        if(item.id === payload) {
+          if(item.count <= 1) {
+            item.count = 1;
+          } else {
+            item.count -= 1;
+          }
+        }
+      });
+      return {
+        ...state,
+        buy: [...buy3]
+      }; 
+    case ActionTypes.CATALOG_BUYCLEAR:
+      return {
+        ...state,
+        buy: []
       }; 
     default:
       return state;

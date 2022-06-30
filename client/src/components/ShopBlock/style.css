@@ -67,6 +67,19 @@
   line-height: 1.35;
  }
 
+ .telephoneShopBlockMobile {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: #000000;
+  font-weight: 600;
+  font-family: Cormorant;
+  font-size: 8px;
+  line-height: 1.35;
+ }
+
  .priceShopBlock {
   display: flex;
   width: 100%;

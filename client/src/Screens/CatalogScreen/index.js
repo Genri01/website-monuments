@@ -56,20 +56,20 @@ function CatalogScreen(props) {
             mobile ?
             <>
             <Title margin="110px 0px 0px 0px" size={33} text={`Категория: ${text}`} />
-            <FilterItem customclass="titleFilter" category={category} />
+            <FilterItem mobile={mobile} customclass="titleFilterMobile" scategory={category} />
               <div className="mobileCardMonumentContainer">
               {
-                prod.map((item, i) => (<CardsMonument key={i} img={item.img} title={item.title} description={item.description} price={item.price} id={item.id} category={item.category} prop={item.prop} info={item.info} />))
+                prod.map((item, i) => (<CardsMonument key={i} count={item.count} img={item.img} title={item.title} description={item.description} price={item.price} id={item.id} prop={item.prop} info={item.info} />))
               } 
               </div> 
             </>
             :
             <>
               <Title margin="50px 0px 0px 0px" size={38} text={`Категория: ${text}`} />
-              <FilterItem customclass="titleFilter" category={category} />
+              <FilterItem mobile={mobile} customclass="titleFilter" category={category} />
               <div className="cardMonumentContainer">
               {
-                prod.map((item, i) => (<CardsMonument key={i} img={item.img} title={item.title} description={item.description} price={item.price} id={item.id} category={item.category} prop={item.prop} info={item.info} />))
+                prod.map((item, i) => (<CardsMonument key={i} count={item.count} img={item.img} title={item.title} description={item.description} price={item.price} id={item.id} prop={item.prop} info={item.info} />))
               } 
               </div> 
             </>

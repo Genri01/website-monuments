@@ -24,6 +24,7 @@ export const cart = {
   delivery_method: (state) => state.cart.delivery_method,
   pay_method: (state) => state.cart.pay_method,
   insert: (state) => state.cart.insert,
-  category: (state) => state.cart.category
+  category: (state) => state.cart.category,
+  buy: (state) => state.cart.buy,
 }
  

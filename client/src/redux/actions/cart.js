@@ -139,4 +139,38 @@ export function setCategory(method) {
     payload: method
   }
 }
+
+export function setBuy(buy) { 
+  return {
+    type: ActionTypes.CATALOG_BUY,
+    payload: buy
+  }
+}
+
+export function setDelBuy(del) { 
+  return {
+    type: ActionTypes.CATALOG_BUYDEL,
+    payload: del
+  }
+}
+
+export function incrimentBuy(inn) { 
+  return {
+    type: ActionTypes.CATALOG_INCRIMENTBUY,
+    payload: inn
+  }
+}
+
+export function decrimentBuy(dec) { 
+  return {
+    type: ActionTypes.CATALOG_DECRIMENTBUY,
+    payload: dec
+  }
+}
+
+export function clearBuy() { 
+  return {
+    type: ActionTypes.CATALOG_BUYCLEAR, 
+  }
+}
  

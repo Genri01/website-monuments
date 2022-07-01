@@ -9,9 +9,11 @@ import './style.css';
 
 export default function ShopBlock(props) {
   const { mobile } = props;
-  const { cross, _1 } =images;
+  const { cross } =images;
 
   const insert = useSelector(cart.insert);
+  const link = useSelector(cart.link);
+
   const dispatch = useDispatch(); 
 
   return (
@@ -20,7 +22,7 @@ export default function ShopBlock(props) {
         mobile ?
         <>
           <div className="cross">
-            <Link style={{ textDecoration: 'none' }} to={"/"}><img className="imageShopBlock" src={cross} alt="cross" /></Link>
+            <Link style={{ textDecoration: 'none' }} to={`${link}`}><img className="imageShopBlock" src={cross} alt="cross" /></Link>
           </div>
           <div style={mobile ? { width: '100%' } : {}} className="imageShopBlockWrapper">
             <img style={mobile ? { width: '100%' } : {}} className="imageShopBlock" src={insert.img} alt="" />
@@ -46,7 +48,7 @@ export default function ShopBlock(props) {
         </> :
         <>
           <div className="cross">
-          <Link to={"/"}><img className="imageShopBlock" src={cross} alt="cross" /></Link>
+          <Link to={`${link}`}><img className="imageShopBlock" src={cross} alt="cross" /></Link>
           </div>
           <div className="imageShopBlockWrapper">
           <img className="imageShopBlock" src={insert.img} alt="" />

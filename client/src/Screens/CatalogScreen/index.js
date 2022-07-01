@@ -59,7 +59,7 @@ function CatalogScreen(props) {
             <FilterItem mobile={mobile} customclass="titleFilterMobile" scategory={category} />
               <div className="mobileCardMonumentContainer">
               {
-                prod.map((item, i) => (<CardsMonument key={i} count={item.count} img={item.img} title={item.title} description={item.description} price={item.price} id={item.id} prop={item.prop} info={item.info} />))
+                prod.map((item, i) => (<CardsMonument key={i} category={category} count={item.count} img={item.img} title={item.title} description={item.description} price={item.price} id={item.id} prop={item.prop} info={item.info} />))
               } 
               </div> 
             </>
@@ -69,7 +69,7 @@ function CatalogScreen(props) {
               <FilterItem mobile={mobile} customclass="titleFilter" category={category} />
               <div className="cardMonumentContainer">
               {
-                prod.map((item, i) => (<CardsMonument key={i} count={item.count} img={item.img} title={item.title} description={item.description} price={item.price} id={item.id} prop={item.prop} info={item.info} />))
+                prod.map((item, i) => (<CardsMonument key={i} category={category} count={item.count} img={item.img} title={item.title} description={item.description} price={item.price} id={item.id} prop={item.prop} info={item.info} />))
               } 
               </div> 
             </>

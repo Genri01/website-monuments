@@ -21,7 +21,8 @@ const initialState = {
   pay_method: '',
   insert: {},
   category: 'all',
-  buy: []
+  buy: [],
+  link: '/',
 };
 
 export default function cart(state = initialState, { type, payload }) { 
@@ -173,6 +174,11 @@ export default function cart(state = initialState, { type, payload }) {
       return {
         ...state,
         buy: []
+      }; 
+    case ActionTypes.CATALOG_LINKPAGE:
+      return {
+        ...state,
+        link: payload
       }; 
     default:
       return state;

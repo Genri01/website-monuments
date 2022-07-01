@@ -4,9 +4,10 @@ import OrangeButton from '../OrangeButton';
 import Title from '../Title'; 
 import { top_product } from '../../config';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import { setTabHeader } from '../../redux/actions/app';
 import { setCategory } from '../../redux/actions/cart';
+import { cart } from '../../redux/selectors'; 
 import './style.css';
 
 export default function TopMonument(props) {
@@ -15,6 +16,9 @@ export default function TopMonument(props) {
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const category = useSelector(cart.category);
+
   return (
     <div className="topMonumentWrapper" >
       {
@@ -23,7 +27,7 @@ export default function TopMonument(props) {
           <Title margin="30px 0px 0px 0px" size={33} text="Мы предлагаем:" under/>
           <div className="mobileCardMonumentContainer">
             {
-              top_product.map((item, i) => (<CardsMonument key={i} img={item.img} title={item.title} description={item.description} price={item.price} id={item.id} category={item.category} prop={item.prop} info={item.info} />))
+              top_product.map((item, i) => (<CardsMonument key={i} img={item.img} title={item.title} description={item.description} price={item.price} id={item.id} category={category} prop={item.prop} info={item.info} />))
             } 
           </div>
           <div className='buttonContainer'>
@@ -35,7 +39,7 @@ export default function TopMonument(props) {
           <Title margin="50px 0px 0px 0px" size={38} text="Мы предлагаем:" under/>
           <div className="cardMonumentContainer">
             {
-              top_product.map((item, i) => (<CardsMonument key={i} img={item.img} title={item.title} description={item.description} price={item.price} id={item.id} category={item.category} prop={item.prop} info={item.info} />))
+              top_product.map((item, i) => (<CardsMonument key={i} img={item.img} title={item.title} description={item.description} price={item.price} id={item.id} category={category} prop={item.prop} info={item.info} />))
             } 
           </div>
           <div className='buttonContainer'>

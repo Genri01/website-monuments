@@ -173,4 +173,11 @@ export function clearBuy() {
     type: ActionTypes.CATALOG_BUYCLEAR, 
   }
 }
+
+export function linkpage(link) { 
+  return {
+    type: ActionTypes.CATALOG_LINKPAGE,
+    payload: link 
+  }
+}
  

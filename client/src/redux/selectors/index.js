@@ -26,5 +26,6 @@ export const cart = {
   insert: (state) => state.cart.insert,
   category: (state) => state.cart.category,
   buy: (state) => state.cart.buy,
+  link: (state) => state.cart.link,
 }
  

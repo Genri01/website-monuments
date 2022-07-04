@@ -8,8 +8,7 @@ import AboutProduct from '../../components/AboutProduct'
 import WorkOrder from '../../components/WorkOrder'
 import FeedbackBlock from '../../components/FeedbackBlock'
 import AnswerBlock from '../../components/AnswerBlock'
-import PlusBlock from '../../components/PlusBlock'
-import DataForm from '../../components/DataForm'
+import PlusBlock from '../../components/PlusBlock' 
 import FilterItem from '../../components/FilterItem';
 import Title from '../../components/Title';
 import HeaderMenu from '../../components/HeaderMenu'
@@ -18,7 +17,7 @@ import InputMask from 'react-input-mask';
 import Footer from '../../components/Footer';
 import { useSelector, useDispatch } from 'react-redux';
 import { app, cart } from '../../redux/selectors';
-import { setConsultComent, setConsultInitial, setConsultTel } from '../../redux/actions/cart';
+import { setConsultComent, setConsultInitial, setConsultTel, sendEmailServer } from '../../redux/actions/cart';
 
 
 function changeTelephone(value,mask,phone,setErrTel,dispatch) {
@@ -348,6 +347,7 @@ function MainScreen(props) {
   const byer_consult_tel = useSelector(cart.byer_consult_tel);
   const coment_consult = useSelector(cart.coment_consult);
   const category = useSelector(cart.category); 
+  const msg_main_popup = useSelector(cart.msg_main_popup); 
   const dispatch = useDispatch();
 
     return (
@@ -404,7 +404,7 @@ function MainScreen(props) {
               <textarea style={mobile ? { width: '100%'} : {} } name="msg" placeholder="Задайте Ваш вопрос, консультация бесплатна..." className="popup_textarea" value={coment_consult} onChange={(e) => { dispatch(setConsultComent(e.target.value)) }} />
               </div>
               <div className='answerBtnWrapper'>
-              <OrangeButton onClick={() => { console.log('SENDMAIL CONSULT') }} text="Заказать звонок" /> 
+              <OrangeButton onClick={() => { sendEmailServer({ byer_consult_initial,byer_consult_tel,coment_consult },dispatch) }} text="Заказать звонок" /> 
               </div>
             </>
             :
@@ -418,8 +418,9 @@ function MainScreen(props) {
               <InputMask placeholder="Ваш телефон" className={`popup_input ${errTel ? 'error_input' : ''}`} name="telephone" mask={`${mask}`} maskChar={'_'} value={byer_consult_tel} onChange={(e)=>{changeTelephone(e.target.value,mask,byer_consult_tel,setErrTel,dispatch)}} /> 
               <textarea name="msg" placeholder="Задайте Ваш вопрос, консультация бесплатна..." className="popup_textarea" value={coment_consult} onChange={(e) => { dispatch(setConsultComent(e.target.value)) }} />
               </div>
+              <div className='resultMssg'>{`${msg_main_popup}`}</div>
               <div className='answerBtnWrapper'>
-              <OrangeButton onClick={() => { console.log('SENDMAIL CONSULT') }} text="Заказать звонок" /> 
+              <OrangeButton onClick={() => { sendEmailServer({ byer_consult_initial,byer_consult_tel,coment_consult },dispatch) }} text="Заказать звонок" /> 
               </div>
             </>
           }

@@ -23,8 +23,7 @@ import {
   setInstall,
   setPayMethod,
   setRegion,
-  setTel,
-  setDelBuy,
+  setTel, 
   clearBuy
  } from '../../redux/actions/cart';
 import './style.css';

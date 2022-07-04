@@ -58,7 +58,7 @@ function ProductItem(props) {
                 <div onClick={(e) => {dispatch(decrimentBuy(id));e.preventDefault();}} className='decrementCount'>
                 <img src={arrowl} alt="arrowl" width={25}  height={25} />
                 </div>
-                <input value={count} className='resultCount' type='number' step="1" min="1" max="27" id="count_product" name="count_product"></input>
+                <input value={count} onChange={()=>{}} className='resultCount' type='number' step="1" min="1" max="27" id="count_product" name="count_product" /> 
                 <div onClick={(e) => {dispatch(incrimentBuy(id));e.preventDefault();}} className='incrementCount'>
                 <img src={arrowr} alt="arrowr" width={25}  height={25}/>
                 </div>

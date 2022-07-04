@@ -23,6 +23,7 @@ const initialState = {
   category: 'all',
   buy: [],
   link: '/',
+  msg_main_popup:''
 };
 
 export default function cart(state = initialState, { type, payload }) { 
@@ -179,6 +180,11 @@ export default function cart(state = initialState, { type, payload }) {
       return {
         ...state,
         link: payload
+      }; 
+    case ActionTypes.CART_POPUP_MAIN:
+      return {
+        ...state,
+        msg_main_popup: payload
       }; 
     default:
       return state;

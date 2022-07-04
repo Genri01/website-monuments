@@ -1,14 +1,9 @@
 {
-  "Server": {
-    "dbConfig": {
-      "production": {
-        "username": "",
-        "password": "",
-        "database": "",
-        "host": "",
-        "dialect": "mysql"
-      }
-    },
-    "port": 8080
+  "Server": { 
+    "port": 8080, 
+    "URL" : {
+      "API" : "http://localhost:4000",
+      "CLIENT" : "http://localhost:3000"
+    }
   }
 }

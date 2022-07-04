@@ -2,9 +2,10 @@ import React from 'react';
 import './style.css';
 
 function Title(props) {
-    const { text, color, size, margin ,under, z, customclass } = props;
+    const { text, color, size, margin ,under, z, customclass, id } = props;
     return (
       <div 
+      id={id}
       style={{ 
         fontSize: size === undefined ? '40px': size,
         color: color === undefined ? '#333' : color,

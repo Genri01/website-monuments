@@ -24,7 +24,7 @@ function Footer(props) {
           </div>
           <div className="footer_desription_section_left">
           <Link onClick={()=> { dispatch(setCategory('all')); }} to={"/catalog/all"}><div className={`${mobile ? 'mobile-footer_txt' : 'footer_txt'}`} >Каталог</div></Link> 
-          <Link to={"/works"}><div className={`${mobile ? 'mobile-footer_txt' : 'footer_txt'}`} >Наши работы</div></Link>
+          <Link to={"/works/#works"}><div className={`${mobile ? 'mobile-footer_txt' : 'footer_txt'}`} >Наши работы</div></Link>
           <Link to={"/#feedback"}><div className={`${mobile ? 'mobile-footer_txt' : 'footer_txt'}`} >Отзывы</div></Link>
           </div>
           <div className="footer_desription_section_right">

@@ -492,6 +492,8 @@ const {
   form_66, 
 } = images;
 
+const API_URL = "http://localhost:4000/api";
+
 const top_product = [
   {
     img:an_6,
@@ -7846,6 +7848,7 @@ export {
   answers,
   products,
   works_images,
-  priceDelivery
+  priceDelivery,
+  API_URL
 }
 

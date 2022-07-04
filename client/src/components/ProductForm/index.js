@@ -1,7 +1,6 @@
 
 import React from 'react';
-import ProductItem from '../ProductItem';
-import images from '../../assets/images';
+import ProductItem from '../ProductItem'; 
 import { useDispatch,useSelector } from 'react-redux';
 import {  
   setDelBuy
@@ -18,7 +17,6 @@ export default function ProductForm(props) {
   let sumPrice = 0;
   buy.map((item) => { sumPrice += Number(item.price ) * item.count ;return false});
  
-console.log(buy)
   return (
     <div className="productFormWrapper">
       {
@@ -72,7 +70,7 @@ console.log(buy)
           </div>
           <div className='priceContainer'>
           <div className='productFormTitle' style={{fontWeight: 'bold'}}>Итого:  </div>
-          <div className='productFormPrice'>{ priceDelivery + buy.length !== 0 ? sumPrice : 0}</div>
+          <div className='productFormPrice'>{ priceDelivery + (buy.length !== 0 ? sumPrice : 0)}</div>
           </div>
         </>
       }

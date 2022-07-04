@@ -4,7 +4,7 @@ import OrangeButton from '../OrangeButton';
 import { HashLink as Link } from 'react-router-hash-link'; 
 import { useSelector, useDispatch } from 'react-redux';
 import { cart } from '../../redux/selectors'; 
-import { setBuy, setInsert } from '../../redux/actions/cart'; 
+import { setBuy } from '../../redux/actions/cart'; 
 import './style.css';
 
 export default function ShopBlock(props) {

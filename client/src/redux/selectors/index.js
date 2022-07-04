@@ -27,5 +27,6 @@ export const cart = {
   category: (state) => state.cart.category,
   buy: (state) => state.cart.buy,
   link: (state) => state.cart.link,
+  msg_main_popup: (state) => state.cart.msg_main_popup,
 }
  

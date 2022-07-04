@@ -1,4 +1,6 @@
 import ActionTypes from '../constants';
+import { API_URL } from '../../config/index';
+import axios from 'axios';
 
 export function setInitialDead(initial) {
   return {
@@ -119,6 +121,13 @@ export function setIndex(index) {
   }
 }
 
+export function setPopupMainMsg(msg) {
+  return {
+    type: ActionTypes.CART_POPUP_MAIN,
+    payload: msg
+  }
+}
+
 export function setDeliveryMethod(method) {
   return {
     type: ActionTypes.CART_DELIVERY_METHOD,
@@ -178,6 +187,28 @@ export function linkpage(link) {
   return {
     type: ActionTypes.CATALOG_LINKPAGE,
     payload: link 
+  }
+}
+ 
+export async function sendEmailServer(body,dispatch) {
+ 
+  try {
+    const requestOptions = {
+        method: 'post',
+        headers: { 
+        'Content-Type': 'application/json',
+        },
+        body
+      }; 
+    const response = await axios.post(`${API_URL}/sendmail`, requestOptions)
+
+    if(response.status === 200) {
+      console.log(response.data)
+      dispatch(setPopupMainMsg(response.data.msg))
+    }  
+  } catch (error) {
+    console.log(error)
+    return error.response?.status;
   }
 }
  

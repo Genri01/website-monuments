@@ -64,7 +64,7 @@ import ch_m_3 from './images/child_mramor/3.webp';
 
 // family gravure image
 
-import gr_f_0 from './images/family_gravure/0.jpg'; 
+import gr_f_0 from './images/family_gravure/0.webp'; 
 import gr_f_1 from './images/family_gravure/1.jpg'; 
 import gr_f_2 from './images/family_gravure/2.jpg'; 
 import gr_f_3 from './images/family_gravure/3.jpg'; 
@@ -119,26 +119,26 @@ import gr_f_39 from './images/family_gravure/39.jpg';
 
 // family mramor image
 
-import fam_m_0 from './images/family_mramor/0.webp'; 
-import fam_m_1 from './images/family_mramor/1.webp'; 
-import fam_m_2 from './images/family_mramor/2.webp'; 
-import fam_m_3 from './images/family_mramor/3.webp'; 
-import fam_m_4 from './images/family_mramor/4.webp'; 
-import fam_m_5 from './images/family_mramor/5.webp'; 
-import fam_m_6 from './images/family_mramor/6.webp'; 
-import fam_m_7 from './images/family_mramor/7.webp'; 
-import fam_m_8 from './images/family_mramor/8.webp'; 
-import fam_m_9 from './images/family_mramor/9.webp'; 
+import fam_m_0 from './images/family_mramor/0.jpg'; 
+import fam_m_1 from './images/family_mramor/1.jpg'; 
+import fam_m_2 from './images/family_mramor/2.jpg'; 
+import fam_m_3 from './images/family_mramor/3.jpg'; 
+import fam_m_4 from './images/family_mramor/4.jpg'; 
+import fam_m_5 from './images/family_mramor/5.jpg'; 
+import fam_m_6 from './images/family_mramor/6.jpg'; 
+import fam_m_7 from './images/family_mramor/7.jpg'; 
+import fam_m_8 from './images/family_mramor/8.jpg'; 
+import fam_m_9 from './images/family_mramor/9.jpg'; 
 
-import fam_m_10 from './images/family_mramor/10.webp'; 
-import fam_m_11 from './images/family_mramor/11.webp'; 
-import fam_m_12 from './images/family_mramor/12.webp'; 
-import fam_m_13 from './images/family_mramor/13.webp'; 
-import fam_m_14 from './images/family_mramor/14.webp'; 
-import fam_m_15 from './images/family_mramor/15.webp'; 
-import fam_m_16 from './images/family_mramor/16.webp'; 
-import fam_m_17 from './images/family_mramor/17.webp'; 
-import fam_m_18 from './images/family_mramor/18.webp'; 
+import fam_m_10 from './images/family_mramor/10.jpg'; 
+import fam_m_11 from './images/family_mramor/11.jpg'; 
+import fam_m_12 from './images/family_mramor/12.jpg'; 
+import fam_m_13 from './images/family_mramor/13.jpg'; 
+import fam_m_14 from './images/family_mramor/14.jpg'; 
+import fam_m_15 from './images/family_mramor/15.jpg'; 
+import fam_m_16 from './images/family_mramor/16.jpg'; 
+import fam_m_17 from './images/family_mramor/17.jpg'; 
+import fam_m_18 from './images/family_mramor/18.jpg'; 
 import fam_m_19 from './images/family_mramor/19.jpeg'; 
 
 // forms image

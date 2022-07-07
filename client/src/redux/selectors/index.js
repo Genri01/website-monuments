@@ -28,5 +28,7 @@ export const cart = {
   buy: (state) => state.cart.buy,
   link: (state) => state.cart.link,
   msg_main_popup: (state) => state.cart.msg_main_popup,
+  width: (state) => state.cart.width,
+  material: (state) => state.cart.material,
 }
  

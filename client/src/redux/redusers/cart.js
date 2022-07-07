@@ -23,7 +23,9 @@ const initialState = {
   category: 'all',
   buy: [],
   link: '/',
-  msg_main_popup:''
+  msg_main_popup:'',
+  width: 0,
+  material: 0,
 };
 
 export default function cart(state = initialState, { type, payload }) { 
@@ -185,6 +187,16 @@ export default function cart(state = initialState, { type, payload }) {
       return {
         ...state,
         msg_main_popup: payload
+      }; 
+    case ActionTypes.CATALOG_MATERIALMONUMENT:
+      return {
+        ...state,
+        material: payload
+      }; 
+    case ActionTypes.CATALOG_WIDTHMONUMENT:
+      return {
+        ...state,
+        width: payload
       }; 
     default:
       return state;

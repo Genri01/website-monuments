@@ -31,7 +31,7 @@ export default function PayForm(props) {
       </div>
       <div style={ mobile ? { width:'130px' } : {} } className='payFormContainer'>
         {
-          inputs.map((item) => (<div key={item.value} className='pay'><input type="Radio" checked={pay_method === item.value} onChange={(e) => {  item.checked = e.target.checked;  dispatch(setPayMethod(e.target.value)) }}  name={item.name} value={item.value}  style={{ marginRight:'10px' }}/>{item.title}</div>))
+          inputs.map((item) => (<div key={item.value} className='pay'><div className='check_container'><input type="Radio" checked={pay_method === item.value} onChange={(e) => {  item.checked = e.target.checked;  dispatch(setPayMethod(e.target.value)) }}  name={item.name} value={item.value} /></div>{item.title}</div>))
         }
       </div>
     </div>

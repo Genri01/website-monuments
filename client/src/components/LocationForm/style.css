@@ -41,6 +41,17 @@
   background: #fcfcfc;
 }
 
+.locationInputWidth {
+  display: flex;
+  width: 20%;
+  margin-right: 30px;
+  height: 30px;
+  border-radius: 2px;
+  border: 1px solid #eee;
+  box-shadow: none;
+  background: #fcfcfc;
+}
+
 .locationContainer {
   display: flex;
   width: 100%;

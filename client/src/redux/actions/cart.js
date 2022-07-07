@@ -177,6 +177,20 @@ export function decrimentBuy(dec) {
   }
 }
 
+export function setWidth(width) { 
+  return {
+    type: ActionTypes.CATALOG_WIDTHMONUMENT,
+    payload: width
+  }
+}
+
+export function setMaterial(material) { 
+  return {
+    type: ActionTypes.CATALOG_MATERIALMONUMENT,
+    payload: material
+  }
+}
+
 export function clearBuy() { 
   return {
     type: ActionTypes.CATALOG_BUYCLEAR, 
@@ -205,6 +219,28 @@ export async function sendEmailServer(body,dispatch) {
     if(response.status === 200) {
       console.log(response.data)
       dispatch(setPopupMainMsg(response.data.msg))
+    }  
+  } catch (error) {
+    console.log(error)
+    return error.response?.status;
+  }
+}
+ 
+export async function sendInfoServer(body,dispatch) {
+
+  try {
+    const requestOptions = {
+        method: 'post',
+        headers: { 
+        'Content-Type': 'application/json',
+        },
+        body
+      }; 
+    const response = await axios.post(`${API_URL}/sendinfo`, requestOptions)
+
+    if(response.status === 200) {
+      console.log(response.data)
+      // dispatch(setPopupMainMsg(response.data.msg))
     }  
   } catch (error) {
     console.log(error)

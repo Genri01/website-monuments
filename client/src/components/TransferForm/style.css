@@ -120,3 +120,16 @@
   align-items: center;
   justify-content: center;
 }
+
+.check_container {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.label_container {
+  width: 400px;
+  height: auto;
+}
+
+ 

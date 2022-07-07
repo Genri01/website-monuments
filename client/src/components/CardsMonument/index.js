@@ -6,8 +6,7 @@ import { useDispatch } from 'react-redux';
 import './style.css'
 
 export default function CardsMonument(props) {
-  const { img, title, description, price, id, info, prop, count,category } = props;
-  console.log(category)
+  const { img, title, description, price, id, info, prop, count,category } = props; 
   const dispatch = useDispatch();
   return (
     <div className="CardsItemWrapper">

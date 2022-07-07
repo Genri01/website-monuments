@@ -364,57 +364,7 @@ export default function BuyerForm(props) {
       <div className='titleLocationContainer'>
         <div className='titlelocation textTitleForm'>Покупатель</div>
       </div>
-      <div className='locationContainer'style={{  borderTop: '1px solid #ea402f'}}>
-        <div className='locationForm'>
-          <div style={ mobile ? { width:'150px', fontSize: '13px' } : {width:'150px'} }>Ф.И.О умершего</div>
-          <input onChange={(e) => { dispatch(setInitialDead(e.target.value)) }} value={byer_initial_dead} className='locationInput' id="fio_dead" name="fio_dead" type="text" />
-        </div>
-      </div>
-      <div className='locationContainer'>
-        <div className='locationForm'>
-          <div style={ mobile ? { width:'150px', fontSize: '13px' } : {width:'150px'} }>Дата рождения</div>
-          <input onChange={(e) => { dispatch(setBirthdayDate(e.target.value)) }} value={byer_date_birthday} className='locationInput'  type="date" name="datebirthday" id="datebirthday" placeholder="01.01.2017" data-type="date" data-start-day="01.01.1900" data-end-day="01.01.2099" data-reload-payment-form="true" />
-        </div>
-      </div>
-      <div className='locationContainer'>
-        <div className='locationForm'>
-          <div style={ mobile ? { width:'150px', fontSize: '13px' } : {width:'150px'} }>Дата смерти</div>
-          <input onChange={(e) => { dispatch(setDeadDate(e.target.value)) }} value={byer_date_dead} className='locationInput'  type="date" name="deadday" id="deadday" placeholder="01.01.2017" data-type="date" data-start-day="01.01.1900" data-end-day="01.01.2099" data-reload-payment-form="true" />
-        </div>
-      </div>
-      <div className='locationContainer'>
-        <div className='locationForm'>
-          <div style={ mobile ? { width:'100px', fontSize: '13px' } : {width:'150px'} }>Загрузить фото</div>
-          <div className="input__wrapper">
-            <input 
-            // value='' 
-            style={ mobile ? { width:'10px' } : {} }
-            onChange={(event) => { 
-              if(event.target.files.length !== 0) { 
-              console.log(event.target.files[0])
-              dispatch(setFile(event.target.files[0])) 
-              } 
-              }} 
-              name="file" 
-              type="file" 
-              id='files' 
-              className="input input__file" 
-              multiple 
-            />
-            <label htmlFor='files' className="input__file-button">
-              <span className="input__file-button-text">Выберите файл</span>
-            </label>
-          </div>
-        </div>
-      </div>
-      <div className='locationContainer'>
-        <div className='locationForm'>
-        <div  style={ mobile ? { width:'297px', fontSize: '13px' } : { width:'150px' } } className='pay'>Установка
-        <input onChange={(e) => { dispatch(setInstall(e.target.checked)) }} value='' checked={install} type="checkbox" style={{ marginLeft:'50px' }}/>
-        </div>
-        </div>
-      </div>
-      <div className='locationContainer'>
+      <div className='locationContainer' style={{  borderTop: '1px solid #ea402f'}}>
         <div className='locationForm'>
           <div style={ mobile ? { width:'150px', fontSize: '13px' } : {width:'150px'} }>Ваше Ф.И.О</div>
           <input onChange={(e) => { dispatch(setInitial(e.target.value)) }} value={byer_initial} className='locationInput' id="initial" name="initial" type="text" />
@@ -432,6 +382,74 @@ export default function BuyerForm(props) {
           <input placeholder="Ваш@email.ru" onChange={(e) => {changeEmail(e.target.value,setErrEmail,dispatch,validateEmail)}} value={byer_email} className={`locationInput ${errEmail ? 'error_input' : ''}`} name="email" type="text" />
         </div>
       </div>
+      <div className='locationContainer'>
+        <div className='locationForm'>
+          <div style={ mobile ? { width:'150px', fontSize: '13px' } : {width:'150px'} }>Ф.И.О умершего</div>
+          <input onChange={(e) => { dispatch(setInitialDead(e.target.value)) }} value={byer_initial_dead} className='locationInput' id="fio_dead" name="fio_dead" type="text" />
+        </div>
+      </div>
+      <div className='locationContainer'>
+        <div className='locationForm'>
+          <div style={ mobile ? { width:'150px', fontSize: '13px' } : {width:'150px'} }>Дата рождения</div>
+          <input onChange={(e) => { dispatch(setBirthdayDate(e.target.value)) }} value={byer_date_birthday} className='locationInput'  type="date" name="datebirthday" id="datebirthday" placeholder="01.01.2017" data-type="date" data-start-day="01.01.1900" data-end-day="01.01.2099" data-reload-payment-form="true" />
+        </div>
+      </div>
+      <div className='locationContainer'>
+        <div className='locationForm'>
+          <div style={ mobile ? { width:'150px', fontSize: '13px' } : {width:'150px'} }>Дата смерти</div>
+          <input onChange={(e) => { dispatch(setDeadDate(e.target.value)) }} value={byer_date_dead} className='locationInput'  type="date" name="deadday" id="deadday" placeholder="01.01.2017" data-type="date" data-start-day="01.01.1900" data-end-day="01.01.2099" data-reload-payment-form="true" />
+        </div>
+      </div> 
+      <div className='locationContainer'>
+        <div className='locationForm'>
+          <div style={ mobile ? { width:'100px', fontSize: '13px' } : {width:'150px'} }>Загрузить фото</div>
+          <div className="input__wrapper">
+            <input 
+            // value='' 
+            style={ mobile ? { width:'10px' } : {} }
+            onChange={(event) => { 
+              if(event.target.files.length !== 0) { 
+              console.log(event.target.files[0])
+              dispatch(setFile(event.target.files[0])) 
+                 var reader = new FileReader(); 
+                 reader.onload = function(e) {
+                  console.log(e.target.result)
+                  console.log()
+                  document.getElementById('blah').setAttribute("src", e.target.result) ;
+                 } 
+                 reader.readAsDataURL(event.target.files[0]); 
+              } 
+              }} 
+              name="file" 
+              type="file" 
+              id='files' 
+              className="input input__file" 
+              multiple 
+            />
+            <label htmlFor='files' className="input__file-button">
+              <span className="input__file-button-text">Выберите файл</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div className='locationContainer'>
+        <div className='locationForm'>
+          <div className='nameimg'>{ byer_file.name }</div>
+          <img style={{width: '60px',height: '60px'}} id="blah" src="#" alt="фаил не загружен" />
+        </div>
+      </div>
+      <div className='locationContainer'>
+        <div className='locationForm'>
+          <div  style={ mobile ? { width:'297px', fontSize: '13px' } : { width:'150px' } } className='pay'>Установка
+           <input onChange={(e) => {
+             dispatch(setInstall(e.target.checked));
+          
+            }} value='' checked={install} type="checkbox" style={{ marginLeft:'50px' }}/>
+          </div>
+          <div className='titleSetup'>Не входит в стоимость памятника и считается индивидуально</div>
+        </div>
+      </div>
+  
     </div>
   );
 }

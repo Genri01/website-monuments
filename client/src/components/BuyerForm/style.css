@@ -71,6 +71,8 @@ input[name="telephone"]:focus {
 }
 
 
+
+
 .locationContainer {
   display: flex;
   width: 100%;
@@ -158,3 +160,73 @@ input[name="telephone"]:focus {
   outline: none;
   overflow: hidden;
 }
+
+@media (max-width: 420px) { 
+  .input__file-button { 
+    padding: 10px 15px !important ;
+  }
+  .input__wrapper {
+    width: 137px !important ;
+  }
+  .mobileProductFormTitle { 
+    width: 100% !important ; 
+  }
+  .locationInput { 
+    margin-left: 0px !important ;
+  }
+  .productFormTitle { 
+    width: 40% !important ;
+    padding-right: 14px !important ;
+ }
+}
+
+.titleSetup {
+  margin-left: 10px;
+  color: #b3271a;
+  font-size: 15px;
+  
+}
+
+input[type=checkbox] {
+  position: relative;
+  cursor: pointer;
+}
+
+input[type=checkbox]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: -2px;
+  left: 0;
+  border: 1px solid #555;
+  border-radius: 2px;
+  background-color: #f9dedc;
+}
+input[type=checkbox]:checked:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: -2px;
+  left: 0;
+  background-color:#1E80EF;
+}
+
+input[type=checkbox]:checked:after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0px;
+  left: 6px;
+}
+  

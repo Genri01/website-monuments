@@ -163,6 +163,14 @@
   justify-content: center;
 }
 
+.productFormPriceWidth {
+  display: flex;
+  width: 13%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
 .mobileProductFormPrice {
   display: flex;
   width: 30%;

@@ -17,7 +17,7 @@ export default function LocationForm(props) {
   return (
     <div className="locationFormWrapper">
       <div className='titleLocationContainer'>
-        <div className='titlelocation textTitleForm'>Адрес доставки</div>
+        <div className='titlelocation textTitleForm'>Адрес доставки (Установки)</div>
       </div>
       <div className='locationContainer' style={{  borderTop: '1px solid #ea402f'}}>
         <div className='locationForm'>

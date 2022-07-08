@@ -40,6 +40,10 @@ export default function FilterItem(props) {
       <OrangeButton onClick={() => {dispatch(setTabHeader(1)); navigate(`/catalog/children`); dispatch(setCategory('children')); }} text="Детские" />
       <OrangeButton onClick={() => {dispatch(setTabHeader(1)); navigate(`/catalog/forms`); dispatch(setCategory('forms')); }} margin="0px 0px 0px 10px" text="Формы" />
     </div> 
+    <div className="filterItemCol">
+      <OrangeButton onClick={() => {dispatch(setTabHeader(1)); navigate(`/catalog/mramor`); dispatch(setCategory('mramor')); }} text="Мраморные" />
+      <OrangeButton onClick={() => {dispatch(setTabHeader(1)); navigate(`/catalog/granit`); dispatch(setCategory('granit')); }} margin="0px 0px 0px 10px" text="Гранитные" />
+    </div> 
   </div>
   );
 }

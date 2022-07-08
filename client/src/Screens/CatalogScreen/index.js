@@ -40,14 +40,33 @@ function CatalogScreen(props) {
     case 'forms':
       text = 'Формы';
       break; 
+    case 'mramor':
+      text = 'Мраморные';
+      break; 
+    case 'granit':
+      text = 'Гранитные';
+      break; 
   
     default:
       break;
   }
 
-  products.map((item,i) => {console.log(item);item.category === category ? category_obj.push(...item.items) : category_obj_all.push(...item.items); return false});
-  category_obj.length === 0 ? prod.push(...category_obj_all) : prod.push(...category_obj);
 
+  if(category === 'mramor' || category === 'granit') { 
+    if(category === 'granit') {
+      products.map((item) => { 
+        item.items.map((chank) => ( chank.material === 'granit' ? category_obj.push(chank) : false )) 
+      });
+    } else {
+      products.map((item) => { 
+        item.items.map((chank) => ( chank.material === 'mramor' ? category_obj.push(chank) : false )) 
+      });
+    } 
+  } else { 
+    products.map((item,i) => {console.log(item);item.category === category ? category_obj.push(...item.items) : category_obj_all.push(...item.items); return false});
+    // category_obj.length === 0 ? prod.push(...category_obj_all) : prod.push(...category_obj);
+  }
+    category_obj.length === 0 ? prod.push(...category_obj_all) : prod.push(...category_obj);
     return (
       <div className="main_screen" >
         <HeaderMenu  mobile={mobile} />

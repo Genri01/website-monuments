@@ -19,9 +19,9 @@ export default function LocationForm(props) {
       <div className='titleLocationContainer'>
         <div className='titlelocation textTitleForm'>Адрес доставки (Установки)</div>
       </div>
-      <div className='locationContainer' style={{  borderTop: '1px solid #ea402f'}}>
+      <div className='locationContainer' style={{ borderTop: '1px solid #ea402f' }}>
         <div className='locationForm'>
-        <div style={{width:'50px'}}>Регион</div><select value={addres_region} onChange={(e) => {dispatch(setRegion(e.target.value))}} className="locationInput" name="shipping_address[zone_id]" id="shipping_address_zone_id" data-theme="bootstrap" data-onchange="reloadAll">
+        <div style={{width:'70px'}}>Регион</div><select value={addres_region} onChange={(e) => {dispatch(setRegion(e.target.value))}} className="locationInput" name="shipping_address[zone_id]" id="shipping_address_zone_id" data-theme="bootstrap" data-onchange="reloadAll">
                   <option value=""> --- Выбрать --- </option>
                   <option value="Алтайский край">Алтайский край</option>
                   <option value="Амурская область">Амурская область</option>
@@ -111,17 +111,17 @@ export default function LocationForm(props) {
       </div>
         <div className='locationContainer'>
         <div className='locationForm'>
-        <div style={{width:'50px'}}>Город</div><input value={addres_city} onChange={(e) => { dispatch(setCity(e.target.value)) }} className='locationInput' id="city" name="city" />
+        <div style={{width:'70px'}}>Город</div><input value={addres_city} onChange={(e) => { dispatch(setCity(e.target.value)) }} className='locationInput' id="city" name="city" />
         </div>
         </div>
         <div className='locationContainer'>
         <div className='locationForm'>
-        <div style={{width:'50px'}}>Адрес</div><input value={addres} onChange={(e) => { dispatch(setAddres(e.target.value)) }}  className='locationInput' id="add" name="add" />
+        <div style={{width:'70px'}}>Адрес</div><input value={addres} onChange={(e) => { dispatch(setAddres(e.target.value)) }}  className='locationInput' id="add" name="add" />
         </div>
         </div>
         <div className='locationContainer'>
           <div className='locationForm'>
-          <div style={{width:'50px'}}>Индекс</div><input value={addres_index} onChange={(e) => { dispatch(setIndex(e.target.value)) }} type='number'  className='locationInput' id="ind" name="ind" />
+          <div style={{width:'70px'}}>Индекс</div><input value={addres_index} onChange={(e) => { dispatch(setIndex(e.target.value)) }} type='number'  className='locationInput' id="ind" name="ind" />
           </div>
         </div>
     </div>

@@ -15,7 +15,7 @@ function CartScreen(props) {
           mobile ? 
           <>
             <div className='backgroundCartProduct'>
-              <Title size={25} text="Оформление заказа" margin="28f0px 0px 10px 0px" under/>
+              <Title size={25} text="Оформление заказа" margin="280px 0px 10px 0px" under/>
             </div>
             <CartBlock mobile={mobile} />
           </> :

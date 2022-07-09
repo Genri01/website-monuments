@@ -156,6 +156,13 @@ export function setBuy(buy) {
   }
 }
 
+export function setFileName(name) { 
+  return {
+    type: ActionTypes.CATALOG_FILENAME,
+    payload: name
+  }
+}
+
 export function setDelBuy(del) { 
   return {
     type: ActionTypes.CATALOG_BUYDEL,
@@ -226,6 +233,20 @@ export async function sendEmailServer(body,dispatch) {
   }
 }
  
+export async function uploadServer(data,dispatch) { 
+  try { 
+    const response = await axios.post(`${API_URL}/uploader`, data)
+
+    if(response.status === 200) {
+      dispatch(setFileName(response.data))
+      // console.log(response.data) 
+    }  
+  } catch (error) {
+    console.log(error)
+    return error.response?.status;
+  }
+}
+ 
 export async function sendInfoServer(body,dispatch) {
 
   try {
@@ -239,7 +260,7 @@ export async function sendInfoServer(body,dispatch) {
     const response = await axios.post(`${API_URL}/sendinfo`, requestOptions)
 
     if(response.status === 200) {
-      console.log(response.data)
+      // console.log(response.data)
       // dispatch(setPopupMainMsg(response.data.msg))
     }  
   } catch (error) {

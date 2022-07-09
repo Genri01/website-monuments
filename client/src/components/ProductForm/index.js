@@ -87,7 +87,7 @@ export default function ProductForm(props) {
           </div>
           <div className='priceContainer'>
             <div className='mobileProductFormTitle' style={{fontWeight: 'bold'}}>Итого:  </div>
-            <div className='mobileProductFormPrice'>{ priceDelivery + (buy.length !== 0 ? sumPrice : 0) + priceMaterial}</div>
+            <div className='mobileProductFormPrice'>{ priceDelivery + (buy.length !== 0 ? sumPrice : 0) + priceMaterial }</div>
           </div>
         </> :
         <>
@@ -142,7 +142,7 @@ export default function ProductForm(props) {
           </div>
           <div className='priceContainer'>
             <div className='productFormTitle' style={{fontWeight: 'bold'}}>Итого:  </div>
-            <div className='productFormPrice'>{ priceDelivery + (buy.length !== 0 ? sumPrice : 0)}</div>
+            <div className='productFormPrice'>{ priceDelivery + (buy.length !== 0 ? sumPrice : 0) + priceMaterial }</div>
           </div>
         </>
       }

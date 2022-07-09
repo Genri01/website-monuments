@@ -404,17 +404,13 @@ export default function BuyerForm(props) {
         <div className='locationForm'>
           <div style={ mobile ? { width:'100px', fontSize: '13px' } : {width:'150px'} }>Загрузить фото</div>
           <div className="input__wrapper">
-            <input 
-            // value='' 
+            <input  
             style={ mobile ? { width:'10px' } : {} }
             onChange={(event) => { 
-              if(event.target.files.length !== 0) { 
-              console.log(event.target.files[0])
+              if(event.target.files.length !== 0) {  
               dispatch(setFile(event.target.files[0])) 
                  var reader = new FileReader(); 
-                 reader.onload = function(e) {
-                  console.log(e.target.result)
-                  console.log()
+                 reader.onload = function(e) { 
                   document.getElementById('blah').setAttribute("src", e.target.result) ;
                  } 
                  reader.readAsDataURL(event.target.files[0]); 
@@ -424,7 +420,8 @@ export default function BuyerForm(props) {
               type="file" 
               id='files' 
               className="input input__file" 
-              multiple 
+              multiple="" 
+              accept="image" 
             />
             <label htmlFor='files' className="input__file-button">
               <span className="input__file-button-text">Выберите файл</span>

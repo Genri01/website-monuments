@@ -85,7 +85,7 @@ export default function ViewStone(props) {
         <Swiper
           spaceBetween={10}
           slidesPerView={5} 
-          onSwiper={(swiper) => console.log(swiper)}
+          onSwiper={() => {}}
           className={`mySwiper`}
         >
           { 

@@ -496,12 +496,13 @@ const API_URL = "http://localhost:4000/api";
 
 const top_product = [
   {
-    img:an_6,
-    title: 'Памятник для животных',
-    category: 'animals',
+    material: 'granit',
+    count: 1,
+    img:rez_w_3,
+    title: 'Памятник для женщин резной',
     description: 'Памятник из гранита',
     price: '1500',
-    id: '6',
+    id: '3',
     prop:`
       <ul type="square">
         <li>Размеры:</li>
@@ -511,20 +512,21 @@ const top_product = [
         <li>Оплата после установки памятника</li>
       </ul>
     `,
-        info: `
-          <div>
-            <h1>Всю информацию можно уточнить по телефону:</h1>
-            <h2>+7 (953) 534 41 11</div>
-          </h2>        
-        `
+    info: `
+    <div>
+      <h1>Всю информацию можно уточнить по телефону:</h1>
+      <h2>+7 (953) 534 41 11</div>
+    </h2>        
+  `
   },
   {
-    img:p_2,
-    title: 'Памятники из полиамида',
+    material: 'mramor',
+    count: 1,
+    img:man_mr_57,
+    title: 'Памятник Мужской мрамор',
     description: 'Памятник из гранита',
     price: '1500',
-    category: 'children',
-    id: '6',
+    id: '115',
     prop:`
       <ul type="square">
         <li>Размеры:</li>
@@ -534,20 +536,21 @@ const top_product = [
         <li>Оплата после установки памятника</li>
       </ul>
     `,
-        info: `
-          <div>
-            <h1>Всю информацию можно уточнить по телефону:</h1>
-            <h2>+7 (953) 534 41 11</div>
-          </h2>        
-        `
+    info: `
+    <div>
+      <h1>Всю информацию можно уточнить по телефону:</h1>
+      <h2>+7 (953) 534 41 11</div>
+    </h2>        
+  `
   }, 
   {
-    img:gr_f_16,
-    title: 'Памятник семейный гравюра',
+    material: 'granit',
+    count: 1,
+    img:an_19,
+    title: 'Памятник для животных',
     description: 'Памятник из гранита',
     price: '1500',
-    category: 'family',
-    id: '16',
+    id: '256',
     prop:`
       <ul type="square">
         <li>Размеры:</li>
@@ -557,12 +560,12 @@ const top_product = [
         <li>Оплата после установки памятника</li>
       </ul>
     `,
-        info: `
-          <div>
-            <h1>Всю информацию можно уточнить по телефону:</h1>
-            <h2>+7 (953) 534 41 11</div>
-          </h2>        
-        `
+    info: `
+    <div>
+      <h1>Всю информацию можно уточнить по телефону:</h1>
+      <h2>+7 (953) 534 41 11</div>
+    </h2>        
+  `
   },  
 
 ]
@@ -2315,7 +2318,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '0',
+        id: '58',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2339,7 +2342,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '1',
+        id: '59',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2363,7 +2366,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '2',
+        id: '60',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2387,7 +2390,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '3',
+        id: '61',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2411,7 +2414,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '4',
+        id: '62',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2435,7 +2438,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '5',
+        id: '63',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2459,7 +2462,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '6',
+        id: '64',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2483,7 +2486,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '7',
+        id: '65',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2507,7 +2510,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '8',
+        id: '66',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2531,7 +2534,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '9',
+        id: '67',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2555,7 +2558,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '10',
+        id: '68',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2579,7 +2582,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '11',
+        id: '69',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2603,7 +2606,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '12',
+        id: '70',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2627,7 +2630,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '13',
+        id: '71',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2651,7 +2654,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '14',
+        id: '72',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2675,7 +2678,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '15',
+        id: '73',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2699,7 +2702,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '16',
+        id: '74',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2723,7 +2726,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '17',
+        id: '75',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2747,7 +2750,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '18',
+        id: '76',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2771,7 +2774,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '19',
+        id: '77',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2795,7 +2798,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '20',
+        id: '78',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2819,7 +2822,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '21',
+        id: '79',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2843,7 +2846,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '22',
+        id: '80',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2867,7 +2870,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '23',
+        id: '81',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2891,7 +2894,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '24',
+        id: '82',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2915,7 +2918,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '25',
+        id: '83',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2939,7 +2942,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '26',
+        id: '84',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2963,7 +2966,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '27',
+        id: '85',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -2987,7 +2990,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '28',
+        id: '86',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3011,7 +3014,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '29',
+        id: '87',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3035,7 +3038,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '30',
+        id: '88',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3059,7 +3062,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '31',
+        id: '89',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3083,7 +3086,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '32',
+        id: '90',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3107,7 +3110,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '33',
+        id: '91',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3131,7 +3134,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '34',
+        id: '92',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3155,7 +3158,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '35',
+        id: '93',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3179,7 +3182,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '36',
+        id: '94',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3203,7 +3206,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '37',
+        id: '95',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3227,7 +3230,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '38',
+        id: '96',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3251,7 +3254,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '39',
+        id: '97',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3275,7 +3278,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '40',
+        id: '98',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3299,7 +3302,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '41',
+        id: '99',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3323,7 +3326,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '42',
+        id: '100',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3347,7 +3350,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '43',
+        id: '101',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3371,7 +3374,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '44',
+        id: '102',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3395,7 +3398,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '45',
+        id: '103',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3419,7 +3422,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '46',
+        id: '104',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3443,7 +3446,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '47',
+        id: '105',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3467,7 +3470,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '48',
+        id: '106',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3491,7 +3494,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '49',
+        id: '107',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3515,7 +3518,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '50',
+        id: '108',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3539,7 +3542,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '51',
+        id: '109',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3563,7 +3566,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '52',
+        id: '110',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3587,7 +3590,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '53',
+        id: '111',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3611,7 +3614,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '54',
+        id: '112',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3635,7 +3638,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '55',
+        id: '113',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3659,7 +3662,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '56',
+        id: '114',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3683,7 +3686,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '57',
+        id: '115',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3707,7 +3710,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '58',
+        id: '116',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3731,7 +3734,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '59',
+        id: '117',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3755,7 +3758,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '60',
+        id: '118',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3779,7 +3782,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '61',
+        id: '119',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3803,7 +3806,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '62',
+        id: '120',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3827,7 +3830,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '63',
+        id: '121',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3851,7 +3854,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '64',
+        id: '122',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3875,7 +3878,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '65',
+        id: '123',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3899,7 +3902,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '66',
+        id: '124',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3923,7 +3926,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '67',
+        id: '125',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3947,7 +3950,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '68',
+        id: '126',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3971,7 +3974,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '69',
+        id: '127',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -3995,7 +3998,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '70',
+        id: '128',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4019,7 +4022,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '71',
+        id: '129',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4043,7 +4046,7 @@ const products = [
         title: 'Памятник Мужской мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '72',
+        id: '130',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4067,7 +4070,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '73',
+        id: '131',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4091,7 +4094,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '74',
+        id: '132',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4115,7 +4118,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '75',
+        id: '133',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4139,7 +4142,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '76',
+        id: '134',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4163,7 +4166,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '77',
+        id: '135',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4187,7 +4190,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '78',
+        id: '13',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4211,7 +4214,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '79',
+        id: '137',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4235,7 +4238,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '80',
+        id: '138',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4259,7 +4262,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '81',
+        id: '139',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4283,7 +4286,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '82',
+        id: '140',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4307,7 +4310,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '83',
+        id: '141',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4331,7 +4334,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '84',
+        id: '142',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4355,7 +4358,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '85',
+        id: '143',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4379,7 +4382,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '86',
+        id: '144',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4403,7 +4406,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '87',
+        id: '145',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4427,7 +4430,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '88',
+        id: '146',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4451,7 +4454,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '89',
+        id: '147',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4475,7 +4478,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '90',
+        id: '148',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4499,7 +4502,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '91',
+        id: '149',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4523,7 +4526,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '92',
+        id: '150',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4547,7 +4550,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '93',
+        id: '151',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4571,7 +4574,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '94',
+        id: '152',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4595,7 +4598,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '95',
+        id: '153',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4619,7 +4622,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '96',
+        id: '154',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4643,7 +4646,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '97',
+        id: '155',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4667,7 +4670,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '98',
+        id: '156',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4691,7 +4694,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '99',
+        id: '157',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4715,7 +4718,7 @@ const products = [
         title: 'Памятник Мужской резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '100',
+        id: '157',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4739,7 +4742,7 @@ const products = [
         title: 'Памятники из полиамида',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '101',
+        id: '159',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4763,7 +4766,7 @@ const products = [
         title: 'Памятники из полиамида',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '102',
+        id: '160',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4787,7 +4790,7 @@ const products = [
         title: 'Памятники из полиамида',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '103',
+        id: '162',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4816,7 +4819,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '0',
+        id: '163',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4840,7 +4843,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '1',
+        id: '164',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4864,7 +4867,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '2',
+        id: '165',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4888,7 +4891,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '3',
+        id: '166',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4912,7 +4915,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '4',
+        id: '167',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4936,7 +4939,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '5',
+        id: '168',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4960,7 +4963,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '6',
+        id: '169',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -4984,7 +4987,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '7',
+        id: '170',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5008,7 +5011,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '8',
+        id: '171',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5032,7 +5035,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '9',
+        id: '172',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5056,7 +5059,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '10',
+        id: '173',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5080,7 +5083,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '11',
+        id: '174',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5104,7 +5107,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '12',
+        id: '175',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5128,7 +5131,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '13',
+        id: '176',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5152,7 +5155,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '14',
+        id: '177',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5176,7 +5179,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '15',
+        id: '178',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5200,7 +5203,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '16',
+        id: '179',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5224,7 +5227,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '17',
+        id: '180',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5248,7 +5251,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '18',
+        id: '181',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5272,7 +5275,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '19',
+        id: '182',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5296,7 +5299,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '20',
+        id: '183',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5320,7 +5323,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '21',
+        id: '184',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5344,7 +5347,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '22',
+        id: '185',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5368,7 +5371,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '23',
+        id: '186',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5392,7 +5395,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '24',
+        id: '187',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5416,7 +5419,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '25',
+        id: '188',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5440,7 +5443,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '26',
+        id: '189',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5464,7 +5467,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '27',
+        id: '190',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5488,7 +5491,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '28',
+        id: '191',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5512,7 +5515,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '29',
+        id: '192',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5536,7 +5539,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '30',
+        id: '193',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5560,7 +5563,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '31',
+        id: '194',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5584,7 +5587,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '32',
+        id: '195',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5608,7 +5611,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '33',
+        id: '196',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5632,7 +5635,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '34',
+        id: '197',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5656,7 +5659,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '35',
+        id: '198',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5680,7 +5683,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '36',
+        id: '199',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5704,7 +5707,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '37',
+        id: '200',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5728,7 +5731,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '38',
+        id: '201',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5752,7 +5755,7 @@ const products = [
         title: 'Памятник семейный гравюра',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '39',
+        id: '202',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5776,7 +5779,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '40',
+        id: '203',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5800,7 +5803,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '41',
+        id: '204',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5824,7 +5827,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '42',
+        id: '205',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5848,7 +5851,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '43',
+        id: '206',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5872,7 +5875,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '44',
+        id: '207',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5896,7 +5899,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '45',
+        id: '208',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5918,7 +5921,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '46',
+        id: '209',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5942,7 +5945,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '47',
+        id: '210',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5966,7 +5969,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '48',
+        id: '211',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -5990,7 +5993,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '49',
+        id: '212',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6014,7 +6017,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '50',
+        id: '213',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6038,7 +6041,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '51',
+        id: '214',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6062,7 +6065,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '52',
+        id: '215',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6086,7 +6089,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '53',
+        id: '216',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6110,7 +6113,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '54',
+        id: '217',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6134,7 +6137,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '55',
+        id: '218',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6158,7 +6161,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '56',
+        id: '219',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6182,7 +6185,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '57',
+        id: '220',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6206,7 +6209,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '58',
+        id: '221',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6230,7 +6233,7 @@ const products = [
         title: 'Памятник семейный мрамор',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '59',
+        id: '222',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6254,7 +6257,7 @@ const products = [
         title: 'Памятник семейный резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '60',
+        id: '223',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6278,7 +6281,7 @@ const products = [
         title: 'Памятник семейный резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '61',
+        id: '224',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6302,7 +6305,7 @@ const products = [
         title: 'Памятник семейный резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '62',
+        id: '225',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6326,7 +6329,7 @@ const products = [
         title: 'Памятник семейный резные',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '63',
+        id: '226',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6349,7 +6352,7 @@ const products = [
         title: 'Памятники из полиамида',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '64',
+        id: '227',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6372,7 +6375,7 @@ const products = [
         title: 'Памятники из полиамида',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '65',
+        id: '228',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6395,7 +6398,7 @@ const products = [
         title: 'Памятники из полиамида',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '66',
+        id: '229',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6424,7 +6427,7 @@ const products = [
         title: 'Памятник для детей',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '0',
+        id: '230',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6448,7 +6451,7 @@ const products = [
         title: 'Памятник для детей',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '1',
+        id: '231',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6472,7 +6475,7 @@ const products = [
         title:'Памятник для детей',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '2',
+        id: '232',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6496,7 +6499,7 @@ const products = [
         title: 'Памятник для детей',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '3',
+        id: '233',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6519,7 +6522,7 @@ const products = [
         title: 'Памятники из полиамида',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '4',
+        id: '234',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6542,7 +6545,7 @@ const products = [
         title: 'Памятники из полиамида',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '5',
+        id: '235',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6565,7 +6568,7 @@ const products = [
         title: 'Памятники из полиамида',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '6',
+        id: '236',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6594,7 +6597,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '0',
+        id: '237',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6618,7 +6621,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '1',
+        id: '238',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6642,7 +6645,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '2',
+        id: '239',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6666,7 +6669,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '3',
+        id: '240',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6690,7 +6693,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '4',
+        id: '241',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6714,7 +6717,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '5',
+        id: '242',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6738,7 +6741,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '6',
+        id: '243',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6762,7 +6765,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '7',
+        id: '244',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6786,7 +6789,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '8',
+        id: '245',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6810,7 +6813,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '9',
+        id: '246',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6834,7 +6837,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '10',
+        id: '247',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6858,7 +6861,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '11',
+        id: '248',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6882,7 +6885,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '12',
+        id: '249',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6906,7 +6909,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '13',
+        id: '250',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6930,7 +6933,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '14',
+        id: '251',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6954,7 +6957,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '15',
+        id: '252',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -6978,7 +6981,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '16',
+        id: '253',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7002,7 +7005,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '17',
+        id: '254',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7026,7 +7029,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '18',
+        id: '255',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7050,7 +7053,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '19',
+        id: '256',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7074,7 +7077,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '20',
+        id: '257',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7098,7 +7101,7 @@ const products = [
         title: 'Памятник для животных',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '21',
+        id: '258',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7121,7 +7124,7 @@ const products = [
         title: 'Памятники из полиамида',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '22',
+        id: '259',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7144,7 +7147,7 @@ const products = [
         title: 'Памятники из полиамида',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '23',
+        id: '260',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7167,7 +7170,7 @@ const products = [
         title: 'Памятники из полиамида',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '24',
+        id: '261',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7196,7 +7199,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '0',
+        id: '262',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7220,7 +7223,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '1',
+        id: '263',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7244,7 +7247,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '2',
+        id: '264',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7268,7 +7271,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '3',
+        id: '265',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7292,7 +7295,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '4',
+        id: '266',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7316,7 +7319,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '5',
+        id: '267',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7340,7 +7343,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '6',
+        id: '268',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7364,7 +7367,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '7',
+        id: '269',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7388,7 +7391,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '8',
+        id: '270',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7412,7 +7415,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '9',
+        id: '271',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7436,7 +7439,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '10',
+        id: '272',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7460,7 +7463,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '11',
+        id: '273',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7484,7 +7487,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '12',
+        id: '274',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7508,7 +7511,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '13',
+        id: '275',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7532,7 +7535,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '14',
+        id: '276',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7556,7 +7559,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '15',
+        id: '277',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7580,7 +7583,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '16',
+        id: '278',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7604,7 +7607,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '17',
+        id: '279',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7628,7 +7631,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '18',
+        id: '280',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7652,7 +7655,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '19',
+        id: '281',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7674,7 +7677,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '20',
+        id: '282',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7698,7 +7701,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '21',
+        id: '283',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7722,7 +7725,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '22',
+        id: '284',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7746,7 +7749,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '23',
+        id: '285',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7770,7 +7773,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '24',
+        id: '286',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7794,7 +7797,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '25',
+        id: '287',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7818,7 +7821,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '26',
+        id: '288',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7842,7 +7845,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '27',
+        id: '289',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7866,7 +7869,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '28',
+        id: '290',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7890,7 +7893,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '29',
+        id: '291',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7914,7 +7917,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '30',
+        id: '292',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7938,7 +7941,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '31',
+        id: '293',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7962,7 +7965,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '32',
+        id: '294',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -7986,7 +7989,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '33',
+        id: '295',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8010,7 +8013,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '34',
+        id: '296',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8034,7 +8037,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '35',
+        id: '297',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8058,7 +8061,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '36',
+        id: '298',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8082,7 +8085,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '37',
+        id: '299',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8106,7 +8109,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '38',
+        id: '300',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8130,7 +8133,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '39',
+        id: '301',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8154,7 +8157,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '40',
+        id: '302',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8178,7 +8181,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '41',
+        id: '303',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8202,7 +8205,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '42',
+        id: '304',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8226,7 +8229,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '43',
+        id: '305',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8250,7 +8253,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '44',
+        id: '306',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8274,7 +8277,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '45',
+        id: '307',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8298,7 +8301,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '46',
+        id: '308',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8322,7 +8325,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '47',
+        id: '309',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8346,7 +8349,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '48',
+        id: '310',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8370,7 +8373,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '49',
+        id: '311',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8394,7 +8397,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '50',
+        id: '312',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8418,7 +8421,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '51',
+        id: '313',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8442,7 +8445,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '52',
+        id: '314',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8466,7 +8469,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '53',
+        id: '315',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8490,7 +8493,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '54',
+        id: '316',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8514,7 +8517,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '55',
+        id: '317',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8538,7 +8541,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '56',
+        id: '318',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8562,7 +8565,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '57',
+        id: '319',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8586,7 +8589,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '58',
+        id: '320',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8610,7 +8613,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '59',
+        id: '321',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8634,7 +8637,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '60',
+        id: '322',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8658,7 +8661,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '61',
+        id: '323',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8682,7 +8685,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '62',
+        id: '324',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8706,7 +8709,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '63',
+        id: '325',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8730,7 +8733,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '64',
+        id: '326',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8754,7 +8757,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '65',
+        id: '327',
         prop:`
           <ul type="square">
             <li>Размеры:</li>
@@ -8778,7 +8781,7 @@ const products = [
         title: 'Форма памятников',
         description: 'Памятник из гранита',
         price: '1500',
-        id: '66',
+        id: '328',
         prop:`
           <ul type="square">
             <li>Размеры:</li>

@@ -25,7 +25,8 @@ import {
   setRegion,
   setTel, 
   clearBuy,
-  sendInfoServer
+  sendInfoServer,
+  uploadServer
  } from '../../redux/actions/cart';
 import './style.css';
 import { useDispatch, useSelector } from 'react-redux';
@@ -54,6 +55,7 @@ export default function CartBlock(props) {
   const buy = useSelector(cart.buy);  
   const width = useSelector(cart.width);
   const material = useSelector(cart.material);
+  const fileName = useSelector(cart.fileName);
   const widthArr = ["90x180x10","90x180x15","120x180x10","120x180x15","150x180x10","150x180x15","180x180x10","180x180x15","210x240x10","210x240x15","240x240x10","240x240x15","240x420x10","240x420x15"];
   const materialArr = ['Тротуарная','Керамогранитная','Гранитная'];
    
@@ -72,7 +74,13 @@ export default function CartBlock(props) {
           <div className='btnWrapperCart'>
           <OrangeButton 
             disabled={ buy.length === 0 ? true : false }  
-            onClick={() => {
+            onClick={async () => { 
+              if (byer_file.length !== 0) {
+                let formDataImg = new FormData();
+                formDataImg.append('imageFile', byer_file); 
+                await uploadServer(formDataImg,dispatch);
+              }  
+
               sendInfoServer({ 
                 byer_initial_dead, 
                 byer_date_birthday, 
@@ -91,7 +99,8 @@ export default function CartBlock(props) {
                 pay_method, 
                 buy, 
                 width: widthArr[width],
-                material: materialArr[material] 
+                material: materialArr[material],
+                fileName
               },dispatch); 
             }} 
             text="Оформить" />
@@ -139,7 +148,13 @@ export default function CartBlock(props) {
           <div className='btnWrapperCart'>
             <OrangeButton 
             disabled={ buy.length === 0 ? true : false }  
-            onClick={() => {
+            onClick={async () => { 
+              if (byer_file.length !== 0) {
+                let formDataImg = new FormData();
+                formDataImg.append('imageFile', byer_file); 
+                await uploadServer(formDataImg,dispatch);
+              }  
+
               sendInfoServer({ 
                 byer_initial_dead, 
                 byer_date_birthday, 
@@ -158,7 +173,8 @@ export default function CartBlock(props) {
                 pay_method, 
                 buy, 
                 width: widthArr[width],
-                material: materialArr[material] 
+                material: materialArr[material],
+                fileName
               },dispatch); 
             }} 
             text="Оформить" />

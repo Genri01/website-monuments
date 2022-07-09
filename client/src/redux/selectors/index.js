@@ -30,5 +30,6 @@ export const cart = {
   msg_main_popup: (state) => state.cart.msg_main_popup,
   width: (state) => state.cart.width,
   material: (state) => state.cart.material,
+  fileName: (state) => state.cart.fileName,
 }
  

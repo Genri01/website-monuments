@@ -27,7 +27,7 @@ export default function TopMonument(props) {
           <Title margin="30px 0px 0px 0px" size={33} text="Мы предлагаем:" under/>
           <div className="mobileCardMonumentContainer">
             {
-              top_product.map((item, i) => (<CardsMonument key={i} img={item.img} title={item.title} description={item.description} price={item.price} id={item.id} category={category} prop={item.prop} info={item.info} />))
+              top_product.map((item, i) => (<CardsMonument key={i} category={category} count={item.count} img={item.img} title={item.title} description={item.description} price={item.price} id={item.id} prop={item.prop} info={item.info}  />))
             } 
           </div>
           <div className='buttonContainer'>
@@ -39,7 +39,7 @@ export default function TopMonument(props) {
           <Title margin="50px 0px 0px 0px" size={38} text="Мы предлагаем:" under/>
           <div className="cardMonumentContainer">
             {
-              top_product.map((item, i) => (<CardsMonument key={i} img={item.img} title={item.title} description={item.description} price={item.price} id={item.id} category={category} prop={item.prop} info={item.info} />))
+              top_product.map((item, i) => (<CardsMonument key={i} category={category} count={item.count} img={item.img} title={item.title} description={item.description} price={item.price} id={item.id} prop={item.prop} info={item.info}  />))
             } 
           </div>
           <div className='buttonContainer'>

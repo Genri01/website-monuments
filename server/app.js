@@ -7,10 +7,6 @@ const info_rout = require('./routes/info.routes');
 const config = require('config');
 const PORT = config.get('Server.port') || 8080;
 
-const http = require('http');
-const https = require('https');
-var fs = require('fs');
-
 app.use(function (req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
   res.setHeader("Access-Control-Allow-Headers","Origin, X-Requested-With, Content-Type, Accept");
@@ -18,6 +14,7 @@ app.use(function (req, res, next) {
   res.header('Access-Control-Allow-Credentials', true);
   next();
 },express.json());
+
 app.use(cors());
 
 app.use('/api',info_rout);

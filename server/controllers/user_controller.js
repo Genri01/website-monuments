@@ -1,46 +1,4 @@
 const sendmail = require('sendmail')();
-const multer = require('multer');
-const path = require('path');
-
-
-const filePath = {
-  imageFile: './uploads/images/' 
-}
-
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, path.join(__dirname, '../' + filePath[file.fieldname]))
-  },
-  filename: function (req, file, cb) {
-      let extention = '';
-      switch (file.mimetype) {
-        case 'image/jpeg':
-         extention = 'upload_file.jpeg'
-          break;
-        case 'image/jpg':
-         extention = 'upload_file.jpg'
-          break;
-        case 'image/png':
-         extention = 'upload_file.png'
-          break; 
-        default:
-          break;
-      }
-      cb(null, (extention))
-  }
-})
-
-const uploader = multer({storage: storage}).any();
-
-// const Remove = function (path) {
-//   try {
-//       fs.unlinkSync(path);
-//       console.log('successfully deleted' + path);
-//   } catch (err) {
-//       console.log(err);
-//   }
-// }
-
 
  const UserController = {
   sendConsult:(req,res) => {
@@ -51,6 +9,7 @@ const uploader = multer({storage: storage}).any();
         // from: `webdev170291@yandex.ru`,
         from: `infoimperial01@gmail.com`,
         // from: `${email}`,
+        // to:`webdev170291@yandex.ru`,
         to: `infoimperial01@gmail.com`,
         subject: `!! Запрос на обратную связь !!`,
         html: `Пользователь ${byer_consult_initial.bold()} запрашивает обратную связь по номеру телефона: ${byer_consult_tel.bold()}. Прислал сообщение с текстом: " ${coment_consult.bold()} "`,
@@ -63,7 +22,7 @@ const uploader = multer({storage: storage}).any();
   },
   sendInfo:(req,res) => {
     const { body } = req.body;
-    console.log(body)
+
     const {     
       byer_initial_dead, 
       byer_date_birthday, 
@@ -82,9 +41,10 @@ const uploader = multer({storage: storage}).any();
       pay_method, 
       buy, 
       width,
-      material
+      material,
+      fileName
     } = body 
-
+ 
     let infobuy = 'Заказали памятники: '
 
     buy.map((item) => {
@@ -120,9 +80,10 @@ const uploader = multer({storage: storage}).any();
 
     if(true) {
       sendmail({
+        // from: `webdev170291@yandex.ru`,
         from: `infoimperial01@gmail.com`,
-        // from: `infoimperial01@gmail.com`,
         // from: `${email}`,
+        // to:`webdev170291@yandex.ru`,
         to: `infoimperial01@gmail.com`,
         subject: `!! Информация о заказе !!`,
         html: `
@@ -142,28 +103,17 @@ const uploader = multer({storage: storage}).any();
         Параметры ПЛИТ: ${width},
         Материал ПЛИТ: ${material},
       `,
+      attachments: [
+        {   // data uri as an attachment
+          path: `files/${fileName}`
+        }
+      ]
       }, function(err, reply) {
         res.status(200).send({msg: "Заказ успешно принят. Ожидайте в ближайшее время с вами свяжутся наши специалисты"}) 
       })
     } else {
       res.status(200).send({msg: "Проверьте правильность заполненых данных :("})
     } 
-  },
-   upload: async(body, res, next) => {
-    try {
-      const response = await uploader(body, res, next);
-  
-      return response
-    } catch(e) {
-      console.log(e)
-      if (err instanceof multer.MulterError) {
-        throw ApiErr.BadRequest(e.message)
-        // return res.status(500).json(err)
-      } else if (err) {
-        // return res.status(500).json(err)
-        throw ApiErr.BadRequest(e.message)
-      }
-    }
   }
 }
 

@@ -26,6 +26,7 @@ const initialState = {
   msg_main_popup:'',
   width: 0,
   material: 0,
+  fileName: ''
 };
 
 export default function cart(state = initialState, { type, payload }) { 
@@ -150,8 +151,8 @@ export default function cart(state = initialState, { type, payload }) {
     case ActionTypes.CATALOG_INCRIMENTBUY:
       let buy2 = state.buy; 
       buy2.forEach(item => {
-        if(item.id === payload) {
-          item.count += 1;
+        if(item.id === payload.id) {
+          item.count = payload.count;
         }
       });
       return {
@@ -161,11 +162,11 @@ export default function cart(state = initialState, { type, payload }) {
     case ActionTypes.CATALOG_DECRIMENTBUY:
       let buy3 = state.buy; 
       buy3.forEach(item => {
-        if(item.id === payload) {
+        if(item.id === payload.id) {
           if(item.count <= 1) {
             item.count = 1;
           } else {
-            item.count -= 1;
+            item.count = payload.count;
           }
         }
       });
@@ -197,6 +198,11 @@ export default function cart(state = initialState, { type, payload }) {
       return {
         ...state,
         width: payload
+      }; 
+    case ActionTypes.CATALOG_FILENAME:
+      return {
+        ...state,
+        fileName: payload
       }; 
     default:
       return state;

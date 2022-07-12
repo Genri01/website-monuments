@@ -23,10 +23,7 @@ export default function ProductForm(props) {
   buy.map((item) => { sumPrice += Number(item.price ) * item.count ;return false});
  
   let priceMaterial = (width > 4 && material === 2) ? 0 : arrayMaterial[width][material];
-
-
-
-
+ 
   return (
     <div className="productFormWrapper">
       {
@@ -49,8 +46,8 @@ export default function ProductForm(props) {
             <div className='mobileProductFormPrice'>{ sumPrice }</div>
           </div>
           <div className='transportContainer'>
-            <div className='mobileProductFormTitle'>Доставка транспортной кампанией (оплачивается заказчиком):</div>
-            <div className='mobileProductFormPrice'>{ buy.length !== 0 ? priceDelivery : 0 }</div>
+            <div className='mobileProductFormTitle'>Доставка транспортной кампанией (оплачивается заказчиком и расчитывается индивидуально)</div>
+            {/* <div className='mobileProductFormPrice'>{ buy.length !== 0 ? priceDelivery : 0 }</div> */}
           </div>
           <div className='salesContainer'>
             <div className='mobileProductFormTitle'>
@@ -87,7 +84,8 @@ export default function ProductForm(props) {
           </div>
           <div className='priceContainer'>
             <div className='mobileProductFormTitle' style={{fontWeight: 'bold'}}>Итого:  </div>
-            <div className='mobileProductFormPrice'>{ priceDelivery + (buy.length !== 0 ? sumPrice : 0) + priceMaterial }</div>
+            <div className='mobileProductFormPrice'>{ (buy.length !== 0 ? sumPrice : 0) + priceMaterial }</div>
+            {/* <div className='mobileProductFormPrice'>{ priceDelivery + (buy.length !== 0 ? sumPrice : 0) + priceMaterial }</div> */}
           </div>
         </> :
         <>
@@ -104,8 +102,8 @@ export default function ProductForm(props) {
             }
           </div>
           <div className='transportContainer'>
-            <div className='productFormTitle'>Доставка транспортной кампанией (оплачивается заказчиком):</div>
-            <div className='productFormPrice'>{ buy.length !== 0 ? priceDelivery : 0 }</div>
+            <div className='productFormTitle'>Доставка транспортной кампанией (оплачивается заказчиком и расчитывается индивидуально)</div>
+            {/* <div className='productFormPrice'>{ buy.length !== 0 ? priceDelivery : 0 }</div> */}
           </div>
           <div className='salesContainer'>
             <div className='productFormTitle'>Предварительная стоимость: </div>
@@ -142,7 +140,8 @@ export default function ProductForm(props) {
           </div>
           <div className='priceContainer'>
             <div className='productFormTitle' style={{fontWeight: 'bold'}}>Итого:  </div>
-            <div className='productFormPrice'>{ priceDelivery + (buy.length !== 0 ? sumPrice : 0) + priceMaterial }</div>
+            <div className='productFormPrice'>{ (buy.length !== 0 ? sumPrice : 0) + priceMaterial }</div>
+            {/* <div className='productFormPrice'>{ priceDelivery + (buy.length !== 0 ? sumPrice : 0) + priceMaterial }</div> */}
           </div>
         </>
       }

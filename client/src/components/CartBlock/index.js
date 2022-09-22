@@ -26,7 +26,9 @@ import {
   setTel, 
   clearBuy,
   sendInfoServer,
-  uploadServer
+  uploadServer,
+  setPopupMainMsg,
+  setBuy
  } from '../../redux/actions/cart';
 import './style.css';
 import { useDispatch, useSelector } from 'react-redux';
@@ -122,6 +124,8 @@ export default function CartBlock(props) {
                 dispatch(setPayMethod(''));
                 dispatch(setRegion(''));
                 dispatch(setTel(''));
+                dispatch(setPopupMainMsg(''));
+                dispatch(setBuy([]));
                 dispatch(clearBuy());
                 navigate('/');
               }}
@@ -148,7 +152,7 @@ export default function CartBlock(props) {
           <div className='btnWrapperCart'>
             <OrangeButton 
             disabled={ buy.length === 0 ? true : false }  
-            onClick={async () => { 
+            onClick={async () => {  
               if (byer_file.length !== 0) {
                 let formDataImg = new FormData();
                 formDataImg.append('imageFile', byer_file); 
@@ -196,6 +200,9 @@ export default function CartBlock(props) {
                 dispatch(setPayMethod(''));
                 dispatch(setRegion(''));
                 dispatch(setTel(''));
+                dispatch(setPopupMainMsg(''));
+                dispatch(setBuy([]));
+                dispatch(clearBuy());
                 navigate('/');
               }}
               text="Отменить"

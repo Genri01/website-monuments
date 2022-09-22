@@ -4,6 +4,7 @@ const userController = require('../controllers/user_controller')
 const infoRouter = Router()
 const fileMiddleware = require('../middleware/file')
  
+infoRouter.post('/test',userController.test); 
 infoRouter.post('/sendmail',userController.sendConsult); 
 infoRouter.post('/sendinfo',userController.sendInfo); 
 infoRouter.post('/uploader', fileMiddleware.any(), async (req, res) => { 

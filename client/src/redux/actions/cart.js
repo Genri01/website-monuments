@@ -233,13 +233,34 @@ export async function sendEmailServer(body,dispatch) {
   }
 }
  
+export async function sendTest(body,dispatch) {
+ 
+  try {
+    const requestOptions = {
+        method: 'post',
+        headers: { 
+        'Content-Type': 'application/json',
+        },
+        body
+      }; 
+    const response = await axios.post(`${API_URL}/test`, requestOptions)
+
+    if(response.status === 200) {
+      console.log(response.data) 
+    }  
+  } catch (error) {
+    console.log(error)
+    return error.response?.status;
+  }
+}
+ 
 export async function uploadServer(data,dispatch) { 
   try { 
     const response = await axios.post(`${API_URL}/uploader`, data)
 
     if(response.status === 200) {
       dispatch(setFileName(response.data))
-      // console.log(response.data) 
+      console.log(response.data) 
     }  
   } catch (error) {
     console.log(error)
@@ -260,8 +281,9 @@ export async function sendInfoServer(body,dispatch) {
     const response = await axios.post(`${API_URL}/sendinfo`, requestOptions)
 
     if(response.status === 200) {
-      // console.log(response.data)
-      // dispatch(setPopupMainMsg(response.data.msg))
+      console.log(response.data.msg)
+      console.log(setPopupMainMsg)
+      dispatch(setPopupMainMsg(response.data.msg))
     }  
   } catch (error) {
     console.log(error)

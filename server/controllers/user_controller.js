@@ -20,14 +20,13 @@ const sendmail = require('sendmail')();
       res.status(200).send({msg: "Проверьте правильность заполненых данных :("})
     } 
   },
-  sendInfo:(req,res) => {
+  sendInfo:(req,res) => { 
     const { body } = req.body;
 
     const {     
       byer_initial_dead, 
       byer_date_birthday, 
-      byer_date_dead,
-      byer_file,
+      byer_date_dead, 
       install,
       byer_initial,
       byer_tel,
@@ -78,7 +77,15 @@ const sendmail = require('sendmail')();
         break;
     }
 
-    if(true) {
+console.log(typeof(fileName),'typeof')
+console.log(fileName,'attach fileName')
+
+      let attach = [];
+      if(Object.getOwnPropertyNames(fileName).length > 0) {
+        attach = {   // data uri as an attachment
+          path: `files/${fileName}`
+        }
+      }
       sendmail({
         // from: `webdev170291@yandex.ru`,
         from: `infoimperial01@gmail.com`,
@@ -103,17 +110,24 @@ const sendmail = require('sendmail')();
         Параметры ПЛИТ: ${width},
         Материал ПЛИТ: ${material},
       `,
-      attachments: [
-        {   // data uri as an attachment
-          path: `files/${fileName}`
-        }
-      ]
+      attachments: attach
       }, function(err, reply) {
-        res.status(200).send({msg: "Заказ успешно принят. Ожидайте в ближайшее время с вами свяжутся наши специалисты"}) 
-      })
-    } else {
-      res.status(200).send({msg: "Проверьте правильность заполненых данных :("})
-    } 
+        try {
+          res.status(200).send({msg: "Заказ успешно принят. Ожидайте в ближайшее время с вами свяжутся наши специалисты"}) 
+        } catch (err) {
+          res.status(200).send({msg: `Произошла ошибка: ${err}`})
+        }
+      });
+  },
+  test:(req,res) => { 
+    console.log(req,'@@!!')
+    const { body } = req.body;
+
+    const {     
+      test
+    } = body 
+ 
+    res.status(200).send( body )
   }
 }
 

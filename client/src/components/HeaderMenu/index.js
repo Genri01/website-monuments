@@ -101,14 +101,14 @@ function HeaderMenu(props) {
                 <img className="i-plain" src={phone} alt="phone" />
                     <div className="he-text">
                         Телефон
-                        <span className="text-muted">+7 (953) 534 41 11</span>
+                        <span className="text-muted">+7 (988) 083 76 29</span>
                     </div>
                 </li>
                 <li className="media-desktop">
                     <img className="i-plain" src={time} alt="time" />
                     <div className="he-text">
                         Часы работы
-                        <span className="text-muted">Пн-Пт с 10:00 до 19:00</span>
+                        <span className="text-muted">Пн-Пт с 09:00 до 17:00</span>
                     </div>
                 </li>
             </ul>

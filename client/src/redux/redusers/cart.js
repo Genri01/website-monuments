@@ -26,7 +26,7 @@ const initialState = {
   msg_main_popup:'',
   width: 0,
   material: 0,
-  fileName: ''
+  fileName:{}
 };
 
 export default function cart(state = initialState, { type, payload }) { 

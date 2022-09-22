@@ -24,7 +24,7 @@ export default function MainBlock(props) {
           </div>
           <OrangeButton width={200} margin="20px 0px 0px 0px" text="Заказать" onClick={() => {dispatch(setTabHeader(1)); navigate('/catalog/all');  dispatch(setCategory('all')); }} />
           <div className="colTimerBlock">
-            <div className={`${mobile ? 'mobile-txtTimer' : 'txtTimer'}`}>Получи скидку 15% до окончания времени: </div>
+            <div className={`${mobile ? 'mobile-txtTimer' : 'txtTimer'}`}>Получи скидку 5% до окончания времени: </div>
             <div className="wrapperTimer">
               <Timer initialMinute={15} initialSeconds={0} />
             </div>

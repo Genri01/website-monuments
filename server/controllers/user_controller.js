@@ -118,17 +118,7 @@ console.log(fileName,'attach fileName')
           res.status(200).send({msg: `Произошла ошибка: ${err}`})
         }
       });
-  },
-  test:(req,res) => { 
-    console.log(req,'@@!!')
-    const { body } = req.body;
-
-    const {     
-      test
-    } = body 
- 
-    res.status(200).send( body )
-  }
+  } 
 }
 
 module.exports = UserController;

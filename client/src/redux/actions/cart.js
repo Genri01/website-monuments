@@ -233,27 +233,6 @@ export async function sendEmailServer(body,dispatch) {
   }
 }
  
-export async function sendTest(body,dispatch) {
- 
-  try {
-    const requestOptions = {
-        method: 'post',
-        headers: { 
-        'Content-Type': 'application/json',
-        },
-        body
-      }; 
-    const response = await axios.post(`${API_URL}/test`, requestOptions)
-
-    if(response.status === 200) {
-      console.log(response.data) 
-    }  
-  } catch (error) {
-    console.log(error)
-    return error.response?.status;
-  }
-}
- 
 export async function uploadServer(data,dispatch) { 
   try { 
     const response = await axios.post(`${API_URL}/uploader`, data)

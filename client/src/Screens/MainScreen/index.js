@@ -17,7 +17,7 @@ import InputMask from 'react-input-mask';
 import Footer from '../../components/Footer';
 import { useSelector, useDispatch } from 'react-redux';
 import { app, cart } from '../../redux/selectors';
-import { setConsultComent, setConsultInitial, setConsultTel, sendEmailServer, sendTest } from '../../redux/actions/cart';
+import { setConsultComent, setConsultInitial, setConsultTel, sendEmailServer } from '../../redux/actions/cart';
 
 
 function changeTelephone(value,mask,phone,setErrTel,dispatch) {

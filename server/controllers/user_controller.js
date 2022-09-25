@@ -9,8 +9,8 @@ const sendmail = require('sendmail')();
         // from: `webdev170291@yandex.ru`,
         from: `infoimperial01@gmail.com`,
         // from: `${email}`,
-        // to:`webdev170291@yandex.ru`,
-        to: `infoimperial01@gmail.com`,
+        to:`webdev170291@yandex.ru`,
+        // to: `infoimperial01@gmail.com`,
         subject: `!! Запрос на обратную связь !!`,
         html: `Пользователь ${byer_consult_initial.bold()} запрашивает обратную связь по номеру телефона: ${byer_consult_tel.bold()}. Прислал сообщение с текстом: " ${coment_consult.bold()} "`,
       }, function(err, reply) {
@@ -76,10 +76,7 @@ const sendmail = require('sendmail')();
       default:
         break;
     }
-
-console.log(typeof(fileName),'typeof')
-console.log(fileName,'attach fileName')
-
+ 
       let attach = [];
       if(Object.getOwnPropertyNames(fileName).length > 0) {
         attach = {   // data uri as an attachment
@@ -90,8 +87,8 @@ console.log(fileName,'attach fileName')
         // from: `webdev170291@yandex.ru`,
         from: `infoimperial01@gmail.com`,
         // from: `${email}`,
-        // to:`webdev170291@yandex.ru`,
-        to: `infoimperial01@gmail.com`,
+        to:`webdev170291@yandex.ru`,
+        // to: `infoimperial01@gmail.com`,
         subject: `!! Информация о заказе !!`,
         html: `
         Покупатель ${byer_initial.bold()} с номером телефона: ${byer_tel.bold()} и email(почтой): ${byer_email.bold()} 

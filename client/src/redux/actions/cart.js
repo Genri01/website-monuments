@@ -223,8 +223,7 @@ export async function sendEmailServer(body,dispatch) {
       }; 
     const response = await axios.post(`${API_URL}/sendmail`, requestOptions)
 
-    if(response.status === 200) {
-      console.log(response.data)
+    if(response.status === 200) { 
       dispatch(setPopupMainMsg(response.data.msg))
     }  
   } catch (error) {
@@ -238,8 +237,7 @@ export async function uploadServer(data,dispatch) {
     const response = await axios.post(`${API_URL}/uploader`, data)
 
     if(response.status === 200) {
-      dispatch(setFileName(response.data))
-      console.log(response.data) 
+      dispatch(setFileName(response.data)) 
     }  
   } catch (error) {
     console.log(error)
@@ -259,8 +257,7 @@ export async function sendInfoServer(body,dispatch) {
       }; 
     const response = await axios.post(`${API_URL}/sendinfo`, requestOptions)
 
-    if(response.status === 200) {
-      console.log(response.data.msg)
+    if(response.status === 200) { 
       console.log(setPopupMainMsg)
       dispatch(setPopupMainMsg(response.data.msg))
     }  

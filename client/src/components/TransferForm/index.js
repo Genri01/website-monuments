@@ -27,11 +27,11 @@ export default function TransferForm(props) {
       value: "maycop",
       title: 'Cамовывоз с производства г. Майкоп Промышленная 54а',
     },
-    {
-      name: "delivery",
-      value: "anapa",
-      title: 'Cамовывоз с производства г. Анапа Чехова 50а',
-    },
+    // {
+    //   name: "delivery",
+    //   value: "anapa",
+    //   title: 'Cамовывоз с производства г. Анапа Чехова 50а',
+    // },
   ]
   return (
     <div className="payFormWrapper">

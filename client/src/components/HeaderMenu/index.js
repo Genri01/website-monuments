@@ -1,37 +1,55 @@
-import React, { useState } from 'react';
-import images from '../../assets/images';
-import { HashLink as Link } from 'react-router-hash-link'
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux'; 
 import { slide as Menu } from 'react-burger-menu';
+import { Link, useNavigate,useLocation } from 'react-router-dom';
+// import { HashLink } from 'react-router-hash-link';
 import { header } from '../../redux/selectors';
-import { useSelector, useDispatch } from 'react-redux';
-import { setTabHeader } from '../../redux/actions/app';
+import { change_page } from '../../redux/actions/app';
+import images from '../../assets/images';
 import './style.css';
 
 function HeaderMenu(props) {
   const { statuy, cart, phone, map, time }= images;
-  const { mobile } = props;
-
-  const tab = useSelector(header.tab);
+  const { onClick, userName, page, mobile, isAuth} = props;
+ 
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  useEffect(() => {   
+    dispatch(change_page(localStorage.getItem('page'))); 
+  },[page]); 
+
+  const {hash, key} = useLocation()
+  useEffect(()=>{
+      if(hash){
+         const targetElement = document.getElementById(hash.substring(1))
+          targetElement?.scrollIntoView({behavior: 'smooth'})
+      }
+  }, [key, hash])
   const headers_tab = [
     {
       title: 'Главная',
-      to: '/',
+      key:"main",
+      rout: '/',
     },
     {
       title: 'Каталог',
-      to: '/catalog/all',
+      key:"all",
+      rout: '/catalog/all',
     },
     {
       title: 'Наши работы',
-      to: '/works',
+      key:"works",
+      rout: '/works',
     },
     {
       title: 'Отзывы',
-      to: '/#feedback',
+      key:"feedbacks",
+      rout: '/#feedback',
     },
   ];
+ 
+  let st = {}
  
     return (
       <div className={` ${ mobile ? 'mobileHeaderWrapper' : 'headerWrapper' }`}>
@@ -39,7 +57,12 @@ function HeaderMenu(props) {
           <>
             <div className='mobileTopHeader'>
             <Menu >
-              { headers_tab.map((item,i) => (<Link key={i} className={`tabMobile ${tab === i ? 'active' : ''}`} to={item.to}><div id={i} onClick={(e) => { dispatch(setTabHeader(Number(e.target.id))) }} >{item.title}</div></Link>))}  
+              { headers_tab.map(({ key, rout, title }) => {
+                st = key === page ? 'active' : ''
+                return <Link key={key} to={rout}><div id={key} className={`tabMobile ${st}`} onClick={(e) => { onClick(e); }}>{title}</div></Link>
+              })} 
+              {/* (<Link key={i} className={`tabMobile ${tab === i ? 'active' : ''}`} to={item.to}><div id={i} onClick={(e) => { dispatch(setTabHeader(Number(e.target.id))) }} >{item.title}</div></Link>))
+              }   */}
             </Menu>
             </div>
             <Link className='cartMobile' to={"/cart"}><img src={cart} alt="profile" width="47" height="47" /></Link>
@@ -55,7 +78,7 @@ function HeaderMenu(props) {
                 <li>
                     <img  style={{marginLeft: '7px' }} src={map} alt="map" width="25" height="25" />
                     <div className="he-text"> 
-                      <span className="text-muted"> Майкоп Промышленная 54а, Анапа Чехова 50а</span>
+                      <span className="text-muted"> Майкоп Промышленная 54а</span>
                     </div>
                 </li>
                 <li>
@@ -77,7 +100,10 @@ function HeaderMenu(props) {
           <>
             <div className='topHeader'>
             <div className="catigories">
-              { headers_tab.map((item,i) => (<Link key={i} className={`tab ${tab === i ? 'active' : ''}`} to={item.to}><div id={i} onClick={(e) => { dispatch(setTabHeader(Number(e.target.id))) }} >{item.title}</div></Link>))}
+            { headers_tab.map(({ key, rout, title }) => {
+                st = key === page ? 'active' : ''
+                return <Link key={key} to={rout}><div id={key} className={`tab ${st}`} onClick={(e) => { onClick(e); }}>{title}</div></Link>
+              })} 
             </div>
             <Link to={"/cart"}><img className='cart' src={cart} alt="profile" width="40" height="40" /></Link>
             </div>
@@ -94,7 +120,7 @@ function HeaderMenu(props) {
                     <img  style={{margin: '3px' }} src={map} alt="map" className='i-local' />
                     <div className="he-text">
                         Адрес
-                        <span className="text-muted"> Майкоп: Промышленная 54а, Анапа: Чехова 50а</span>
+                        <span className="text-muted"> Майкоп: Промышленная 54а</span>
                     </div>
                 </li>
                 <li>

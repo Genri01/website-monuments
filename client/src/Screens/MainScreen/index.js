@@ -10,15 +10,14 @@ import FeedbackBlock from '../../components/FeedbackBlock'
 import AnswerBlock from '../../components/AnswerBlock'
 import PlusBlock from '../../components/PlusBlock' 
 import FilterItem from '../../components/FilterItem';
-import Title from '../../components/Title';
-import HeaderMenu from '../../components/HeaderMenu'
+import Title from '../../components/Title'; 
 import OrangeButton from '../../components/OrangeButton';
 import InputMask from 'react-input-mask';
 import Footer from '../../components/Footer';
 import { useSelector, useDispatch } from 'react-redux';
 import { app, cart } from '../../redux/selectors';
 import { setConsultComent, setConsultInitial, setConsultTel, sendEmailServer } from '../../redux/actions/cart';
-
+ 
 
 function changeTelephone(value,mask,phone,setErrTel,dispatch) {
 
@@ -332,6 +331,8 @@ function MainScreen(props) {
 
   const [mask,setMask] = useState('');
   const [errTel,setErrTel] = useState(false); 
+  const { mobile } = props;
+
   useEffect(() => {
     fetch('https://api.sypexgeo.net/json')
     .then(response => response.json())
@@ -341,8 +342,8 @@ function MainScreen(props) {
       }
     });
   },[])
-
-  const mobile = useSelector(app.mobile);
+ 
+ 
   const byer_consult_initial = useSelector(cart.byer_consult_initial);
   const byer_consult_tel = useSelector(cart.byer_consult_tel);
   const coment_consult = useSelector(cart.coment_consult);
@@ -351,8 +352,7 @@ function MainScreen(props) {
   const dispatch = useDispatch();
 
     return (
-      <div className="main_screen" >
-        <HeaderMenu mobile={mobile} />
+      <div className="main_screen" > 
         <MainBlock mobile={mobile} />
         <TopMonument mobile={mobile} />
         { 

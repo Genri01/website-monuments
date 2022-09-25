@@ -53,9 +53,7 @@ class SigninWindow extends React.Component {
       password,
       forgot_email 
     } = this.props
-
-    console.log(this.props)
-
+ 
     return (
       <div className="signinWindowWrapper">
         <div className="signinImageContainer">

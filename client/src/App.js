@@ -1,19 +1,38 @@
 import React, { useEffect } from 'react';
-import './App.css';
 import Main from './routes/index';
 import { isMobile } from 'react-device-detect';
-import { useDispatch } from 'react-redux';
-import { setMobileMod } from './redux/actions/app';
+import { useDispatch, useSelector } from 'react-redux';
+import { change_page, setMobileMod } from './redux/actions/app';
+import { pages, app } from './redux/selectors';
+import HeaderMenu from './components/HeaderMenu';
+import './App.css';
 
 function App() {
   const dispatch = useDispatch();  
+
+  const page = useSelector(pages.page); 
+  const mobile = useSelector(app.mobile); 
+
   useEffect(() => {
-    dispatch(setMobileMod(isMobile))
+    if(localStorage.getItem('page') === null) {  
+      localStorage.setItem('page','main'); 
+    }   
+    dispatch(change_page(localStorage.getItem('page')));
+    dispatch(setMobileMod(isMobile));
   },[]);
 
+  
   return (
     <div className="App">
-      <Main />
+      <HeaderMenu 
+        mobile={mobile}  
+        page={page} 
+        onClick={(e) => {  
+          localStorage.setItem('page',e.target.id);
+          dispatch(change_page(e.target.id))
+        }}   
+      />
+      <Main mobile={mobile} />
     </div>
   );
 }

@@ -4,8 +4,7 @@ import ItemOrder from '../ItemOrder';
 import Title from '../Title';
 import { ordedr_work } from '../../config';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { setTabHeader } from '../../redux/actions/app';
+import { useDispatch } from 'react-redux'; 
 import { setCategory } from '../../redux/actions/cart';
 import './style.css';
 
@@ -25,7 +24,7 @@ export default function WorkOrder(props) {
             } 
           </div>
           <div className="workOrderBtnWrapper">
-          <OrangeButton onClick={() => {dispatch(setTabHeader(1)); navigate('/catalog/all');  dispatch(setCategory('all'));}} text="Заказать" />
+          <OrangeButton onClick={() => { navigate('/catalog/all');  dispatch(setCategory('all'));}} text="Заказать" />
           </div>
           </> :
         <>
@@ -36,7 +35,7 @@ export default function WorkOrder(props) {
             }  
           </div>
           <div className="workOrderBtnWrapper">
-          <OrangeButton onClick={() => {dispatch(setTabHeader(1)); navigate('/catalog/all'); dispatch(setCategory('all')); }} text="Заказать" />
+          <OrangeButton onClick={() => { navigate('/catalog/all'); dispatch(setCategory('all')); }} text="Заказать" />
           </div>
         </>
       }

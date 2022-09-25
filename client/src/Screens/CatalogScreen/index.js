@@ -1,6 +1,5 @@
 import React from 'react';
-import './style.css';
-import HeaderMenu from '../../components/HeaderMenu';
+import './style.css'; 
 import Title from '../../components/Title';
 import CardsMonument from '../../components/CardsMonument';
 import { products } from '../../config';
@@ -17,7 +16,7 @@ function CatalogScreen(props) {
   let category_obj_all = [];
   let category_obj = [];
   let prod = [];
-
+ 
   switch (category) {
     case 'all':
       text = 'Все';
@@ -50,26 +49,39 @@ function CatalogScreen(props) {
     default:
       break;
   }
-
-
-  if(category === 'mramor' || category === 'granit') { 
-    if(category === 'granit') {
-      products.map((item) => { 
-        item.items.map((chank) => ( chank.material === 'granit' ? category_obj.push(chank) : false )) 
-      });
-    } else {
-      products.map((item) => { 
-        item.items.map((chank) => ( chank.material === 'mramor' ? category_obj.push(chank) : false )) 
-      });
-    } 
-  } else { 
-    products.map((item,i) => {console.log(item);item.category === category ? category_obj.push(...item.items) : category_obj_all.push(...item.items); return false});
-    // category_obj.length === 0 ? prod.push(...category_obj_all) : prod.push(...category_obj);
+ 
+  if(category === 'all') {
+    products.map((item,i) => { 
+      item.monuments.map((chank) => (category_obj_all.push(...chank.items)))  
+    });
   }
+ 
+  if(category === 'mramor' || category === 'granit' || category === 'poly') { 
+    if(category === 'granit') {
+      products.map((item,i) => { 
+        item.monuments.map((chank) => ( chank.material === 'granit' ? category_obj.push(...chank.items) : false )) 
+      });
+    } else if(category === 'mramor') {
+      products.map((item) => { 
+        item.monuments.map((chank) => ( chank.material === 'mramor' ? category_obj.push(...chank.items) : false )) 
+      });
+    } else if(category === 'poly') {
+      products.map((item) => { 
+        item.monuments.map((chank) => ( chank.material === 'poly' ? category_obj.push(...chank.items) : false )) 
+      });
+    }   
+  } else {
+    products.map((item,i) => { 
+      if(item.category === category) {
+        item.monuments.map((chank) => ( category_obj.push(...chank.items) ))  
+      } 
+    });
+  } 
+ 
     category_obj.length === 0 ? prod.push(...category_obj_all) : prod.push(...category_obj);
+
     return (
-      <div className="main_screen" >
-        <HeaderMenu  mobile={mobile} />
+      <div className="main_screen" > 
         <div className='catalog_wrapper'>
           {
             mobile ?

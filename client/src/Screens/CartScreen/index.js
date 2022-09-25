@@ -1,6 +1,5 @@
 import React from 'react';
-import './style.css';
-import HeaderMenu from '../../components/HeaderMenu' 
+import './style.css'; 
 import CartBlock from '../../components/CartBlock' 
 import Title from '../../components/Title';
 import { useSelector } from 'react-redux';
@@ -9,8 +8,7 @@ import { app } from '../../redux/selectors'
 function CartScreen(props) {
   const mobile = useSelector(app.mobile);
     return (
-      <div className="cart_screen" >
-        <HeaderMenu mobile={mobile} />
+      <div className="cart_screen" > 
         {
           mobile ? 
           <>

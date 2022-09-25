@@ -1,6 +1,5 @@
 import React from 'react';
-import './style.css';
-import HeaderMenu from '../../components/HeaderMenu'
+import './style.css'; 
 import Footer from '../../components/Footer' 
 import Title from '../../components/Title'; 
 import { works_images } from '../../config';
@@ -9,8 +8,7 @@ function WorkScreen(props) {
 
   const { mobile } = props; 
     return (
-      <div className="main_screen" >
-        <HeaderMenu  mobile={mobile}/>
+      <div className="main_screen" > 
         <div className='catalog_wrapper'>
           {
             mobile ?

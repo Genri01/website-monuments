@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { HashLink as Link } from 'react-router-hash-link'
+import { Link, useNavigate } from 'react-router-dom';
 import images from '../../assets/images';
 import { YMaps, Map, Placemark,ZoomControl } from 'react-yandex-maps';
 import { setCategory } from '../../redux/actions/cart';
@@ -15,9 +15,9 @@ function Footer(props) {
         <div className="footer_up">
           <div className="footer_logo_section">
             <YMaps>
-                <Map  className={`${mobile ? 'mobile-iframe' : 'iframe'}`} defaultState={{ center: [44.889227, 38.819485], zoom: 7 }}>
-                  <Placemark geometry={[44.625058, 40.094401]} />
-                  <Placemark geometry={[44.889293, 37.340501]} />
+                <Map  className={`${mobile ? 'mobile-iframe' : 'iframe'}`} defaultState={{ center: [44.625040, 40.094427], zoom: 15 }}>
+                  <Placemark geometry={[44.625040, 40.094427]} />
+                  {/* <Placemark geometry={[44.889293, 37.340501]} /> */}
                   <ZoomControl />
                 </Map>
             </YMaps>
@@ -41,7 +41,7 @@ function Footer(props) {
         </div>
         <div className="footer_down">
           <div className="coperait_container">
-            <div className={`${mobile ? 'mobile-coperait_txt' : 'coperait_txt'}`}>Copyright © 2022 Лучшие памятники АНАПЫ!</div> 
+            <div className={`${mobile ? 'mobile-coperait_txt' : 'coperait_txt'}`}>Copyright © 2022 Лучшие памятники!</div> 
           </div>
           <div className="visa_container">
             <img src={visa} alt="visa" width="49" height="17" />

@@ -1,9 +1,14 @@
-export const header = {
-  tab: (state) => state.header.tab
-}
+ 
 export const app = {
   mobile: (state) => state.app.mobile
 }
+
+export const pages = {
+  page:(state) => state.pages.page,
+  header_visible:(state) => state.pages.header_visible,
+  active:(state) => state.pages.active,
+}
+
 export const cart = {
   byer_initial_dead: (state) => state.cart.byer_initial_dead,
   byer_date_birthday: (state) => state.cart.byer_date_birthday,

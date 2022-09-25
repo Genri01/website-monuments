@@ -3,8 +3,7 @@ import Title from '../Title';
 import OrangeButton from '../OrangeButton';
 import Timer from '../Timer';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { setTabHeader } from '../../redux/actions/app';
+import { useDispatch } from 'react-redux'; 
 import { setCategory } from '../../redux/actions/cart';
 import './style.css';
 
@@ -22,7 +21,7 @@ export default function MainBlock(props) {
           <div className={`${mobile ? 'mobile-txt_main_subtxt' : 'txt_main_subtxt'}`}>
           Изготовление, доставкой и установкой гранитных памятников и благоустройством могил по доступным ценам
           </div>
-          <OrangeButton width={200} margin="20px 0px 0px 0px" text="Заказать" onClick={() => {dispatch(setTabHeader(1)); navigate('/catalog/all');  dispatch(setCategory('all')); }} />
+          <OrangeButton width={200} margin="20px 0px 0px 0px" text="Заказать" onClick={() => { navigate('/catalog/all');  dispatch(setCategory('all')); }} />
           <div className="colTimerBlock">
             <div className={`${mobile ? 'mobile-txtTimer' : 'txtTimer'}`}>Получи скидку 5% до окончания времени: </div>
             <div className="wrapperTimer">

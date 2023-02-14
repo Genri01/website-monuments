@@ -1,9 +1,9 @@
 
 import React, { useEffect, useState } from 'react'; 
-import { setInitialDead, setBirthdayDate, setDeadDate, setFile, setInstall, setInitial, setTel, setEmail } from '../../redux/actions/cart'
+import { setInitialDead, setBirthdayDate, setDeadDate, setFile, setInstall, setInitial, setTel, setEmail, delFile } from '../../redux/actions/cart'
 import './style.css';
 import { useDispatch, useSelector  } from 'react-redux';
-import { cart } from '../../redux/selectors';
+import { cart } from '../../redux/selectors'; 
 import InputMask from 'react-input-mask';
 
 function validateEmail(email) {
@@ -24,10 +24,8 @@ function changeTelephone(value,mask,phone,setErrTel,dispatch) {
  
 }
 
-function changeEmail(email,setErrEmail,dispatch,validateEmail) {
-
-  dispatch(setEmail(email));
-
+function changeEmail(email,setErrEmail,dispatch,validateEmail) { 
+  dispatch(setEmail(email)); 
   if (validateEmail(email)) {
     setErrEmail(false);
   } else { 
@@ -35,8 +33,7 @@ function changeEmail(email,setErrEmail,dispatch,validateEmail) {
   }
   return false;
 }
-
-
+ 
 export default function BuyerForm(props) {
 
   const [quality,setQuality] = useState({ 
@@ -335,6 +332,7 @@ export default function BuyerForm(props) {
   const [mask,setMask] = useState('');
   const [errTel,setErrTel] = useState(false);
   const [errEmail,setErrEmail] = useState(false); 
+  const [stateFilesArr,setStateFilesArr] = useState([]); 
 
   useEffect(() => {
     fetch('https://api.sypexgeo.net/json')
@@ -352,14 +350,88 @@ export default function BuyerForm(props) {
   const byer_initial_dead = useSelector(cart.byer_initial_dead);
   const byer_date_birthday = useSelector(cart.byer_date_birthday);
   const byer_date_dead = useSelector(cart.byer_date_dead);
-  const byer_file = useSelector(cart.byer_file);
+  const byer_files = useSelector(cart.byer_file);
   const install = useSelector(cart.install);
   const byer_initial = useSelector(cart.byer_initial);
   const byer_tel = useSelector(cart.byer_tel);
-  const byer_email = useSelector(cart.byer_email);
+  const byer_email = useSelector(cart.byer_email); 
  
+  function clearEventListener(element) {
+    const clonedElement = element.cloneNode(true);
+    element.replaceWith(clonedElement);
+    return clonedElement;
+  }
 
-  return (
+  function RenderThumbnail(e, readerEvt, setStates ) { 
+   
+    // function handleClick(e) {
+    //   let newArr = filesArr.filter((item) => (item.name !== e.target.dataset.id)) 
+    //   setStates(newArr); 
+    // } 
+
+    // lis.forEach((item) => { 
+    //   let listItem = clearEventListener(item)
+    //   listItem.addEventListener('click', handleClick);
+    // }) 
+  }
+ 
+  function ApplyFileValidationRules(readerEvt, files) {  
+
+    if (CheckFileType(readerEvt.type) === false) { 
+      console.log ("Этот фаил (" + readerEvt.name + ") не соответсвует формату, пожалуйста выбирите расширения: jpg/png/jуpg/webp");
+      return true;
+    }
+
+    if (CheckFileSize(readerEvt.size) === false) { 
+      console.log ("Этот фаил (" + readerEvt.name + ") не соответсвует формату, максимальный размер файлов 8 MB");
+      return true;
+    }
+  
+    if (CheckFilesCount(files) === false) { 
+      console.log ("Загружено больше 6х файлов, пожалуйста удалите лишние");
+      return true;
+    }
+
+    return false
+  }
+  
+  function CheckFilesCount(AttachmentArray) {  
+    var len = 0;
+    for (var i = 0; i < AttachmentArray.length; i++) {
+      if (AttachmentArray[i] !== undefined) {
+        len++;
+      }
+    }
+ 
+    if (len > 6) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  function CheckFileSize(fileSize) {
+    if (fileSize < 8000000) {
+      return true;
+    }
+    else {
+      return false;
+    } 
+  }
+
+  function CheckFileType(fileType) {
+    if (fileType === "image/jpeg") {
+      return true;
+    } else if (fileType === "image/png") {
+      return true;
+    } else if (fileType === "image/gif") {
+      return true;
+    } else {
+      return false;
+    } 
+  }
+   console.log(byer_files)
+  return ( 
     <div className="locationFormWrapper">
       <div className='titleLocationContainer'>
         <div className='titlelocation textTitleForm'>Покупатель</div>
@@ -405,48 +477,85 @@ export default function BuyerForm(props) {
           <div style={ mobile ? { width:'100px', fontSize: '13px' } : {width:'150px'} }>Загрузить фото</div>
           <div className="input__wrapper">
             <input  
-            style={ mobile ? { width:'10px' } : {} }
-            onChange={(event) => { 
-              if(event.target.files.length !== 0) {  
-              dispatch(setFile(event.target.files[0])) 
-                 var reader = new FileReader(); 
-                 reader.onload = function(e) { 
-                  document.getElementById('blah').setAttribute("src", e.target.result) ;
-                 } 
-                 reader.readAsDataURL(event.target.files[0]); 
-              } 
+              style={ mobile ? { width:'10px' } : {} }
+              onChange={(event) => { 
+                const files = event.target.files;  
+                if(files.length !== 0) {  
+                  for (let i = 0, f; f = files[i]; i++) {
+                    var reader = new FileReader();
+                    reader.readAsDataURL(f); 
+                    reader.onload = (function (readerEvt) { 
+                      return function (e) {  
+                     
+                        if(ApplyFileValidationRules(readerEvt, files) === false) {   
+                          let newArr = [];  
+                          newArr.push(...byer_files);   
+                          newArr.push({
+                            file: readerEvt,
+                            img: e.target.result
+                          });
+
+                          let filterNewArr = newArr.filter((item) => (item.file.name !== readerEvt.name));   
+                          filterNewArr.map((item) => (newArr.push(item)));
+
+                          let unique = newArr.filter(function(elem, index, self) {
+                            return index === self.indexOf(elem);
+                          }) 
+
+                          if(unique.length < 7) { 
+                            let test = []
+                            test.push(...unique); 
+                            dispatch(setFile(test));
+                          } else {
+                            console.log ("Загружено больше 6х файлов, пожалуйста удалите лишние");
+                          }
+                        }  
+                      };
+                    })(f); 
+                  }  
+                } 
               }} 
               name="file" 
               type="file" 
               id='files' 
               className="input input__file" 
-              multiple="" 
-              accept="image" 
+              multiple={true} 
+              accept="image/jpeg, image/png, image/gif" 
             />
             <label htmlFor='files' className="input__file-button">
               <span className="input__file-button-text">Выберите файл</span>
             </label>
-          </div>
+          </div>  
         </div>
       </div>
       <div className='locationContainer'>
-        <div className='locationForm'>
-          <div className='nameimg'>{ byer_file.name }</div>
-          <img style={{width: '60px',height: '60px'}} id="blah" src="#" alt="фаил не загружен" />
+        <div id="fileList" className='locationForm'>
+          {
+            byer_files.map((item, key) => { 
+              return <li key={key} className="fileImage">
+                <div className="img-wrap">
+                  <span onClick={(e) => {
+                    dispatch(delFile(e.target.dataset.id)) 
+                  }} className="close" data-id={item.file.name}>×</span>
+                  <img className="thumb" src={item.img} alt={item.file.name} />
+                </div>
+                {/* <div className="FileNameCaptionStyle">{item.file.name}</div> */}
+              </li>
+            })
+          }
         </div>
       </div>
       <div className='locationContainer'>
         <div className='locationForm'>
           <div  style={ mobile ? { width:'297px', fontSize: '13px' } : { width:'150px' } } className='pay'>Установка
            <input onChange={(e) => {
-             dispatch(setInstall(e.target.checked));
-          
+             dispatch(setInstall(e.target.checked)); 
             }} value='' checked={install} type="checkbox" style={{ marginLeft:'50px' }}/>
           </div>
           <div className='titleSetup'>Не входит в стоимость памятника и считается индивидуально</div>
         </div>
-      </div>
-  
+      </div> 
     </div>
   );
 }
+

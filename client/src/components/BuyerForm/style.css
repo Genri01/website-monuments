@@ -69,10 +69,7 @@ input[name="telephone"]:focus {
   outline: none;
   box-shadow: none;
 }
-
-
-
-
+ 
 .locationContainer {
   display: flex;
   width: 100%;
@@ -86,7 +83,7 @@ input[name="telephone"]:focus {
 .locationForm {
   display: flex;
   width: 100%;
-  height: 40px;
+  height: auto;
   align-items: center;
   box-sizing: border-box;
 }
@@ -229,4 +226,32 @@ input[type=checkbox]:checked:after {
   top: 0px;
   left: 6px;
 }
-  
+
+.fileImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100px; 
+  height: 100px;
+  margin: 0px 8px;
+  overflow: hidden;
+  list-style-type: none;
+}
+
+.thumb {
+  width: 100%;
+  height: 75%;
+}
+
+.img-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+}
+
+.close {
+  color: #ea402f;
+  font-size: 23px;
+  cursor: pointer;
+  user-select: none;
+}

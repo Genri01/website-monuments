@@ -18,12 +18,12 @@ export default function MainBlock(props) {
       <div className="colInfoBlock"> 
         <div className={`${mobile ? 'mobile-wrapper_maintxt' : 'wrapper_maintxt'}`} >
           <Title margin={`${mobile ? "0px 20px 20px" : "0px 0px 20px 0px"}`} size={`${mobile ? '16px' : '33px'}`} text="Вечная память, застывшая в камне." />
-          <div className={`${mobile ? 'mobile-txt_main_subtxt' : 'txt_main_subtxt'}`}>
-          Изготовление, доставкой и установкой гранитных памятников и благоустройством могил по доступным ценам
+	<div className={`${mobile ? 'mobile-txt_main_subtxt' : 'txt_main_subtxt'}`}>
+          Изготовление, доставка и установка гранитных памятников и благоустройством могил по доступным ценам
           </div>
           <OrangeButton width={200} margin="20px 0px 0px 0px" text="Заказать" onClick={() => { navigate('/catalog/all');  dispatch(setCategory('all')); }} />
           <div className="colTimerBlock">
-            <div className={`${mobile ? 'mobile-txtTimer' : 'txtTimer'}`}>Получи скидку 5% до окончания времени: </div>
+		<div className={`${mobile ? 'mobile-txtTimer' : 'txtTimer'}`}>Закажи памятник сейчас и получи скидку до 70% на мраморные памятники: </div>
             <div className="wrapperTimer">
               <Timer initialMinute={15} initialSeconds={0} />
             </div>

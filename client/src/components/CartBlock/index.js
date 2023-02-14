@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import OrangeButton from '../OrangeButton';
 import ProductForm from '../ProductForm';
 import BuyerForm from '../BuyerForm';
@@ -6,7 +6,7 @@ import ComentForm from '../ComentForm';
 import LocationForm from '../LocationForm';
 import TransferForm from '../TransferForm';
 import PayForm from '../PayForm';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; 
 import { 
   setAddres,
   setBirthdayDate,
@@ -15,7 +15,7 @@ import {
   setDeadDate,
   setEmail,
   setDeliveryMethod,
-  setFile,
+  setFile, 
   setIndex,
   setInitial,
   setInitialDead,
@@ -25,8 +25,7 @@ import {
   setRegion,
   setTel, 
   clearBuy,
-  sendInfoServer,
-  uploadServer,
+  sendInfoServer, 
   setPopupMainMsg,
   setBuy
  } from '../../redux/actions/cart';
@@ -39,10 +38,13 @@ export default function CartBlock(props) {
   const { mobile } = props;
   const dispatch = useDispatch();
   const navigate = useNavigate();
+ 
+  const [isToggleOn,setIstoogle] = useState(false);
+
   const byer_initial_dead = useSelector(cart.byer_initial_dead);
   const byer_date_birthday = useSelector(cart.byer_date_birthday);
   const byer_date_dead = useSelector(cart.byer_date_dead);
-  const byer_file = useSelector(cart.byer_file);
+  const byer_file = useSelector(cart.byer_file); 
   const install = useSelector(cart.install);
   const byer_initial = useSelector(cart.byer_initial);
   const byer_tel = useSelector(cart.byer_tel);
@@ -58,9 +60,10 @@ export default function CartBlock(props) {
   const width = useSelector(cart.width);
   const material = useSelector(cart.material);
   const fileName = useSelector(cart.fileName);
+  const msg_main_popup = useSelector(cart.msg_main_popup); 
   const widthArr = ["90x180x10","90x180x15","120x180x10","120x180x15","150x180x10","150x180x15","180x180x10","180x180x15","210x240x10","210x240x15","240x240x10","240x240x15","240x420x10","240x420x15"];
   const materialArr = ['Тротуарная','Керамогранитная','Гранитная'];
-   
+ 
   return (
     <div  style={ mobile ? { padding: '0px 10px' } : {} } className="cartBlockWrapper">
       {
@@ -73,37 +76,67 @@ export default function CartBlock(props) {
           <LocationForm />
           <TransferForm />
           <PayForm />
+          <div className='resultMssg'>{`${msg_main_popup}`}</div>
           <div className='btnWrapperCart'>
           <OrangeButton 
-            disabled={ buy.length === 0 ? true : false }  
-            onClick={async () => { 
-              if (byer_file.length !== 0) {
-                let formDataImg = new FormData();
-                formDataImg.append('imageFile', byer_file); 
-                await uploadServer(formDataImg,dispatch);
-              }  
+              disabled={ isToggleOn ? true : buy.length === 0 ? true : false }  
+              onClick={ async () => {  
+                setIstoogle(true);    
 
-              sendInfoServer({ 
-                byer_initial_dead, 
-                byer_date_birthday, 
-                byer_date_dead,
-                byer_file,
-                install,
-                byer_initial,
-                byer_tel,
-                coment, 
-                byer_email,
-                addres_city,
-                addres,
-                addres_index,
-                addres_region,
-                delivery_method,
-                pay_method, 
-                buy, 
-                width: widthArr[width],
-                material: materialArr[material],
-                fileName
-              },dispatch); 
+                const reader = new FileReader(); 
+               
+                if(byer_file.name !== undefined) { 
+                  reader.readAsDataURL(byer_file); 
+                  reader.onloadend = async function () {   
+                    await sendInfoServer({ 
+                      byer_initial_dead, 
+                      byer_date_birthday, 
+                      byer_date_dead,
+                      byer_file, 
+                      install,
+                      byer_initial,
+                      byer_tel,
+                      coment, 
+                      byer_email,
+                      addres_city,
+                      addres,
+                      addres_index,
+                      addres_region,
+                      delivery_method,
+                      pay_method, 
+                      buy, 
+                      width: widthArr[width],
+                      material: materialArr[material],
+                      fileName,
+                      testImage:reader.result.replace(/^data:.+;base64,/, '')
+                    },dispatch);  
+                    setIstoogle(false);   
+                  }; 
+                } else {
+                  await sendInfoServer({ 
+                    byer_initial_dead, 
+                    byer_date_birthday, 
+                    byer_date_dead,
+                    byer_file, 
+                    install,
+                    byer_initial,
+                    byer_tel,
+                    coment, 
+                    byer_email,
+                    addres_city,
+                    addres,
+                    addres_index,
+                    addres_region,
+                    delivery_method,
+                    pay_method, 
+                    buy, 
+                    width: widthArr[width],
+                    material: materialArr[material],
+                    fileName,
+                    testImage:undefined
+                  },dispatch);  
+                  setIstoogle(false); 
+                } 
             }} 
             text="Оформить" />
           <OrangeButton
@@ -115,7 +148,7 @@ export default function CartBlock(props) {
                 dispatch(setDeadDate(''));
                 dispatch(setEmail(''));
                 dispatch(setDeliveryMethod(''));
-                dispatch(setFile({}));
+                dispatch(setFile([])); 
                 dispatch(setIndex(''));
                 dispatch(setInitial(''));
                 dispatch(setInitialDead(''));
@@ -149,38 +182,35 @@ export default function CartBlock(props) {
               <PayForm />
             </div>
           </div>
+          <div className='resultMssg'>{`${msg_main_popup}`}</div>
           <div className='btnWrapperCart'>
             <OrangeButton 
-            disabled={ buy.length === 0 ? true : false }  
-            onClick={async () => {  
-              if (byer_file.length !== 0) {
-                let formDataImg = new FormData();
-                formDataImg.append('imageFile', byer_file); 
-                await uploadServer(formDataImg,dispatch);
-              }  
-
-              sendInfoServer({ 
-                byer_initial_dead, 
-                byer_date_birthday, 
-                byer_date_dead,
-                byer_file,
-                install,
-                byer_initial,
-                byer_tel,
-                coment, 
-                byer_email,
-                addres_city,
-                addres,
-                addres_index,
-                addres_region,
-                delivery_method,
-                pay_method, 
-                buy, 
-                width: widthArr[width],
-                material: materialArr[material],
-                fileName
-              },dispatch); 
-            }} 
+              disabled={ isToggleOn ? true : buy.length === 0 ? true : false }  
+              onClick={ async () => {  
+                setIstoogle(true);    
+                await sendInfoServer({ 
+                  byer_initial_dead, 
+                  byer_date_birthday, 
+                  byer_date_dead,
+                  byer_file, 
+                  install,
+                  byer_initial,
+                  byer_tel,
+                  coment, 
+                  byer_email,
+                  addres_city,
+                  addres,
+                  addres_index,
+                  addres_region,
+                  delivery_method,
+                  pay_method, 
+                  buy, 
+                  width: widthArr[width],
+                  material: materialArr[material],
+                  fileName, 
+                },dispatch);  
+                setIstoogle(false);  
+              }} 
             text="Оформить" />
             <OrangeButton
               onClick={() => {
@@ -191,7 +221,7 @@ export default function CartBlock(props) {
                 dispatch(setDeadDate(''));
                 dispatch(setEmail(''));
                 dispatch(setDeliveryMethod(''));
-                dispatch(setFile({}));
+                dispatch(setFile([])); 
                 dispatch(setIndex(''));
                 dispatch(setInitial(''));
                 dispatch(setInitialDead(''));
@@ -204,6 +234,7 @@ export default function CartBlock(props) {
                 dispatch(setBuy([]));
                 dispatch(clearBuy());
                 navigate('/');
+                localStorage.setItem('page','main');
               }}
               text="Отменить"
             />
@@ -214,5 +245,6 @@ export default function CartBlock(props) {
   );
 }
  
+
 
 

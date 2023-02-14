@@ -9,7 +9,7 @@ function ProductItem(props) {
     const { arrowl, arrowr, cross } = images;
     const dispatch = useDispatch(); 
     return (
-        <div className='ProductItemWrapper'>
+        <div className={`${mobile ? 'mobileProductItemWrapper' :'ProductItemWrapper'}`}>
           {
             mobile ?
             <>
@@ -78,3 +78,4 @@ function ProductItem(props) {
 }
 
 export default ProductItem;
+

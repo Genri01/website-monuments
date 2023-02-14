@@ -5,6 +5,7 @@ import { Link, useNavigate,useLocation } from 'react-router-dom';
 // import { HashLink } from 'react-router-hash-link';
 import { header } from '../../redux/selectors';
 import { change_page } from '../../redux/actions/app';
+import { setPopupMainMsg } from '../../redux/actions/cart';
 import images from '../../assets/images';
 import './style.css';
 
@@ -17,6 +18,7 @@ function HeaderMenu(props) {
 
   useEffect(() => {   
     dispatch(change_page(localStorage.getItem('page'))); 
+    dispatch(setPopupMainMsg(''));
   },[page]); 
 
   const {hash, key} = useLocation()

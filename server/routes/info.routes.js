@@ -8,7 +8,8 @@ infoRouter.post('/sendmail',userController.sendConsult);
 infoRouter.post('/sendinfo',userController.sendInfo); 
 infoRouter.post('/uploader', fileMiddleware.any(), async (req, res) => { 
  
-  try {   
+  try {  
+ console.log('!uploader')
     return res.json(req.files[0].filename); 
   } catch(err) {  
     if (err instanceof multer.MulterError) {

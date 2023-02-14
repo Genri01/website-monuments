@@ -4,7 +4,8 @@ const initialState = {
   byer_initial_dead: '',
   byer_date_birthday: '',
   byer_date_dead: '',
-  byer_file: {},
+  byer_file: [],
+  byer_file_img: [],
   install: false,
   byer_initial: '',
   byer_tel: '',
@@ -52,6 +53,21 @@ export default function cart(state = initialState, { type, payload }) {
         ...state,
         byer_file: payload
       }; 
+
+    case ActionTypes.CART_BYER_DEL_FILE:
+      let tempArrFiles = state.byer_file;
+      let clearArr = tempArrFiles.filter((item) => (item.file.name !== payload))
+
+      return {
+        ...state,
+        byer_file: clearArr
+      }; 
+    case ActionTypes.CART_BYER_FILE_IMG:
+      return {
+        ...state,
+        byer_file_img: payload
+      }; 
+ 
     case ActionTypes.CART_INSTALL:
       return {
         ...state,
@@ -208,3 +224,4 @@ export default function cart(state = initialState, { type, payload }) {
       return state;
   }
 }
+

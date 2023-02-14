@@ -30,6 +30,13 @@ export function setFile(date) {
   }
 }
 
+export function delFile(filename) {
+  return {
+    type: ActionTypes.CART_BYER_DEL_FILE,
+    payload: filename
+  }
+}
+
 export function setInstall(install) {
   return {
     type: ActionTypes.CART_INSTALL,

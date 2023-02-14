@@ -85,13 +85,10 @@
 
 .productContainer {
   display: flex;
-  width: 100%;
-  height: auto;
-  align-items: center;
-  justify-content: center;
-  border-top: 1px solid #ea402f;
+  width: 100%; 
+  align-items: center; 
+  border-top: 1px solid #ea402f; 
   flex-direction: column;
-  
 }
 
 .transportContainer {

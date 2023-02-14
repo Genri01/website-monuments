@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { cart } from '../../redux/selectors'; 
 import { setBuy } from '../../redux/actions/cart'; 
+import imageToBase64 from 'image-to-base64/browser';
 import './style.css';
 
 export default function ShopBlock(props) {
@@ -15,8 +16,10 @@ export default function ShopBlock(props) {
   const link = useSelector(cart.link);
   var procuct_cart = insert;
   var procuct_link = link;
+
   const dispatch = useDispatch(); 
- 
+  const navigate = useNavigate();
+
   if(Object.keys(insert).length === 0) {
     procuct_cart = JSON.parse(localStorage.getItem('card_inf')); 
     procuct_link = localStorage.getItem('cross_link'); 
@@ -45,7 +48,22 @@ export default function ShopBlock(props) {
               }
             </div>
             <div style={mobile ? { justifyContent: 'center' } : {}} className='btnShopBlockWrapper'>
-              <Link style={{ textDecoration: 'none' }} to={"/cart"}><OrangeButton text='Оформить заказ' onClick={()=>{ dispatch(setBuy({ count:procuct_cart.count, img:procuct_cart.img, price:procuct_cart.price, title:procuct_cart.title, id: procuct_cart.id }))}} /></Link>
+            <OrangeButton style={{ textDecoration: 'none' }} text='Оформить заказ' onClick={()=>{
+                imageToBase64(procuct_cart.img)
+                  .then(
+                      (response) => {
+                        dispatch(setBuy({ count:procuct_cart.count,img:procuct_cart.img, img64:response, price:procuct_cart.price, title:procuct_cart.title, id: procuct_cart.id }))
+                        navigate('/cart');
+                      }
+                  )
+                  .catch(
+                      (error) => {
+                          console.log(error); // Logs an error if there was one
+                          dispatch(setBuy({ count:procuct_cart.count, img:procuct_cart.img, img64:'', price:procuct_cart.price, title:procuct_cart.title, id: procuct_cart.id })) 
+                          navigate('/cart');
+                      }
+                  ) 
+             }} /> 
             </div>
             <div className="aboutShopBlock" dangerouslySetInnerHTML={{__html: procuct_cart.description}} />
             <div className="infoblockShopBlock" dangerouslySetInnerHTML={{__html: procuct_cart.prop}} />
@@ -71,7 +89,22 @@ export default function ShopBlock(props) {
             }
           </div>
           <div className='btnShopBlockWrapper'>
-          <Link style={{ textDecoration: 'none' }} to={"/cart"}><OrangeButton text='Оформить заказ' onClick={()=>{ dispatch(setBuy({ count:procuct_cart.count, img:procuct_cart.img, price:procuct_cart.price, title:procuct_cart.title, id: procuct_cart.id }))}} /></Link>
+          <OrangeButton style={{ textDecoration: 'none' }} text='Оформить заказ' onClick={()=>{
+                imageToBase64(procuct_cart.img)
+                  .then(
+                      (response) => {
+                        dispatch(setBuy({ count:procuct_cart.count,img:procuct_cart.img, img64:response, price:procuct_cart.price, title:procuct_cart.title, id: procuct_cart.id }))
+                        navigate('/cart');
+                      }
+                  )
+                  .catch(
+                      (error) => {
+                          console.log(error); // Logs an error if there was one
+                          dispatch(setBuy({ count:procuct_cart.count, img:procuct_cart.img, img64:'', price:procuct_cart.price, title:procuct_cart.title, id: procuct_cart.id })) 
+                          navigate('/cart');
+                      }
+                  ) 
+             }} /> 
           </div>
             <div className="aboutShopBlock" dangerouslySetInnerHTML={{__html: procuct_cart.description}} />
             <div className="infoblockShopBlock" dangerouslySetInnerHTML={{__html: procuct_cart.prop}} />
@@ -82,3 +115,4 @@ export default function ShopBlock(props) {
     </div>
   );
 }
+

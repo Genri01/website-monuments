@@ -9,8 +9,8 @@ const PORT = config.get('Server.port') || 4000;
 
 const bodyParser = require('body-parser');
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ limit: "500mb", extended: true, parameterLimit: 100000 }));
+app.use(bodyParser.json({limit: '500mb'}));
 
 app.use(cors({
   credentials: true,
@@ -28,6 +28,25 @@ app.use(cors({
 ));
 
 app.use('/api',info_rout);
+
+
+app.use((req, res, next) => {
+    const render = res.render;
+    const send = res.send;
+    res.render = function renderWrapper(...args) {
+        Error.captureStackTrace(this);
+        return render.apply(this, args);
+    };
+    res.send = function sendWrapper(...args) {
+        try {
+            send.apply(this, args);
+        } catch (err) {
+            console.error(`Error in res.send | ${err.code} | ${err.message} | ${res.stack}`);
+        }
+    };
+    next();
+});
+
 
 if (process.env.NODE_ENV === 'production') {
   app.use('/',express.static(path.join(__dirname,'..','client','build')))

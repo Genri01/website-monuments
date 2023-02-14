@@ -58,18 +58,7 @@
   align-items: center;
   justify-content: center;
 }
-
-.productContainer {
-  display: flex;
-  width: 100%;
-  height: auto;
-  align-items: center;
-  justify-content: center;
-  border-top: 1px solid #ea402f;
-  flex-direction: column;
-  
-}
-
+ 
 .transportContainer {
   display: flex;
   width: 100%;

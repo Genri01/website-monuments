@@ -194,8 +194,10 @@
 }
 
 .txtTimer {
-  font-size: 23px;
+  font-size: 19px;
   font-weight: 800;
+  text-align: center;
+  line-height: 1.2;
   font-family: monospace;
   color: #222;
 }
